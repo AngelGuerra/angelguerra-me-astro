@@ -1,7 +1,6 @@
 module.exports = {
   mode: "jit",
-  purge: ["./public/**/*.html", "./src/**/*.{astro,js,jsx,svelte,ts,tsx,vue}"],
-  darkMode: false, // or 'media' or 'class'
+  content: ["./public/**/*.html", "./src/**/*.{astro,js,jsx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
       boxShadow: {
@@ -10,9 +9,6 @@ module.exports = {
         "square-right": "0.35rem 0.35rem 0 #000",
       },
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 };
