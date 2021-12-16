@@ -83,9 +83,10 @@ const image = `${Astro.site.toString()}assets/logo-social-1200x630.jpg`;
     <header class="border-b-4 border-black">
       <nav class="flex flex-row justify-between py-4 px-6 bg-white w-full">
         <div>
-          <a href="/" class="text-2xl no-underline text-grey-darkest hover:text-blue-dark">Ángel Guerra</a>
+          <a href="/" class="text-2xl no-underline text-grey-darkest hover:text-blue-dark" rel="home">Ángel Guerra</a>
         </div>
         <div>
+          <a href="/cv" class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">/cv</a>
           <a href="/uses" class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">/uses</a>
         </div>
       </nav>
@@ -100,7 +101,8 @@ const image = `${Astro.site.toString()}assets/logo-social-1200x630.jpg`;
         <p class="text-center text-xs mb-2">
           <a href="/no-cookies" title="Política de NO cookies" class="underline">Política de NO cookies</a>
         </p>
-        <p class="text-center tracking-wide">Construido con <a href="https://astro.build/" title="Página web de Astro" rel="noopener noreferrer" target="_blank" class="underline">Astro</a> desde Cantabria 🌲</p>
+        <p class="text-center tracking-wide mb-2">Construido con <a href="https://astro.build/" title="Página web de Astro" rel="noopener noreferrer" target="_blank" class="underline">Astro</a> desde Cantabria 🌲</p>
+        <p class="text-center text-xs"><span class="text-indigo-800" title="Página sin Javascript">#ZeroJS</span></p>
       </div>
     </footer>
   </body>
