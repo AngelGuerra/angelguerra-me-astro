@@ -27,7 +27,7 @@ import Label from '../components/timeline/Label.astro';
     <section class="mx-auto max-w-7xl p-4">
       <div>
         <!-- ITEISA -->
-        <div class="relative flex before:bg-black before:content-[''] before:h-full before:left-5 before:absolute before:top-5 before:w-1">
+        <div class="relative flex before:bg-black before:content-[''] before:h-full before:left-[1.125rem] before:absolute before:top-5 before:w-1">
           <Marker />
           <div class="flex-1 pl-4">
             <div
@@ -67,7 +67,7 @@ import Label from '../components/timeline/Label.astro';
           </div>
         </div>
         <!-- SPORT2FIT -->
-        <div class="relative flex before:bg-black before:content-[''] before:h-full before:left-5 before:absolute before:top-5 before:w-1">
+        <div class="relative flex before:bg-black before:content-[''] before:h-full before:left-[1.125rem] before:absolute before:top-5 before:w-1">
           <Marker />
           <div class="flex-1 pl-4">
             <div
@@ -102,7 +102,7 @@ import Label from '../components/timeline/Label.astro';
           </div>
         </div>
         <!-- ITEISA -->
-        <div class="relative flex before:bg-black before:content-[''] before:h-full before:left-5 before:absolute before:top-5 before:w-1">
+        <div class="relative flex before:bg-black before:content-[''] before:h-full before:left-[1.125rem] before:absolute before:top-5 before:w-1">
           <Marker />
           <div class="flex-1 pl-4">
             <div
@@ -128,6 +128,7 @@ import Label from '../components/timeline/Label.astro';
                   <Label css="shadow-[#4479A1] border-[#E97B00] bg-[#4479A1] text-white" text="MySQL" />
                   <Label css="shadow-[#2b2b2b] border-[#333333] bg-[#2b2b2b] text-[#ffcc00]" text="Jekyll" />
                   <Label css="shadow-[#157AFF] border-[#022044] bg-[#157AFF] text-white" text="Docker" />
+                  <Label css="shadow-[#43b02a] border-[#75c563] bg-[#43b02a] text-white" text="Selenium" />
                 </div>
               </div>
             </div>
@@ -169,12 +170,12 @@ import Label from '../components/timeline/Label.astro';
     <section class="max-w-2xl mx-auto mb-8">
       <h2 class="text-2xl text-center my-8">/portfolio (público)</h2>
       <p class="mb-2">
-        Además de todo lo realizado en la empresa, a nivel personal he realizado algunos proyectos para diferentes asociaciones o personas. Los pongo por aquí e iré actualizando la información de los mismos, porque con dos personitas por aquí grintando me es difícil explicarlo bien ahora mismo 😓.
+        Además de todo lo realizado en la empresa, a nivel personal he realizado algunos proyectos para diferentes asociaciones o personas. Los pongo por aquí e iré actualizando la información de los mismos, porque con dos personitas por aquí gritando me es difícil explicarlo bien ahora mismo 😓.
       </p>
     </section>
 
     <section class="max-w-7xl mx-auto grid gap-4 grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2">
-      <section class="bg-white border-4 border-black h-full flex flex-col">
+      <section class="bg-white border-4 border-black h-full flex flex-col shadow-square transition-shadow hover:shadow-square-left">
         <p class="p-4 text-xl text-center border-b border-black font-bold">
           Asociación La Buena Leche
         </p>
@@ -186,7 +187,7 @@ import Label from '../components/timeline/Label.astro';
           <a href="https://github.com/AngelGuerra/la-buena-leche-org" title="Repositorio con el código" rel="external" class="underline text-[#c17e93] font-bold">GitHub</a>
         </div>
       </section>
-      <section class="bg-white border-4 border-black h-full flex flex-col">
+      <section class="bg-white border-4 border-black h-full flex flex-col shadow-square transition-shadow hover:shadow-square-left">
         <p class="p-4 text-xl text-center border-b border-black font-bold">Bujinkan Cantabria</p>
         <p class="p-4">
           Página web de la asociación, está realizada con <strong>11ty</strong> como generador del sitio y con <strong>Tailwind</strong> como librería de estilos. Antes de ésta existía una página realizada con WordPress pero la persona que la mantenía ya no lo iba a hacer, así que cogí el testigo y la realicé a mi manera.
@@ -196,7 +197,7 @@ import Label from '../components/timeline/Label.astro';
           <a href="https://github.com/AngelGuerra/bujinkan-cantabria" title="Repositorio con el código" rel="external" class="underline text-[#bf0202] font-bold">GitHub</a>
         </div>
       </section>
-      <section class="bg-white border-4 border-black h-full flex flex-col">
+      <section class="bg-white border-4 border-black h-full flex flex-col shadow-square transition-shadow hover:shadow-square-left">
         <p class="p-4 text-xl text-center border-b border-black font-bold">Regazo Fotografía</p>
         <p class="p-4">
           Página web de mi pareja que se dedica a la fotografía, está realizada con <strong>Hugo</strong> como generador estático del sitio, los estilos se dan con <strong>Tailwind</strong> y las imágenes se gestionan con <strong>Netlify</strong> debido a su tamaño.
@@ -206,14 +207,14 @@ import Label from '../components/timeline/Label.astro';
           <a href="https://github.com/AngelGuerra/regazo-fotografia" title="Repositorio con el código" rel="external" class="underline text-[#63b3ed] font-bold">GitHub</a>
         </div>
       </section>
-      <section class="bg-white border-4 border-black h-full flex flex-col">
+      <section class="bg-white border-4 border-black h-full flex flex-col shadow-square transition-shadow hover:shadow-square-left">
         <p class="p-4 text-xl text-center border-b border-black font-bold">Regazo Fotografía - Duelo Perinatal</p>
         <p class="p-4">
           Esta página es una <em>landing</em> de Regazo Fotografía, pero orientada al duelo perinatal. Está realizada con <strong>11ty</strong>, <strong>AlpineJS</strong> para el comportamiento y <strong>Tailwind</strong> para los estilos.
         </p>
         <div class="mt-auto p-4 border-t border-black flex flex-wrap items-center justify-around">
           <a href="https://dueloperinatal.regazofotografia.com/" title="Página web de Regazo Fotografía - Duelo perinatal" class="underline text-blue-700 font-bold" rel="external">Web</a>
-          <a href="https://github.com/AngelGuerra/regazo-fotografia-duelo-perinatal" title="Repositorio con el código" rel="external" class="underline text-[#63b3ed] font-bold">GitHub</a>
+          <a href="https://github.com/AngelGuerra/regazo-fotografia-duelo-perinatal" title="Repositorio con el código" rel="external" class="underline text-blue-700 font-bold">GitHub</a>
         </div>
       </section>
     </section>
