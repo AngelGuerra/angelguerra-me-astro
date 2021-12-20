@@ -1,4 +1,6 @@
 ---
+import ExternalLink from '../components/ExternalLink.astro';
+
 const { title, description, robots } = Astro.props;
 const currentUrl = Astro.request.canonicalURL;
 const image = `${Astro.site.toString()}assets/logo-social-1200x630.jpg`;
@@ -81,7 +83,7 @@ const image = `${Astro.site.toString()}assets/logo-social-1200x630.jpg`;
   </head>
   <body class="flex flex-col min-h-screen">
     <header class="border-b-4 border-black">
-      <nav class="flex flex-row justify-between py-4 px-6 bg-white w-full">
+      <nav class="flex flex-row justify-between py-4 px-6 bg-white w-full max-w-7xl mx-auto">
         <div>
           <a href="/" class="text-2xl no-underline text-grey-darkest hover:text-blue-dark" rel="home">Ángel Guerra</a>
         </div>
@@ -101,8 +103,11 @@ const image = `${Astro.site.toString()}assets/logo-social-1200x630.jpg`;
         <p class="text-center text-xs mb-2">
           <a href="/no-cookies" title="Política de NO cookies" class="underline">Política de NO cookies</a>
         </p>
-        <p class="text-center tracking-wide mb-2">Construido con <a href="https://astro.build/" title="Página web de Astro" rel="noopener noreferrer" target="_blank" class="underline">Astro</a> desde Cantabria 🌲</p>
-        <p class="text-center text-xs"><span class="text-indigo-800" title="Página sin Javascript">#ZeroJS</span></p>
+        <p class="text-center tracking-wide mb-2">Construido con <ExternalLink href="https://astro.build/" title="Página web de Astro" text="Astro" /> desde Cantabria 🌲</p>
+        <p class="text-center text-xs">
+          <span class="text-indigo-800" title="Página sin Javascript">#ZeroJS</span>
+          <span class="text-indigo-800" title="Página sin Javascript">#NoJS</span>
+        </p>
       </div>
     </footer>
   </body>

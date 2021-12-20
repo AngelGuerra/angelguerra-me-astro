@@ -1,0 +1,10 @@
+---
+const { href, text, title, css } = Astro.props;
+---
+<a
+    href={href}
+    target="_blank"
+    rel="noopener"
+    title={title}
+    class={`underline underline-offset-2 decoration-wavy hover:decoration-rose-900 ${css}`.trim()}
+>{text}</a>

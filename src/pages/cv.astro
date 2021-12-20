@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/Base.astro';
 import Marker from '../components/timeline/Marker.astro';
 import Label from '../components/timeline/Label.astro';
+import ExternalLink from '../components/ExternalLink.astro';
 ---
 
 <BaseLayout
@@ -45,7 +46,7 @@ import Label from '../components/timeline/Label.astro';
               </div>
               <div class="mb-0 p-10">
                 <p class="mb-4">
-                  <a href="https://iteisa.com/" title="Página web de ITEISA" class="underline text-[#af1685] font-bold" target="_blank" rel="noopener noreferrer">ITEISA</a>. Desarrollador <em>Full-Stack</em>, las herramientas principales con las que trabajo son <strong>CakePHP</strong> y <strong>React</strong>. Me encargo principalmente de los desarrollos a medida de la empresa, utilizando otras herramientas y librerías como <strong>AlpineJS</strong>, <strong>11ty</strong>, <strong>GitLab</strong>, <strong>Docker</strong>...
+                  <ExternalLink href="https://iteisa.com/" title="Página web de ITEISA" css="underline text-[#af1685] font-bold" text="ITEISA" />. Desarrollador <em>Full-Stack</em>, las herramientas principales con las que trabajo son <strong>CakePHP</strong> y <strong>React</strong>. Me encargo principalmente de los desarrollos a medida de la empresa, utilizando otras herramientas y librerías como <strong>AlpineJS</strong>, <strong>11ty</strong>, <strong>GitLab</strong>, <strong>Docker</strong>...
                 </p>
                 <p class="mb-4">
                   También me encargo de realizar las integraciones continuas (CI/CD), participar de manera activa en la planificación de los proyectos, sustituir a nuestro insustituible encargado de sistemas cuando no está disponible, instruir en cómo salir de <strong>vim</strong> a mis compañeros y compañeras...
@@ -82,7 +83,7 @@ import Label from '../components/timeline/Label.astro';
               </div>
               <div class="mb-0 p-10">
                 <p class="mb-4">
-                  <a href="http://www.sport2fit.com/" title="Página web de Sport2Fit" class="underline text-[#49afcd] font-bold" target="_blank" rel="noopener noreferrer">Sport2Fit</a>. Desarrollador <em>Full-Stack</em>, las herramientas principales con las que trabajé fueron <strong>Ruby On Rails</strong> y <strong>JavaScript</strong>. Me encargué principalmente del mantenimiento de los desarrollos a medida de la empresa, también realicé nuevos desarrollos con <strong>Jekyll</strong> y <strong>WordPress</strong>.
+                  <ExternalLink href="http://www.sport2fit.com/" title="Página web de Sport2Fit" css="underline text-[#49afcd] font-bold" text="Sport2Fit" />. Desarrollador <em>Full-Stack</em>, las herramientas principales con las que trabajé fueron <strong>Ruby On Rails</strong> y <strong>JavaScript</strong>. Me encargué principalmente del mantenimiento de los desarrollos a medida de la empresa, también realicé nuevos desarrollos con <strong>Jekyll</strong> y <strong>WordPress</strong>.
                 </p>
                 <div class="flex flex-wrap gap-4 items-end justify-end">
                   <Label css="shadow-[#8892BF] border-[#4F5B93] bg-[#8892BF] text-white" text="PHP" />
@@ -117,7 +118,7 @@ import Label from '../components/timeline/Label.astro';
               </div>
               <div class="mb-0 p-10">
                 <p class="mb-4">
-                  <a href="https://iteisa.com/" title="Página web de ITEISA" class="underline text-[#af1685] font-bold" target="_blank" rel="noopener noreferrer">ITEISA</a>. Desarrollador <em>Backend</em>, las herramientas principales con las que trabajé fueron <strong>CakePHP</strong> y <strong>React</strong>. Me encargué principalmente de los desarrollos a medida de la empresa, utilizando otras herramientas y librerías como <strong>Jekyll</strong>, <strong>oclif</strong>, <strong>Selenium</strong>, <strong>Docker</strong>...
+                  <ExternalLink href="https://iteisa.com/" title="Página web de ITEISA" css="underline text-[#af1685] font-bold" text="ITEISA" />. Desarrollador <em>Backend</em>, las herramientas principales con las que trabajé fueron <strong>CakePHP</strong> y <strong>React</strong>. Me encargué principalmente de los desarrollos a medida de la empresa, utilizando otras herramientas y librerías como <strong>Jekyll</strong>, <strong>oclif</strong>, <strong>Selenium</strong>, <strong>Docker</strong>...
                 </p>
                 <div class="flex flex-wrap gap-4 items-end justify-end">
                   <Label css="shadow-[#8892BF] border-[#4F5B93] bg-[#8892BF] text-white" text="PHP" />
@@ -150,7 +151,7 @@ import Label from '../components/timeline/Label.astro';
               </div>
               <div class="mb-0 p-10">
                 <p class="mb-4">
-                  <a href="https://www.motork.io/es/" title="Página web de MotorK" class="underline text-[#f2a273] font-bold" target="_blank" rel="noopener noreferrer">Punsset (actualmente MotorK)</a>. Desarrollador <em>Full-Stack</em>, las herramientas principales con las que trabajé fueron <strong>Ruby On Rails</strong> y <strong>JavaScript</strong>. Me encargué principalmente del mantenimiento y desarrollo de los productos de la empresa relacionados con el mundo de la automoción, así como de otros proyectos paralelos que ésta tenía.
+                  <ExternalLink href="https://www.motork.io/es/" title="Página web de MotorK" css="underline text-[#f2a273] font-bold" text="Punsset" /> (actualmente MotorK). Desarrollador <em>Full-Stack</em>, las herramientas principales con las que trabajé fueron <strong>Ruby On Rails</strong> y <strong>JavaScript</strong>. Me encargué principalmente del mantenimiento y desarrollo de los productos de la empresa relacionados con el mundo de la automoción, así como de otros proyectos paralelos que ésta tenía.
                 </p>
                 <div class="flex flex-wrap gap-4 items-end justify-end">
                   <Label css="shadow-[#F0DB4F] border-[#323330] bg-[#F0DB4F]" text="JavaScript" />
@@ -183,8 +184,8 @@ import Label from '../components/timeline/Label.astro';
           Página web de la asociación, ha pasado por varias versiones, primero la realicé con <strong>AngularJS</strong> para practicar, más tarde, al ser una página que no se actualiza con regularidad y que no tiene ningún tipo de backend, la transformé a una página estática generada con <strong>Jekyll</strong> y maquetada con <strong>Bootstrap</strong>. También tuvo que ver el cambio de AngularJS a Angular, ¡tenía que reescribirlo todo de nuevo!
         </p>
         <div class="mt-auto text-center p-4 border-t border-black flex flex-wrap items-center justify-around">
-          <a href="https://labuenaleche.org/" title="Página web de la Asociación La Buena Leche" class="underline text-[#c17e93] font-bold">Web</a>
-          <a href="https://github.com/AngelGuerra/la-buena-leche-org" title="Repositorio con el código" rel="external" class="underline text-[#c17e93] font-bold">GitHub</a>
+          <ExternalLink href="https://labuenaleche.org/" title="Página web de la Asociación La Buena Leche" css="underline text-[#c17e93] font-bold" text="Web"/>
+          <ExternalLink href="https://github.com/AngelGuerra/la-buena-leche-org" title="Repositorio con el código" css="underline text-[#c17e93] font-bold" text="GitHub" />
         </div>
       </section>
       <section class="bg-white border-4 border-black h-full flex flex-col shadow-square transition-shadow hover:shadow-square-left">
@@ -193,8 +194,8 @@ import Label from '../components/timeline/Label.astro';
           Página web de la asociación, está realizada con <strong>11ty</strong> como generador del sitio y con <strong>Tailwind</strong> como librería de estilos. Antes de ésta existía una página realizada con WordPress pero la persona que la mantenía ya no lo iba a hacer, así que cogí el testigo y la realicé a mi manera.
         </p>
         <div class="mt-auto p-4 border-t border-black flex flex-wrap items-center justify-around">
-          <a href="https://bujinkancantabria.ninja/" title="Página web de la Asociación Bujinkan Cantabria" class="underline text-[#bf0202] font-bold">Web</a>
-          <a href="https://github.com/AngelGuerra/bujinkan-cantabria" title="Repositorio con el código" rel="external" class="underline text-[#bf0202] font-bold">GitHub</a>
+          <ExternalLink href="https://bujinkancantabria.ninja/" title="Página web de la Asociación Bujinkan Cantabria" css="underline text-[#bf0202] font-bold" text="Web" />
+          <ExternalLink href="https://github.com/AngelGuerra/bujinkan-cantabria" title="Repositorio con el código" css="underline text-[#bf0202] font-bold" text="GitHub" />
         </div>
       </section>
       <section class="bg-white border-4 border-black h-full flex flex-col shadow-square transition-shadow hover:shadow-square-left">
@@ -203,8 +204,8 @@ import Label from '../components/timeline/Label.astro';
           Página web de mi pareja que se dedica a la fotografía, está realizada con <strong>Hugo</strong> como generador estático del sitio, los estilos se dan con <strong>Tailwind</strong> y las imágenes se gestionan con <strong>Netlify</strong> debido a su tamaño.
         </p>
         <div class="mt-auto p-4 border-t border-black flex flex-wrap items-center justify-around">
-          <a href="https://regazofotografia.com/" title="Página web de Regazo Fotografía" class="underline text-[#63b3ed] font-bold" rel="external">Web</a>
-          <a href="https://github.com/AngelGuerra/regazo-fotografia" title="Repositorio con el código" rel="external" class="underline text-[#63b3ed] font-bold">GitHub</a>
+          <ExternalLink href="https://regazofotografia.com/" title="Página web de Regazo Fotografía" css="underline text-[#63b3ed] font-bold" text="Web" />
+          <ExternalLink href="https://github.com/AngelGuerra/regazo-fotografia" title="Repositorio con el código" css="underline text-[#63b3ed] font-bold" text="GitHub" />
         </div>
       </section>
       <section class="bg-white border-4 border-black h-full flex flex-col shadow-square transition-shadow hover:shadow-square-left">
@@ -213,8 +214,8 @@ import Label from '../components/timeline/Label.astro';
           Esta página es una <em>landing</em> de Regazo Fotografía, pero orientada al duelo perinatal. Está realizada con <strong>11ty</strong>, <strong>AlpineJS</strong> para el comportamiento y <strong>Tailwind</strong> para los estilos.
         </p>
         <div class="mt-auto p-4 border-t border-black flex flex-wrap items-center justify-around">
-          <a href="https://dueloperinatal.regazofotografia.com/" title="Página web de Regazo Fotografía - Duelo perinatal" class="underline text-blue-700 font-bold" rel="external">Web</a>
-          <a href="https://github.com/AngelGuerra/regazo-fotografia-duelo-perinatal" title="Repositorio con el código" rel="external" class="underline text-blue-700 font-bold">GitHub</a>
+          <ExternalLink href="https://dueloperinatal.regazofotografia.com/" title="Página web de Regazo Fotografía - Duelo perinatal" css="underline text-blue-700 font-bold" text="Web" />
+          <ExternalLink href="https://github.com/AngelGuerra/regazo-fotografia-duelo-perinatal" title="Repositorio con el código" css="underline text-blue-700 font-bold" text="GitHub" />
         </div>
       </section>
     </section>
