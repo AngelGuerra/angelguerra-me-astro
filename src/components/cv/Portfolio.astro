@@ -1,0 +1,15 @@
+---
+import ExternalLink from "../ExternalLink.astro";
+
+const { title, text, src, alt, web, github, css } = Astro.props;
+---
+
+<section class="bg-white border-4 border-black h-full flex flex-col shadow-square transition-shadow hover:shadow-square-left">
+  <p class="p-4 text-xl text-center border-b border-black font-bold">{title}</p>
+  <img src={src} alt={alt} loading="lazy" decoding="async" />
+  <p class="p-4">{text}</p>
+  <div class="mt-auto text-center p-4 border-t border-black flex flex-wrap items-center justify-around">
+    <ExternalLink href={web} title="Ir a la página web" css={`underline font-bold ${css}`.trim()} text="Web"/>
+    <ExternalLink href={github} title="Repositorio con el código" css={`underline font-bold ${css}`.trim()} text="GitHub" />
+  </div>
+</section>

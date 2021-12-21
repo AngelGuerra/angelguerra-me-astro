@@ -1,6 +1,4 @@
 ---
-import ExternalLink from '../components/ExternalLink.astro';
-
 const { title, description, robots } = Astro.props;
 const currentUrl = Astro.request.canonicalURL;
 const image = `${Astro.site.toString()}assets/logo-social-1200x630.jpg`;
@@ -58,26 +56,26 @@ const image = `${Astro.site.toString()}assets/logo-social-1200x630.jpg`;
     <!-- SCHEMA -->
     <script type="application/ld+json">
     {
-        "@context": "http://www.schema.org",
-        "@type": "Person",
-        "name": "Ángel Guerra",
-        "jobTitle": "Full Stack Developer",
-        "height": "182cm",
-        "gender": "male",
-        "url": "https://angelguerra.me/",
-        "address": {
-            "@type": "PostalAddress",
-            "addressRegion": "Cantabria",
-            "addressCountry": "Spain"
-        },
-        "sameAs": [
-            "https://twitter.com/angellguerra",
-            "https://es.linkedin.com/in/angel-guerra-revilla",
-            "https://github.com/AngelGuerra"
-        ],
-        "birthDate": "1990-03-01",
-        "birthPlace": "Santander",
-        "nationality": "Spanish"
+      "@context": "http://www.schema.org",
+      "@type": "Person",
+      "name": "Ángel Guerra",
+      "jobTitle": "Full Stack Developer",
+      "height": "182cm",
+      "gender": "male",
+      "url": "https://angelguerra.me/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Cantabria",
+        "addressCountry": "Spain"
+      },
+      "sameAs": [
+        "https://twitter.com/angellguerra",
+        "https://es.linkedin.com/in/angel-guerra-revilla",
+        "https://github.com/AngelGuerra"
+      ],
+      "birthDate": "1990-03-01",
+      "birthPlace": "Santander",
+      "nationality": "Spanish"
     }
   </script>
   </head>
@@ -103,7 +101,7 @@ const image = `${Astro.site.toString()}assets/logo-social-1200x630.jpg`;
         <p class="text-center text-xs mb-2">
           <a href="/no-cookies" title="Política de NO cookies" class="underline">Política de NO cookies</a>
         </p>
-        <p class="text-center tracking-wide mb-2">Construido con <ExternalLink href="https://astro.build/" title="Página web de Astro" text="Astro" /> desde Cantabria 🌲</p>
+        <p class="text-center tracking-wide mb-2">Construido con <a href="https://astro.build/" target="_blank" rel="noopener" title="Página web de Astro" class="underline underline-offset-2 decoration-wavy hover:decoration-rose-900">Astro</a> desde Cantabria 🌲</p>
         <p class="text-center text-xs">
           <span class="text-indigo-800" title="Página sin Javascript">#ZeroJS</span>
           <span class="text-indigo-800" title="Página sin Javascript">#NoJS</span>
