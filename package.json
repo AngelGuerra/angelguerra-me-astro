@@ -1,6 +1,22 @@
 {
-  "name": "@example/minimal",
+  "name": "@angelguerra/web",
   "version": "0.0.1",
+  "description": "Ángel Guerra's personal webpage",
+  "homepage": "https://github.com/AngelGuerra/angelguerra-me-astro",
+  "bugs": {
+    "url": "https://github.com/AngelGuerra/angelguerra-me-astro/issues",
+    "email": "a.guerrarevilla@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AngelGuerra/angelguerra-me-astro.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Ángel Guerra",
+    "email": "a.guerrarevilla@gmail.com",
+    "url": "https://angelguerra.me/"
+  },
   "private": true,
   "scripts": {
     "dev": "astro dev",
@@ -9,7 +25,7 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "0.21.13",
+    "astro": "0.21.12",
     "autoprefixer": "^10.4.0",
     "tailwindcss": "^3.0.7"
   }
