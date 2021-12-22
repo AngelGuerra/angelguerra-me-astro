@@ -1,6 +1,11 @@
 ---
-import BaseLayout from '../layouts/Base.astro';
-import ExternalLink from '../components/ExternalLink.astro';
+import BaseLayout from "layout:Base";
+
+import ExternalLink from "component:ExternalLink";
+import JsonArray from "component:json/Array";
+import JsonNumber from "component:json/Number";
+import JsonString from "component:json/String";
+import JsonText from "component:json/Text";
 ---
 
 <BaseLayout
@@ -10,29 +15,12 @@ import ExternalLink from '../components/ExternalLink.astro';
   <section class="grow p-4 flex items-center justify-center bg-emerald-200">
     <section class="bg-white max-w-lg p-4 border-4 border-black transition-shadow shadow-square-left hover:shadow-square-right">
       <span class="block">{"{"}</span>
-      <span class="block ml-4">
-        <span class="text-rose-800">"main-branch"</span>: <h1 class="text-cyan-800 inline-block">"Ángel Guerra"</h1>,
-      </span>
-      <span class="block ml-4">
-        <span class="text-rose-800">"merged-branch"</span>: <span class="text-cyan-800">"<ExternalLink href="https://www.instagram.com/regazofotografia/" title="Instagram de Regazo Fotografía" text="@regazofotografia" />"</span>,
-      </span>
-      <span class="block ml-4">
-        <span class="text-rose-800">"forks"</span>: <span class="text-purple-800">2</span>,
-      </span>
-      <span class="block ml-4">
-        <span class="text-rose-800">"pronouns"</span>: <span class="text-cyan-800 inline-block">"He/Him"</span>,
-      </span>
-      <span class="block ml-4">
-        <span class="text-rose-800">"role"</span>: <span class="inline-block text-cyan-800">"Desarrollador FullStack"</span>,
-      </span>
-      <span class="block ml-4">
-        <span class="text-rose-800">"hobbies"</span>: [
-        <span class="block ml-4 text-stone-600">"Ninjutsu",</span>
-        <span class="block ml-4 text-stone-600">"Kick Boxing",</span>
-        <span class="block ml-4 text-stone-600">"Anime",</span>
-        <span class="block ml-4 text-stone-600">"Ajedrez",</span>
-        ],
-      </span>
+      <JsonText title="main-branch"><h1 class="inline-block">Ángel Guerra</h1></JsonText>
+      <JsonText title="merged-branch"><ExternalLink href="https://www.instagram.com/regazofotografia/" title="Instagram de Regazo Fotografía" text="@regazofotografia" /></JsonText>
+      <JsonNumber title="forks" value="2" />
+      <JsonString title="pronouns" value="He/Him" />
+      <JsonString title="role" value="Desarrollador FullStack" />
+      <JsonArray title="hobbies" values={["Ninjutsu", "Kick Boxing", "Anime", "Ajedrez"]} />
       <span class="block ml-4">
         <span class="text-rose-800">"social"</span>: [
         <span class="block ml-4 text-stone-600">"<ExternalLink href="https://es.linkedin.com/in/angel-guerra-revilla" title="Mi perfil en LinkedIn" text="LinkedIn" />",</span>
@@ -40,9 +28,7 @@ import ExternalLink from '../components/ExternalLink.astro';
         <span class="block ml-4 text-stone-600">"<ExternalLink href="https://github.com/AngelGuerra" title="Mi perfil en GitHub" text="GitHub" />"</span>
         ],
       </span>
-      <span class="block ml-4">
-        <span class="text-rose-800">"bio"</span>: <span class="inline text-cyan-800">"Desarrollador afincado en Cantabria, actualmente trabajo en <ExternalLink href="https://iteisa.com/" title="Página web de ITEISA" css="text-[#af1685]" text="ITEISA" /> donde utilizo sobretodo <strong>CakePHP</strong> y <strong>React</strong> como principales herramientas de desarrollo. Me considero una persona inquieta en cuanto al mundo de la programación se refiere así que, casi siempre, estoy probando cosas nuevas o cacharreando con alguna tecnología que surja."</span>
-      </span>
+      <JsonText title="bio" last={true}>Desarrollador afincado en Cantabria, actualmente trabajo en <ExternalLink href="https://iteisa.com/" title="Página web de ITEISA" css="text-[#af1685]" text="ITEISA" /> donde utilizo sobretodo <strong>CakePHP</strong> y <strong>React</strong> como principales herramientas de desarrollo. Me considero una persona inquieta en cuanto al mundo de la programación se refiere así que, casi siempre, estoy probando cosas nuevas o cacharreando con alguna tecnología que surja.</JsonText>
       <span class="block">{"}"}</span>
     </section>
   </section>

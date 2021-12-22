@@ -1,0 +1,50 @@
+---
+export interface Props {
+  title: string;
+  labels: Array<LabelProp>;
+  current?: boolean;
+  last?: boolean;
+}
+
+import Label from "component:cv/timeline/Label";
+
+interface LabelProp {
+  css: string;
+  text: string;
+}
+
+const { title, labels, current = false, last = false } = Astro.props;
+---
+<div class={`relative flex ${last ? "" : "before:bg-black before:content-[''] before:h-full before:left-[1.125rem] before:absolute before:top-5 before:w-1"}`.trim()}>
+  <div class="z-10">
+    <span class="mt-5 w-10 h-10 flex justify-center items-center border border-emerald-800 rounded-full text-white bg-emerald-600">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+      </svg>
+    </span>
+  </div>
+  <div class="flex-1 pl-4">
+    <div
+      class="relative mb-10 overflow-auto bg-white border-4 border-black shadow-square transition-shadow hover:shadow-square-left"
+    >
+      <div class="border-b border-black py-5 px-10">
+        <div class="flex flex-wrap m-0 p-0 gap-4 justify-between items-center">
+          <p class="text-xl">
+            {title}
+          </p>
+          {current && <span class="uppercase text-white bg-emerald-700 border border-emerald-900 px-3 py-1 tracking-wider text-sm"
+            >Actualmente</span
+          >}
+        </div>
+      </div>
+      <div class="mb-0 p-10">
+        <slot />
+        <div class="flex flex-wrap gap-4 items-end justify-end">
+          {labels.map((label: LabelProp) => {
+            return <Label css={label.css} text={label.text} />;
+          })}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

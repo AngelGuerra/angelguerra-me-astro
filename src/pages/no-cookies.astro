@@ -1,5 +1,9 @@
 ---
-import BaseLayout from '../layouts/Base.astro';
+import BaseLayout from "layout:Base";
+
+import JsonBool from "component:json/Bool";
+import JsonNumber from "component:json/Number";
+import JsonString from "component:json/String";
 ---
 
 <BaseLayout
@@ -10,15 +14,9 @@ import BaseLayout from '../layouts/Base.astro';
   <section class="grow p-4 flex items-center justify-center bg-indigo-200">
     <section class="bg-white max-w-lg p-4 border-4 border-black transition-shadow shadow-square-left hover:shadow-square-right">
       <span class="block">{"{"}</span>
-      <span class="block ml-4">
-        <span class="text-rose-800">"cookies"</span>: <span class="text-purple-800">false</span>,
-      </span>
-      <span class="block ml-4">
-        <span class="text-rose-800">"status"</span>: <span class="text-purple-800">404</span>,
-      </span>
-      <span class="block ml-4">
-        <span class="text-rose-800">"reason"</span>: <span class="text-cyan-800">"Esta página web no utiliza cookies, me acaba de entrar hambre..."</span>
-      </span>
+      <JsonBool title="cookies" value="false" />
+      <JsonNumber title="status" value="404" />
+      <JsonString title="reason" value="Esta página web no utiliza cookies, me acaba de entrar hambre..." last={true} />
       <span class="block">{"}"}</span>
     </section>
   </section>

@@ -1,0 +1,13 @@
+---
+export interface Props {
+  title: string;
+  value: string;
+  last?: boolean;
+}
+
+const { title, value, last = false } = Astro.props;
+---
+
+<span class="block ml-4">
+  <span class="text-rose-800">"{title}"</span>: <span class="text-indigo-800">{value}</span>{!last && ","}
+</span>

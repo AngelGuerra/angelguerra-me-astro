@@ -1,5 +1,11 @@
 ---
-const { title, description, robots } = Astro.props;
+export interface Props {
+  title: string;
+  description: string;
+  robots?: string;
+}
+
+const { title, description, robots = "index,follow" } = Astro.props;
 const currentUrl = Astro.request.canonicalURL;
 const image = `${Astro.site.toString()}assets/logo-social-1200x630.jpg`;
 ---
@@ -11,7 +17,7 @@ const image = `${Astro.site.toString()}assets/logo-social-1200x630.jpg`;
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta charset="UTF-8"/>
-    <meta name="robots" content={robots ?? 'index,follow'} />
+    <meta name="robots" content={robots} />
     <meta name="author" content="Ángel Guerra" />
     <link rel="stylesheet" href={Astro.resolve("../assets/styles/global.pcss")} />
 
@@ -104,7 +110,6 @@ const image = `${Astro.site.toString()}assets/logo-social-1200x630.jpg`;
         <p class="text-center tracking-wide mb-2">Construido con <a href="https://astro.build/" target="_blank" rel="noopener" title="Página web de Astro" class="underline underline-offset-2 decoration-wavy hover:decoration-rose-900">Astro</a> desde Cantabria 🌲</p>
         <p class="text-center text-xs">
           <span class="text-indigo-800" title="Página sin Javascript">#ZeroJS</span>
-          <span class="text-indigo-800" title="Página sin Javascript">#NoJS</span>
         </p>
       </div>
     </footer>
