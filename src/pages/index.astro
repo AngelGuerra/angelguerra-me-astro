@@ -6,14 +6,16 @@ import JsonArray from "component:json/Array";
 import JsonNumber from "component:json/Number";
 import JsonString from "component:json/String";
 import JsonText from "component:json/Text";
+import Snow from "component:extra/Snow";
 ---
 
 <BaseLayout
   title="Desarrollador y ninja"
   description="Padre de dos, pareja, deportista, ninja y programador Full Stack en continuo aprendizaje"
 >
-  <section class="grow p-4 flex items-center justify-center bg-emerald-200">
-    <section class="bg-white max-w-lg p-4 border-4 border-black transition-shadow shadow-square-left hover:shadow-square-right">
+  <section class="grow p-4 flex items-center justify-center bg-gradient-radial from-[#0c2557]  to-[#090d25]">
+    <Snow />
+    <section class="bg-white max-w-lg p-4 border-4 border-black transition-shadow shadow-square-left hover:shadow-square-right z-10">
       <span class="block">{"{"}</span>
       <JsonText title="main-branch"><h1 class="inline-block">Ángel Guerra</h1></JsonText>
       <JsonText title="merged-branch"><ExternalLink href="https://www.instagram.com/regazofotografia/" title="Instagram de Regazo Fotografía" text="@regazofotografia" /></JsonText>

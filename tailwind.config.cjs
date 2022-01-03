@@ -1,6 +1,10 @@
 module.exports = {
+  presets: [require("./presets/winter.preset.js")],
   mode: "jit",
-  content: ["./public/**/*.html", "./src/**/*.{astro,js,jsx,svelte,ts,tsx,vue}"],
+  content: [
+    "./public/**/*.html",
+    "./src/**/*.{astro,js,jsx,svelte,ts,tsx,vue}",
+  ],
   theme: {
     extend: {
       boxShadow: {
