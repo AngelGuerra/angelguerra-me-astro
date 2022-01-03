@@ -34,7 +34,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-radial": "radial-gradient(ellipse at bottom, var(--tw-gradient-stops))",
       },
       keyframes: winterAnimations
         .map((config) => config.keyframes)
