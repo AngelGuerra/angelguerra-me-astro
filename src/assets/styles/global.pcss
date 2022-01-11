@@ -3,17 +3,17 @@
 @tailwind utilities;
 
 ::-webkit-scrollbar {
-  @apply w-2;
+  width: theme("width.2");
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-gray-400;
+  background-color: theme("backgroundColor.gray.400");
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-emerald-600;
+  background-color: theme("backgroundColor.emerald.600");
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-emerald-800;
+  background-color: theme("backgroundColor.emerald.800");
 }
