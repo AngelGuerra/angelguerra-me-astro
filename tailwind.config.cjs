@@ -1,5 +1,4 @@
 module.exports = {
-  // presets: [require("./presets/winter.preset.js")],
   mode: "jit",
   content: [
     "./public/**/*.html",
