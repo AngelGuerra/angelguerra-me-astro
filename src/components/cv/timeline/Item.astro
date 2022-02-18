@@ -16,6 +16,7 @@ interface LabelProp {
 
 const { title, labels, academic = false, current = false, last = false } = Astro.props;
 ---
+
 <div class={`relative flex ${last ? "" : "before:bg-black before:content-[''] before:h-full before:left-[1.125rem] before:absolute before:top-5 before:w-1"}`.trim()}>
   <div class="z-10">
     <span class="mt-5 w-10 h-10 flex justify-center items-center border border-black rounded-full text-black bg-white">

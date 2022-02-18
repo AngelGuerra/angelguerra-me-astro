@@ -13,23 +13,71 @@ import JsonText from "component:json/Text";
   description="Padre de dos, pareja, deportista, ninja y programador Full Stack en continuo aprendizaje"
 >
   <section class="grow p-4 flex items-center justify-center bg-emerald-200">
-    <section class="bg-white max-w-lg p-4 border-4 border-black transition-shadow shadow-square-left hover:shadow-square-right z-10">
+    <section
+      class="bg-white max-w-lg p-4 border-4 border-black transition-shadow shadow-square-left hover:shadow-square-right z-10"
+    >
       <span class="block">{"{"}</span>
-      <JsonText title="main-branch"><h1 class="inline-block">Ángel Guerra</h1></JsonText>
-      <JsonText title="merged-branch"><ExternalLink href="https://www.instagram.com/regazofotografia/" title="Instagram de Regazo Fotografía" text="@regazofotografia" /></JsonText>
+      <JsonText title="main-branch"
+        ><h1 class="inline-block">Ángel Guerra</h1></JsonText
+      >
+      <JsonText title="merged-branch"
+        ><ExternalLink
+          href="https://www.instagram.com/regazofotografia/"
+          title="Instagram de Regazo Fotografía"
+          text="@regazofotografia"
+      /></JsonText>
       <JsonNumber title="forks" value="2" />
       <JsonString title="pronouns" value="He/Him" />
       <JsonString title="role" value="Desarrollador FullStack" />
       <JsonArray title="hobbies" values={["Ninjutsu", "Kick Boxing", "Anime", "Ajedrez"]} />
       <span class="block ml-4">
         <span class="text-rose-800">"social"</span>: [
-        <span class="block ml-4 text-stone-600">"<ExternalLink href="https://es.linkedin.com/in/angel-guerra-revilla" title="Mi perfil en LinkedIn" text="LinkedIn" />",</span>
-        <span class="block ml-4 text-stone-600">"<ExternalLink href="https://twitter.com/angellguerra" title="Mi perfil en Twitter" text="Twitter" />",</span>
-        <span class="block ml-4 text-stone-600">"<ExternalLink href="https://github.com/AngelGuerra" title="Mi perfil en GitHub" text="GitHub" />"</span>
+        <span class="block ml-4 text-stone-600"
+          >"<ExternalLink
+            href="https://es.linkedin.com/in/angel-guerra-revilla"
+            title="Mi perfil en LinkedIn"
+            text="LinkedIn"
+          />",</span
+        >
+        <span class="block ml-4 text-stone-600"
+          >"<ExternalLink
+            href="https://twitter.com/angellguerra"
+            title="Mi perfil en Twitter"
+            text="Twitter"
+          />",</span
+        >
+        <span class="block ml-4 text-stone-600"
+          >"<ExternalLink
+            href="https://github.com/AngelGuerra"
+            title="Mi perfil en GitHub"
+            text="GitHub"
+          />",</span
+        >
+        <span class="block ml-4 text-stone-600"
+          >"<ExternalLink
+            href="https://lichess.org/@/AngelGuerra"
+            title="Mi perfil en Lichess"
+            text="Lichess"
+          />"</span
+        >
         ],
       </span>
-      <JsonText title="bio" last={true}>Desarrollador afincado en Cantabria, actualmente trabajo en <ExternalLink href="https://iteisa.com/" title="Página web de ITEISA" css="text-[#af1685]" text="ITEISA" /> donde utilizo sobretodo <strong>CakePHP</strong> y <strong>React</strong> como principales herramientas de desarrollo. Me considero una persona inquieta en cuanto al mundo de la programación se refiere así que, casi siempre, estoy probando cosas nuevas o cacharreando con alguna tecnología que surja.</JsonText>
+      <JsonText title="bio" last={true}
+        >Desarrollador afincado en Cantabria, actualmente trabajo en
+        <ExternalLink
+          href="https://iteisa.com/"
+          title="Página web de ITEISA"
+          css="text-[#af1685]"
+          text="ITEISA"
+        />
+        donde utilizo sobretodo <strong>CakePHP</strong> y
+        <strong>React</strong> como principales herramientas de desarrollo. Me
+        considero una persona inquieta en cuanto al mundo de la programación se
+        refiere así que, casi siempre, estoy probando cosas nuevas o
+        cacharreando con alguna tecnología que surja.</JsonText
+      >
       <span class="block">{"}"}</span>
     </section>
   </section>
 </BaseLayout>
+

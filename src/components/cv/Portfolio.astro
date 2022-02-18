@@ -14,7 +14,7 @@ const { title, src, alt, web, github, css = "" } = Astro.props;
 ---
 
 <section class="bg-white border-4 border-black h-full flex flex-col transition-shadow shadow-square-left hover:shadow-square-right">
-  <p class={`p-4 text-xl text-center border-b border-black font-bold ${css}`}>{title}</p>
+  <p class={`p-4 text-xl text-center border-b border-black font-bold ${css} 2xl:text-base`}>{title}</p>
   <img src={src} alt={alt} loading="lazy" decoding="async" />
   <div class="p-4">
     <slot />
