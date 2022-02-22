@@ -8,6 +8,32 @@ export interface Props {
 const { title, description, robots = "index,follow" } = Astro.props;
 const currentUrl = Astro.request.canonicalURL;
 const image = `${Astro.site.toString()}assets/logo-social-1200x630.jpg`;
+
+const ldJson = JSON.stringify(
+  {
+    "@context": "http://www.schema.org",
+    "@type": "Person",
+    name: "Ángel Guerra",
+    jobTitle: "Full Stack Developer",
+    height: "182cm",
+    gender: "male",
+    url: Astro.site.toString(),
+    address: {
+      "@type": "PostalAddress",
+      addressRegion: "Cantabria",
+      addressCountry: "Spain",
+    },
+    sameAs: [
+      "https://twitter.com/angellguerra",
+      "https://es.linkedin.com/in/angel-guerra-revilla",
+      "https://github.com/AngelGuerra",
+      "https://lichess.org/@/AngelGuerra",
+    ],
+    birthDate: "1990-03-01",
+    birthPlace: "Santander",
+    nationality: "Spanish",
+  }
+);
 ---
   
 <html lang="es">
@@ -19,7 +45,7 @@ const image = `${Astro.site.toString()}assets/logo-social-1200x630.jpg`;
     <meta charset="UTF-8"/>
     <meta name="robots" content={robots} />
     <meta name="author" content="Ángel Guerra" />
-    <link rel="stylesheet" href={Astro.resolve("../assets/styles/global.pcss")} />
+    <style global>@import "../assets/styles/global.pcss";</style>
 
     <!-- FAVICON -->
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -60,30 +86,7 @@ const image = `${Astro.site.toString()}assets/logo-social-1200x630.jpg`;
     <meta property="profile:last_name" content="Guerra" />
 
     <!-- SCHEMA -->
-    <script type="application/ld+json">
-    {
-      "@context": "http://www.schema.org",
-      "@type": "Person",
-      "name": "Ángel Guerra",
-      "jobTitle": "Full Stack Developer",
-      "height": "182cm",
-      "gender": "male",
-      "url": "https://angelguerra.me/",
-      "address": {
-        "@type": "PostalAddress",
-        "addressRegion": "Cantabria",
-        "addressCountry": "Spain"
-      },
-      "sameAs": [
-        "https://twitter.com/angellguerra",
-        "https://es.linkedin.com/in/angel-guerra-revilla",
-        "https://github.com/AngelGuerra"
-      ],
-      "birthDate": "1990-03-01",
-      "birthPlace": "Santander",
-      "nationality": "Spanish"
-    }
-  </script>
+    <Fragment set:html={`<script type="application/ld+json">${ldJson}</script>`} />
   </head>
   <body class="flex flex-col min-h-screen">
     <header class="border-b-4 border-black">
