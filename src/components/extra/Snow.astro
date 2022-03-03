@@ -12,15 +12,21 @@ export interface Props {
 const { snowflakes = 200 } = Astro.props;
 
 const generateRandomInt = (max: number, min: number = 0): number => {
-  return Math.floor(Math.random() * (max - min + 1) + min)
-}
+  return Math.floor(Math.random() * (max - min + 1) + min);
+};
 ---
 
-<div class="absolute inset-0 overflow-hidden bg-gradient-radial from-[#1b2735] to-[#090a0f] motion-reduce:hidden">
+<div
+  class="absolute inset-0 overflow-hidden bg-gradient-radial from-[#1b2735] to-[#090a0f] motion-reduce:hidden"
+>
   {[...Array(snowflakes).keys()].map((item) => {
-    return <span
-      class={`absolute w-3 h-3 bg-white rounded-full transform translate-y-3 z-10 animate-fall-${item}`}
-      style={`opacity: 0.${generateRandomInt(1000)}; transform: translate(${generateRandomInt(1000000) / 10000}vw, -0.75rem) scale(${generateRandomInt(10000) / 10000})`}
+    return (
+      <span
+        class={`absolute z-10 h-3 w-3 translate-y-3 transform rounded-full bg-white animate-fall-${item}`}
+        style={`opacity: 0.${generateRandomInt(1000)}; transform: translate(${
+          generateRandomInt(1000000) / 10000
+        }vw, -0.75rem) scale(${generateRandomInt(10000) / 10000})`}
       ></span>
+    );
   })}
 </div>

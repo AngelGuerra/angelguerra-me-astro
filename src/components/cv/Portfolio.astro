@@ -13,14 +13,32 @@ export interface Props {
 const { title, src, alt, web, github, css = "" } = Astro.props;
 ---
 
-<section class="bg-white border-4 border-black h-full flex flex-col transition-shadow shadow-square-left hover:shadow-square-right">
-  <p class={`p-4 text-xl text-center border-b border-black font-bold ${css} 2xl:text-base`}>{title}</p>
-  <img src={src} alt={alt} loading="lazy" decoding="async" />
+<section
+  class="bg-white border-4 border-black h-full flex flex-col transition-shadow shadow-square-left hover:shadow-square-right"
+>
+  <p
+    class={`p-4 text-xl text-center border-b border-black font-bold ${css} 2xl:text-base`}
+  >
+    {title}
+  </p>
+  <img {src} {alt} loading="lazy" decoding="async" />
   <div class="p-4">
     <slot />
   </div>
-  <div class="mt-auto text-center p-4 border-t border-black flex flex-wrap items-center justify-around">
-    <ExternalLink href={web} title="Ir a la página web" css={`underline font-bold ${css}`.trim()} text="Web"/>
-    <ExternalLink href={github} title="Repositorio con el código" css={`underline font-bold ${css}`.trim()} text="GitHub" />
+  <div
+    class="mt-auto text-center p-4 border-t border-black flex flex-wrap items-center justify-around"
+  >
+    <ExternalLink
+      href={web}
+      title="Ir a la página web"
+      css={`underline font-bold ${css}`.trim()}
+      text="Web"
+    />
+    <ExternalLink
+      href={github}
+      title="Repositorio con el código"
+      css={`underline font-bold ${css}`.trim()}
+      text="GitHub"
+    />
   </div>
 </section>
