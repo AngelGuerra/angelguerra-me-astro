@@ -6,16 +6,27 @@ import JsonArray from "component:json/Array";
 import JsonNumber from "component:json/Number";
 import JsonString from "component:json/String";
 import JsonText from "component:json/Text";
+
+import FeministLogo from "component:extra/FeministLogo";
 ---
 
 <BaseLayout
   title="Desarrollador y ninja"
   description="Padre de dos, pareja, deportista, ninja y programador Full Stack en continuo aprendizaje"
 >
-  <section class="grow p-4 flex items-center justify-center bg-emerald-200">
+  <section
+    class="relative grow p-4 flex items-center justify-center bg-[#4c2882]"
+  >
+    <FeministLogo className="absolute hidden w-40 bottom-4 right-4 md:block" />
+
     <section
-      class="bg-white max-w-lg p-4 border-4 border-black transition-shadow shadow-square-left hover:shadow-square-right z-10"
+      class="relative bg-white max-w-lg p-4 border-4 border-black transition-shadow shadow-square-left hover:shadow-square-right z-10"
     >
+      <FeministLogo
+        fill="#4c2882"
+        className="absolute block w-8 top-4 right-4 md:hidden"
+      />
+
       <span class="block">{"{"}</span>
       <JsonText title="main-branch"
         ><h1 class="inline-block">Ángel Guerra</h1></JsonText
