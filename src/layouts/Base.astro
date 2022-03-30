@@ -1,4 +1,6 @@
 ---
+import "../assets/styles/global.pcss";
+
 export interface Props {
   title: string;
   description: string;
@@ -46,9 +48,6 @@ const ldJson = JSON.stringify({
     <meta charset="UTF-8" />
     <meta name="robots" content={robots} />
     <meta name="author" content="Ángel Guerra" />
-    <style global>
-      @import "../assets/styles/global.pcss";
-    </style>
 
     <!-- FAVICON -->
     <link rel="shortcut icon" href="/favicon.ico" />

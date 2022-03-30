@@ -25,7 +25,7 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "0.25.2",
+    "astro": "0.25.4",
     "autoprefixer": "^10.4.4",
     "postcss": "^8.4.12",
     "prettier-plugin-astro": "^0.0.12",
