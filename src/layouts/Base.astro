@@ -1,5 +1,6 @@
 ---
 import "../assets/styles/global.pcss";
+import { packages } from "../../package-lock.json";
 
 export interface Props {
   title: string;
@@ -10,6 +11,8 @@ export interface Props {
 const { title, description, robots = "index,follow" } = Astro.props;
 const currentUrl = Astro.request.canonicalURL;
 const image = `${Astro.site.toString()}assets/logo-social-1200x630.jpg`;
+const astroVersion = packages["node_modules/astro"].version;
+const tailwindVersion = packages["node_modules/tailwindcss"].version;
 
 const ldJson = JSON.stringify({
   "@context": "http://www.schema.org",
@@ -48,6 +51,7 @@ const ldJson = JSON.stringify({
     <meta charset="UTF-8" />
     <meta name="robots" content={robots} />
     <meta name="author" content="Ángel Guerra" />
+    <meta name="generator" content={`Astro ${astroVersion}`} />
 
     <!-- FAVICON -->
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -141,11 +145,13 @@ const ldJson = JSON.stringify({
             >Astro</a
           > 🚀 desde Cantabria 🌲
         </p>
-        <p class="text-center text-xs">
+        <div class="text-center text-xs flex flex-col gap-1">
           <span class="text-indigo-800" title="Página sin Javascript"
-            >#ZeroJS</span
+            >#ZeroJS #NoJavascript</span
           >
-        </p>
+          <span class="text-[#ff5e00]">#Astro-{astroVersion}</span>
+          <span class="text-sky-400">#TailwindCSS-{tailwindVersion}</span>
+        </div>
       </div>
     </footer>
   </body>
