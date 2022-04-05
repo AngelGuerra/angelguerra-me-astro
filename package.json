@@ -1,6 +1,6 @@
 {
   "name": "@angelguerra/web",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Ángel Guerra's personal webpage",
   "homepage": "https://github.com/AngelGuerra/angelguerra-me-astro",
   "bugs": {
@@ -21,11 +21,13 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build --verbose",
+    "build": "astro build",
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "0.25.4",
+    "@astrojs/sitemap": "^0.1.0",
+    "@astrojs/tailwind": "^0.1.0",
+    "astro": "^1.0.0-beta.2",
     "autoprefixer": "^10.4.4",
     "postcss": "^8.4.12",
     "prettier-plugin-astro": "^0.0.12",

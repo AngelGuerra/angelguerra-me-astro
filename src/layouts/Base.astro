@@ -9,7 +9,7 @@ export interface Props {
 }
 
 const { title, description, robots = "index,follow" } = Astro.props;
-const currentUrl = Astro.request.canonicalURL;
+const currentUrl = Astro.canonicalURL;
 const image = `${Astro.site.toString()}assets/logo-social-1200x630.jpg`;
 const astroVersion = packages["node_modules/astro"].version;
 const tailwindVersion = packages["node_modules/tailwindcss"].version;
