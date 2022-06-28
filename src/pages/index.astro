@@ -13,104 +13,56 @@ import TwitterIcon from "component:icons/simpleicons/twitter";
 import LichessIcon from "component:icons/simpleicons/lichess";
 ---
 
-<BaseLayout
-  title="Desarrollador y ninja"
-  description="Padre de tres, pareja, deportista, ninja y programador Full Stack en continuo aprendizaje"
->
-  <section
-    class="relative grow p-4 flex items-center justify-center bg-emerald-200"
-  >
+<BaseLayout title="Desarrollador y ninja"
+  description="Padre de tres, pareja, deportista, ninja y programador Full Stack en continuo aprendizaje">
+  <section class="relative grow p-4 flex items-center justify-center bg-emerald-200">
     <section
-      class="relative bg-white max-w-lg p-4 border-4 border-black transition-shadow shadow-square-left hover:shadow-square-right z-10"
-    >
+      class="relative bg-white max-w-lg p-4 border-4 border-black transition-shadow shadow-square-left hover:shadow-square-right z-10">
       <span class="block">{"{"}</span>
-      <JsonText title="main-branch"
-        ><h1 class="inline-block">Ángel Guerra</h1></JsonText
-      >
-      <JsonText title="merged-branch"
-        ><ExternalLink
-          href="https://www.instagram.com/regazofotografia/"
-          title="Instagram de Regazo Fotografía"
-          text="@regazofotografia"
-        /></JsonText
-      >
+      <JsonText title="main-branch">
+        <h1 class="inline-block">Ángel Guerra</h1>
+      </JsonText>
+      <JsonText title="merged-branch">
+        <ExternalLink href="https://www.instagram.com/regazofotografia/" title="Instagram de Regazo Fotografía"
+          text="@regazofotografia" />
+      </JsonText>
       <JsonNumber title="forks" value="3" />
       <JsonString title="pronouns" value="He/Him" />
       <JsonString title="role" value="Desarrollador FullStack" />
-      <JsonArray
-        title="hobbies"
-        values={["Ninjutsu", "Kick Boxing", "Anime", "Ajedrez"]}
-      />
-      <JsonText title="bio" last={true}
-        >Desarrollador afincado en Cantabria, actualmente trabajo en
-        <ExternalLink
-          href="https://iteisa.com/"
-          title="Página web de ITEISA"
-          css="text-[#af1685]"
-          text="ITEISA"
-        />
+      <JsonArray title="hobbies" values={["Ninjutsu", "Kick Boxing" , "Anime" , "Ajedrez" ]} />
+      <JsonText title="bio" last={true}>Desarrollador afincado en Cantabria, actualmente trabajo en
+        <ExternalLink href="https://iteisa.com/" title="Página web de ITEISA" css="text-[#af1685]" text="ITEISA" />
         donde utilizo sobretodo <strong>CakePHP</strong> y
         <strong>React</strong> como principales herramientas de desarrollo. Me considero
         una persona inquieta en cuanto al mundo de la programación se refiere así
         que, casi siempre, estoy probando cosas nuevas o cacharreando con alguna
-        tecnología que surja.</JsonText
-      >
+        tecnología que surja.
+      </JsonText>
       <span class="block">{"}"}</span>
 
       <div class="flex flex-row justify-between items-center mt-6 pt-6 border-t-4 border-t-black">
         <div>
-          <a
-            href="https://es.linkedin.com/in/angel-guerra-revilla"
-            target="_blank"
-            rel="noopener"
-            title="Mi perfil en LinkedIn"
-          >
-            <span
-              class="sr-only underline underline-offset-2 decoration-wavy hover:decoration-rose-900"
-              >LinkedIn</span
-            >
+          <a href="https://es.linkedin.com/in/angel-guerra-revilla" target="_blank" rel="noopener"
+            title="Mi perfil en LinkedIn">
+            <span class="sr-only underline underline-offset-2 decoration-wavy hover:decoration-rose-900">LinkedIn</span>
             <LinkedInIcon css="h-12 w-12 transition-all hover:scale-105" />
           </a>
         </div>
         <div>
-          <a
-            href="https://twitter.com/angellguerra"
-            target="_blank"
-            rel="noopener"
-            title="Mi perfil en Twitter"
-          >
-            <span
-              class="sr-only underline underline-offset-2 decoration-wavy hover:decoration-rose-900"
-              >Twitter</span
-            >
+          <a href="https://twitter.com/angellguerra" target="_blank" rel="noopener" title="Mi perfil en Twitter">
+            <span class="sr-only underline underline-offset-2 decoration-wavy hover:decoration-rose-900">Twitter</span>
             <TwitterIcon css="h-12 w-12 transition-all hover:scale-105" />
           </a>
         </div>
         <div>
-          <a
-            href="https://github.com/AngelGuerra"
-            target="_blank"
-            rel="noopener"
-            title="Mi perfil en Github"
-          >
-            <span
-              class="sr-only underline underline-offset-2 decoration-wavy hover:decoration-rose-900"
-              >Github</span
-            >
+          <a href="https://github.com/AngelGuerra" target="_blank" rel="noopener" title="Mi perfil en Github">
+            <span class="sr-only underline underline-offset-2 decoration-wavy hover:decoration-rose-900">Github</span>
             <GithubIcon css="h-12 w-12 transition-all hover:scale-105" />
           </a>
         </div>
         <div>
-          <a
-            href="https://lichess.org/@/AngelGuerra"
-            target="_blank"
-            rel="noopener"
-            title="Mi perfil en Lichess"
-          >
-            <span
-              class="sr-only underline underline-offset-2 decoration-wavy hover:decoration-rose-900"
-              >Lichess</span
-            >
+          <a href="https://lichess.org/@/AngelGuerra" target="_blank" rel="noopener" title="Mi perfil en Lichess">
+            <span class="sr-only underline underline-offset-2 decoration-wavy hover:decoration-rose-900">Lichess</span>
             <LichessIcon css="h-12 w-12 transition-all hover:scale-105" />
           </a>
         </div>

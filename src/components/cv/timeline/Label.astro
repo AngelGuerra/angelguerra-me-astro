@@ -7,4 +7,5 @@ export interface Props {
 const { css, text } = Astro.props;
 ---
 
-<span class={`text-sm shadow-square-left border px-3 py-1 ${css}`}>{text}</span>
+<span class={`text-sm shadow-square-left border px-3 py-1 ${css} print:shadow-none print:text-xs print:pr-1
+  print:before:content-['#'] print:text-black print:border-0 print:bg-slate-100`}>{text}</span>

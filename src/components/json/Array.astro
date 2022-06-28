@@ -11,11 +11,11 @@ const { title, values, last = false } = Astro.props;
 <span class="block ml-4">
   <span class="text-rose-800">"{title}"</span>: [
   {values.map((value: string, idx: number) => {
-    return (
-      <span class="ml-4 block text-stone-600">
-        "{value}"{values.length !== idx + 1 && ","}
-      </span>
-    );
+  return (
+  <span class="ml-4 block text-stone-600">
+    "{value}"{values.length !== idx + 1 && ","}
+  </span>
+  );
   })}
   ]{!last && ","}
 </span>
