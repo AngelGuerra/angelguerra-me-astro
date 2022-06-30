@@ -25,9 +25,9 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "@astrojs/sitemap": "^0.2.2",
-    "@astrojs/tailwind": "^0.2.1",
-    "astro": "^1.0.0-beta.57",
+    "@astrojs/sitemap": "^0.2.3",
+    "@astrojs/tailwind": "^0.2.2",
+    "astro": "^1.0.0-beta.59",
     "autoprefixer": "^10.4.7",
     "postcss": "^8.4.14",
     "prettier-plugin-astro": "^0.1.1",

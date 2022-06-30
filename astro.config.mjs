@@ -13,5 +13,10 @@ import tailwind from "@astrojs/tailwind";
 // @ts-check
 export default defineConfig({
   site: "https://angelguerra.me",
-  integrations: [sitemap(), tailwind()],
+  integrations: [
+    sitemap({
+      filter: (page) => page !== "https://angelguerra.me/no-cookies",
+    }),
+    tailwind(),
+  ],
 });
