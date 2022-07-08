@@ -2,6 +2,9 @@
 import "../assets/styles/global.pcss";
 import { packages } from "../../package-lock.json";
 
+import ExternalLink from "component:ExternalLink";
+import AstroIcon from "component:icons/simpleicons/astro";
+
 export interface Props {
   title: string;
   description: string;
@@ -117,8 +120,11 @@ const ldJson = JSON.stringify({
         <a href="/no-cookies" title="Política de NO cookies" class="underline">Política de NO cookies</a>
       </p>
       <p class="text-center tracking-wide mb-2">
-        Construido con <a href="https://astro.build/" target="_blank" rel="noopener" title="Página web de Astro"
-          class="underline underline-offset-2 decoration-wavy hover:decoration-rose-900">Astro</a> 🚀 desde Cantabria 🌲
+        Construido con
+        <ExternalLink href="https://astro.build/" text="Astro" title="Página web de Astro" rel="external" />
+        <AstroIcon /> desde
+        <ExternalLink href="https://turismodecantabria.com/" text="Cantabria" title="Portal de turismo de Cantabria"
+          rel="external noreferrer" /> 🌲
       </p>
       <div class="text-center text-xs flex flex-col gap-1">
         <span class="text-indigo-800" title="Página sin Javascript">#ZeroJS #NoJavascript</span>

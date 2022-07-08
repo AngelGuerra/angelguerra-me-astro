@@ -4,10 +4,11 @@ export interface Props {
   text: string;
   title: string;
   css?: string;
+  rel?: string;
 }
 
-const { href, text, title, css = "" } = Astro.props;
+const { href, text, title, rel = "", css = "" } = Astro.props;
 ---
 
-<a {href} target="_blank" rel="noopener" {title} class={`underline underline-offset-2 decoration-wavy
+<a {href} target="_blank" rel={`noopener ${rel}`.trim()} {title} class={`underline underline-offset-2 decoration-wavy
   hover:decoration-rose-900 ${css} print:no-underline print:font-bold`.trim()}>{text}</a>

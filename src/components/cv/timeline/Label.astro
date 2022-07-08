@@ -1,10 +1,10 @@
 ---
 export interface Props {
-  css: string;
   text: string;
+  css?: string;
 }
 
-const { css, text } = Astro.props;
+const { css = '', text } = Astro.props;
 ---
 
 <span class={`text-sm shadow-square-left border px-3 py-1 ${css} print:shadow-none print:text-xs print:pr-1
