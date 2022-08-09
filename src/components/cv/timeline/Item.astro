@@ -1,7 +1,7 @@
 ---
 export interface Props {
   title: string;
-  labels: Array<LabelProp>;
+  labels: Array<ILabelProp>;
   academic?: boolean;
   current?: boolean;
   last?: boolean;
@@ -11,7 +11,7 @@ import Label from "component:cv/timeline/Label";
 import BriefcaseIcon from "component:icons/heroicons/briefcase";
 import AcademicCapIcon from "component:icons/heroicons/academic-cap";
 
-interface LabelProp {
+interface ILabelProp {
   css: string;
   text: string;
 }
@@ -55,7 +55,7 @@ const {
       <div class="mb-0 p-10 print:p-0">
         <slot />
         <div class="flex flex-wrap gap-4 items-end justify-end print:gap-1">
-          {labels.map((label: LabelProp) => (<Label css={label.css} text={label.text} />))}
+          {labels.map((label: ILabelProp) => (<Label css={label.css} text={label.text} />))}
         </div>
       </div>
     </div>

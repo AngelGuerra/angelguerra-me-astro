@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "types": ["@astrojs/image/client"],
     "paths": {
       "asset:*": ["src/assets/*"],
       "component:*": ["src/components/*.astro"],

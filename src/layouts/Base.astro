@@ -12,12 +12,12 @@ export interface Props {
 }
 
 const { title, description, robots = "index,follow" } = Astro.props;
-const currentUrl = Astro.url;
-const image = `${Astro.site.toString()}assets/logo-social-1200x630.jpg`;
-const astroVersion = packages["node_modules/astro"].version;
-const tailwindVersion = packages["node_modules/tailwindcss"].version;
+const currentUrl: URL = Astro.url;
+const image: string = `${Astro.site.toString()}assets/logo-social-1200x630.jpg`;
+const astroVersion: string = packages["node_modules/astro"].version;
+const tailwindVersion: string = packages["node_modules/tailwindcss"].version;
 
-const ldJson = JSON.stringify({
+const ldJson: string = JSON.stringify({
   "@context": "http://www.schema.org",
   "@type": "Person",
   name: "Ángel Guerra",

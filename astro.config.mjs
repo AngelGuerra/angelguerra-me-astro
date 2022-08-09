@@ -1,5 +1,6 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
+import image from "@astrojs/image";
 import tailwind from "@astrojs/tailwind";
 
 // Full Astro Configuration API Documentation:
@@ -17,6 +18,7 @@ export default defineConfig({
     sitemap({
       filter: (page) => page !== "https://angelguerra.me/no-cookies",
     }),
+    image(),
     tailwind(),
   ],
 });
