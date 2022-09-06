@@ -6,15 +6,23 @@ import JsonNumber from "component:json/Number";
 import JsonString from "component:json/String";
 ---
 
-<BaseLayout title="Política de NO cookies" description="La política de cookies es... que no hay cookies :-)"
-  robots="noindex,nofollow">
+<BaseLayout
+  title="Política de NO cookies"
+  description="La política de cookies es... que no hay cookies :-)"
+  robots="noindex,nofollow"
+>
   <section class="grow p-4 flex items-center justify-center bg-indigo-200">
     <section
-      class="bg-white max-w-lg p-4 border-4 border-black transition-shadow shadow-square-left hover:shadow-square-right">
+      class="bg-white max-w-lg p-4 border-4 border-black transition-shadow shadow-square-left hover:shadow-square-right"
+    >
       <span class="block">{"{"}</span>
       <JsonBool title="cookies" value="false" />
       <JsonNumber title="status" value="404" />
-      <JsonString title="reason" value="Esta página web no utiliza cookies, me acaba de entrar hambre..." last={true} />
+      <JsonString
+        title="reason"
+        value="Esta página web no utiliza cookies, me acaba de entrar hambre..."
+        last={true}
+      />
       <span class="block">{"}"}</span>
     </section>
   </section>

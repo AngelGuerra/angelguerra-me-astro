@@ -1,6 +1,6 @@
 ---
-import { ImageMetadata } from '@astrojs/image';
-import { Picture } from '@astrojs/image/components';
+import { ImageMetadata, OutputFormat } from "@astrojs/image";
+import { Picture } from "@astrojs/image/components";
 import ExternalLink from "component:ExternalLink";
 
 export interface Props {
@@ -15,31 +15,55 @@ export interface Props {
 interface IPicture {
   widths: number[];
   sizes: string;
-  formats: string[];
+  formats: OutputFormat[];
 }
 
 const PICTURE_CONFIG: IPicture = {
   widths: [632, 368, 496, 624, 364],
-  sizes: "(min-width: 640px) 632px, (min-width: 768px) 368px, (min-width: 1024px) 496px, (min-width: 1280px) 624px, (min-width: 1536px) 364px, 632px",
-  formats: ['avif', 'webp', 'jpeg', 'png']
+  sizes:
+    "(min-width: 640px) 632px, (min-width: 768px) 368px, (min-width: 1024px) 496px, (min-width: 1280px) 624px, (min-width: 1536px) 364px, 632px",
+  formats: ["avif", "webp", "png"],
 };
 
 const { title, src, alt, web, github, css = "" } = Astro.props;
 ---
 
 <section
-  class="bg-white border-4 border-black h-full flex flex-col transition-shadow shadow-square-left hover:shadow-square-right print:shadow-none print:hover:shadow-none print:border">
-  <p class={`p-4 text-xl text-center border-b border-black font-bold ${css} 2xl:text-base print:text-base print:p-2`}>
+  class="bg-white border-4 border-black h-full flex flex-col transition-shadow shadow-square-left hover:shadow-square-right print:shadow-none print:hover:shadow-none print:border"
+>
+  <p
+    class={`p-4 text-xl text-center border-b border-black font-bold ${css} 2xl:text-base print:text-base print:p-2`}
+  >
     {title}
   </p>
-  <Picture {src} {alt} widths={PICTURE_CONFIG.widths} sizes={PICTURE_CONFIG.sizes} formats={PICTURE_CONFIG.formats}
-    loading="lazy" decoding="async" class="print:hidden" />
+  <Picture
+    src={src}
+    alt={alt}
+    widths={PICTURE_CONFIG.widths}
+    sizes={PICTURE_CONFIG.sizes}
+    formats={PICTURE_CONFIG.formats}
+    loading="lazy"
+    decoding="async"
+    class="print:hidden"
+    aspectRatio="158:109"
+  />
   <div class="p-4">
     <slot />
   </div>
-  <div class="mt-auto text-center p-4 border-t border-black flex flex-wrap items-center justify-around print:hidden">
-    <ExternalLink href={web} title="Ir a la página web" css={`underline font-bold ${css}`.trim()} text="Web" />
-    <ExternalLink href={github} title="Repositorio con el código" css={`underline font-bold ${css}`.trim()}
-      text="GitHub" />
+  <div
+    class="mt-auto text-center p-4 border-t border-black flex flex-wrap items-center justify-around print:hidden"
+  >
+    <ExternalLink
+      href={web}
+      title="Ir a la página web"
+      css={`underline font-bold ${css}`.trim()}
+      text="Web"
+    />
+    <ExternalLink
+      href={github}
+      title="Repositorio con el código"
+      css={`underline font-bold ${css}`.trim()}
+      text="GitHub"
+    />
   </div>
 </section>

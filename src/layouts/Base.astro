@@ -43,96 +43,127 @@ const ldJson: string = JSON.stringify({
 ---
 
 <html lang="es">
-
-<head>
-  <title>{title} | Ángel Guerra</title>
-  <meta name="description" content={description} />
-  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta charset="UTF-8" />
-  <meta name="robots" content={robots} />
-  <meta name="author" content="Ángel Guerra" />
-  <meta name="generator" content={`Astro ${astroVersion}`} />
-
-  <!-- FAVICON -->
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#212121" />
-
-  <!-- MANIFEST -->
-  <link rel="manifest" href="/site.webmanifest" />
-
-  <!-- OTHER -->
-  <meta name="apple-mobile-web-app-title" content="Ángel Guerra" />
-  <meta name="application-name" content="Ángel Guerra" />
-  <meta name="msapplication-TileColor" content="#ffffff" />
-  <meta name="theme-color" content="#ffffff" />
-
-  <!-- TWITTER -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Ángel Guerra" />
-  <meta name="twitter:description" content={description} />
-  <meta name="twitter:url" content={currentUrl} />
-  <meta name="twitter:image" content={image} />
-  <meta name="twitter:site" content="@angellguerra" />
-  <meta name="twitter:author" content="@angellguerra" />
-
-  <!-- OPEN GRAPH -->
-  <meta property="og:type" content="profile" />
-  <meta property="og:site_name" content="Ángel Guerra" />
-  <meta property="og:title" content={title} />
-  <meta property="og:description" content={description} />
-  <meta property="og:url" content={currentUrl} />
-  <meta property="og:locale" content="es" />
-  <meta property="og:image" content={image} />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="profile:first_name" content="Ángel" />
-  <meta property="profile:last_name" content="Guerra" />
-
-  <!-- SCHEMA -->
-  <Fragment set:html={`<script type="application/ld+json">${ldJson}</script>`}
+  <head>
+    <title>{title} | Ángel Guerra</title>
+    <meta name="description" content={description} />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1.0"
     />
-</head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="UTF-8" />
+    <meta name="robots" content={robots} />
+    <meta name="author" content="Ángel Guerra" />
+    <meta name="generator" content={`Astro ${astroVersion}`} />
 
-<body class="flex flex-col min-h-screen">
-  <header class="border-b-4 border-black print:hidden">
-    <nav class="container flex flex-row justify-between py-4 px-6 bg-white w-full mx-auto">
-      <div>
-        <a href="/" class="text-2xl no-underline text-grey-darkest hover:text-blue-dark" rel="home">Ángel Guerra</a>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#212121" />
+
+    <!-- MANIFEST -->
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- OTHER -->
+    <meta name="apple-mobile-web-app-title" content="Ángel Guerra" />
+    <meta name="application-name" content="Ángel Guerra" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- TWITTER -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ángel Guerra" />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:url" content={currentUrl} />
+    <meta name="twitter:image" content={image} />
+    <meta name="twitter:site" content="@angellguerra" />
+    <meta name="twitter:author" content="@angellguerra" />
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="Ángel Guerra" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={currentUrl} />
+    <meta property="og:locale" content="es" />
+    <meta property="og:image" content={image} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="profile:first_name" content="Ángel" />
+    <meta property="profile:last_name" content="Guerra" />
+
+    <!-- SCHEMA -->
+    <Fragment
+      set:html={`<script type="application/ld+json">${ldJson}</script>`}
+    />
+  </head>
+
+  <body class="flex flex-col min-h-screen">
+    <header class="border-b-4 border-black print:hidden">
+      <nav
+        class="container flex flex-row justify-between py-4 px-6 bg-white w-full mx-auto"
+      >
+        <div>
+          <a
+            href="/"
+            class="text-2xl no-underline text-grey-darkest hover:text-blue-dark"
+            rel="home">Ángel Guerra</a
+          >
+        </div>
+        <div>
+          <a
+            href="/cv"
+            class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2"
+            >/cv</a
+          >
+          <a
+            href="/uses"
+            class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2"
+            >/uses</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main
+      class="relative flex-1 flex flex-col flex-wrap items-stretch justify-start"
+    >
+      <slot />
+    </main>
+
+    <footer class="border-t-4 border-black py-8 bg-white print:hidden">
+      <div class="container mx-auto">
+        <p class="text-center text-xs mb-2">
+          <a href="/no-cookies" title="Política de NO cookies" class="underline"
+            >Política de NO cookies</a
+          >
+        </p>
+        <p class="text-center tracking-wide mb-2">
+          Construido con
+          <ExternalLink
+            href="https://astro.build/"
+            text="Astro"
+            title="Página web de Astro"
+            rel="external"
+          />
+          <AstroIcon /> desde
+          <ExternalLink
+            href="https://turismodecantabria.com/"
+            text="Cantabria"
+            title="Portal de turismo de Cantabria"
+            rel="external noreferrer"
+          /> 🌲
+        </p>
+        <div class="text-center text-xs flex flex-col gap-1">
+          <span class="text-indigo-800" title="Página sin Javascript"
+            >#ZeroJS #NoJavascript</span
+          >
+          <span class="text-[#514375]">#Astro-{astroVersion}</span>
+          <span class="text-sky-700">#TailwindCSS-{tailwindVersion}</span>
+        </div>
       </div>
-      <div>
-        <a href="/cv" class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">/cv</a>
-        <a href="/uses" class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">/uses</a>
-      </div>
-    </nav>
-  </header>
-
-  <main class="relative flex-1 flex flex-col flex-wrap items-stretch justify-start">
-    <slot />
-  </main>
-
-  <footer class="border-t-4 border-black py-8 bg-white print:hidden">
-    <div class="container mx-auto">
-      <p class="text-center text-xs mb-2">
-        <a href="/no-cookies" title="Política de NO cookies" class="underline">Política de NO cookies</a>
-      </p>
-      <p class="text-center tracking-wide mb-2">
-        Construido con
-        <ExternalLink href="https://astro.build/" text="Astro" title="Página web de Astro" rel="external" />
-        <AstroIcon /> desde
-        <ExternalLink href="https://turismodecantabria.com/" text="Cantabria" title="Portal de turismo de Cantabria"
-          rel="external noreferrer" /> 🌲
-      </p>
-      <div class="text-center text-xs flex flex-col gap-1">
-        <span class="text-indigo-800" title="Página sin Javascript">#ZeroJS #NoJavascript</span>
-        <span class="text-[#514375]">#Astro-{astroVersion}</span>
-        <span class="text-sky-700">#TailwindCSS-{tailwindVersion}</span>
-      </div>
-    </div>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>

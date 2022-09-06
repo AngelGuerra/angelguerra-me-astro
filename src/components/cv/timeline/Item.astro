@@ -25,37 +25,52 @@ const {
 } = Astro.props;
 ---
 
-<div class={`relative flex break-inside-avoid print:before:hidden ${ last ? ""
-  : "before:bg-black before:content-[''] before:h-full before:left-[1.125rem] before:absolute before:top-5 before:w-1"
-  }`.trim()}>
+<div
+  class={`relative flex break-inside-avoid print:before:hidden ${
+    last
+      ? ""
+      : "before:bg-black before:content-[''] before:h-full before:left-[1.125rem] before:absolute before:top-5 before:w-1"
+  }`.trim()}
+>
   <div class="z-10 print:hidden">
-    <span class="mt-5 w-10 h-10 flex justify-center items-center border border-black rounded-full text-black bg-white">
-      {academic ?
-      <AcademicCapIcon /> :
-      <BriefcaseIcon />}
+    <span
+      class="mt-5 w-10 h-10 flex justify-center items-center border border-black rounded-full text-black bg-white"
+    >
+      {academic ? <AcademicCapIcon /> : <BriefcaseIcon />}
     </span>
   </div>
   <div class="flex-1 pl-4 print:pl-0">
     <div
-      class="relative mb-10 overflow-auto bg-white border-4 border-black shadow-square-left transition-shadow hover:shadow-square-right print:border-0 print:shadow-none print:hover:shadow-none">
+      class="relative mb-10 overflow-auto bg-white border-4 border-black shadow-square-left transition-shadow hover:shadow-square-right print:border-0 print:shadow-none print:hover:shadow-none"
+    >
       <div class="border-b border-black py-5 px-10 print:p-0 print:border-0">
         <div class="flex flex-wrap m-0 p-0 gap-4 justify-between items-center">
-          <p class={`text-xl print:text-base print:before:mr-2 ${ academic ? "print:before:content-['🧑‍🎓']"
-            : "print:before:content-['👨‍💻']" }`}>
+          <p
+            class={`text-xl print:text-base print:before:mr-2 ${
+              academic
+                ? "print:before:content-['🧑‍🎓']"
+                : "print:before:content-['👨‍💻']"
+            }`}
+          >
             {title}
           </p>
-          {current && (
-          <span
-            class="border border-emerald-900 bg-emerald-700 px-3 py-1 text-sm uppercase tracking-wider text-white print:bg-white print:border-0 print:text-black print:text-base">
-            Actualmente
-          </span>
-          )}
+          {
+            current && (
+              <span class="border border-emerald-900 bg-emerald-700 px-3 py-1 text-sm uppercase tracking-wider text-white print:border-0 print:bg-white print:text-base print:text-black">
+                Actualmente
+              </span>
+            )
+          }
         </div>
       </div>
       <div class="mb-0 p-10 print:p-0">
         <slot />
         <div class="flex flex-wrap gap-4 items-end justify-end print:gap-1">
-          {labels.map((label: ILabelProp) => (<Label css={label.css} text={label.text} />))}
+          {
+            labels.map((label: ILabelProp) => (
+              <Label css={label.css} text={label.text} />
+            ))
+          }
         </div>
       </div>
     </div>
