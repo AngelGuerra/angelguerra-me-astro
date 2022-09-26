@@ -1,2 +1,5 @@
 User-agent: *
 Disallow:
+Disallow: /herir-al-ser-humano
+Disallow: /ignorar-las-ordenes-del-ser-humano
+Disallow: /herirse-a-uno-mismo

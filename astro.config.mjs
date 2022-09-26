@@ -3,6 +3,19 @@ import sitemap from "@astrojs/sitemap";
 import image from "@astrojs/image";
 import tailwind from "@astrojs/tailwind";
 
+/**
+ * @description Determina si la página debe aparecer en el sitemap o no.
+ * @param {string} page Página que se recibe del filter-sitemap.
+ */
+const isExcludedInSitemap = (page) => {
+  return [
+    "https://angelguerra.me/no-cookies/",
+    "https://angelguerra.me/herir-al-ser-humano/",
+    "https://angelguerra.me/ignorar-las-ordenes-del-ser-humano/",
+    "https://angelguerra.me/herirse-a-uno-mismo/",
+  ].includes(page);
+};
+
 // Full Astro Configuration API Documentation:
 // https://docs.astro.build/reference/configuration-reference
 
@@ -15,9 +28,7 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   site: "https://angelguerra.me",
   integrations: [
-    sitemap({
-      filter: (page) => page !== "https://angelguerra.me/no-cookies",
-    }),
+    sitemap({ filter: (page) => !isExcludedInSitemap(page) }),
     image(),
     tailwind(),
   ],

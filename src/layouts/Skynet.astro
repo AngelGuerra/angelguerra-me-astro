@@ -1,20 +1,12 @@
 ---
-import { packages } from "../../package-lock.json";
-
-import ExternalLink from "component:ExternalLink";
-import AstroIcon from "component:icons/official/astro";
-
 export interface Props {
   title: string;
   description: string;
-  robots?: string;
 }
 
-const { title, description, robots = "index,follow" } = Astro.props;
+const { title, description } = Astro.props;
 const currentUrl: URL = Astro.url;
-const image: string = `${Astro.site.toString()}assets/logo-social-1200x630.jpg`;
-const astroVersion: string = packages["node_modules/astro"].version;
-const tailwindVersion: string = packages["node_modules/tailwindcss"].version;
+const image: string = `${Astro.site.toString()}assets/img-rrss-robots-1200x630.jpg`;
 
 const ldJson: string = JSON.stringify({
   "@context": "http://www.schema.org",
@@ -51,7 +43,7 @@ const ldJson: string = JSON.stringify({
     />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta charset="UTF-8" />
-    <meta name="robots" content={robots} />
+    <meta name="robots" content="noindex,nofollow" />
     <meta name="author" content="Ángel Guerra" />
     <meta name="generator" content={Astro.generator} />
 
@@ -99,84 +91,15 @@ const ldJson: string = JSON.stringify({
     />
 
     <style>
-      ::-webkit-scrollbar {
-        @apply w-2;
-      }
-
-      ::-webkit-scrollbar-track {
-        @apply bg-gray-400;
-      }
-
-      ::-webkit-scrollbar-thumb {
-        @apply bg-emerald-600 hover:bg-emerald-800;
+      body {
+        @apply flex min-h-screen flex-col items-center justify-center bg-zinc-900 before:absolute before:bottom-0 before:left-0 before:z-[-1] before:h-full before:w-full before:bg-[url("/assets/terminator.png")] before:bg-left-bottom before:bg-no-repeat before:brightness-[0.3] before:content-[''];
       }
     </style>
   </head>
 
-  <body class="flex flex-col min-h-screen">
-    <header class="border-b-4 border-black print:hidden">
-      <nav
-        class="container flex flex-row justify-between py-4 px-6 bg-white w-full mx-auto"
-      >
-        <div>
-          <a
-            href="/"
-            class="text-2xl no-underline text-grey-darkest hover:text-blue-dark"
-            rel="home">Ángel Guerra</a
-          >
-        </div>
-        <div>
-          <a
-            href="/cv"
-            class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2"
-            >/cv</a
-          >
-          <a
-            href="/uses"
-            class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2"
-            >/uses</a
-          >
-        </div>
-      </nav>
-    </header>
-
-    <main
-      class="relative flex-1 flex flex-col flex-wrap items-stretch justify-start"
-    >
+  <body>
+    <main>
       <slot />
     </main>
-
-    <footer class="border-t-4 border-black py-8 bg-white print:hidden">
-      <div class="container mx-auto">
-        <p class="text-center text-xs mb-2">
-          <a href="/no-cookies" title="Política de NO cookies" class="underline"
-            >Política de NO cookies</a
-          >
-        </p>
-        <p class="text-center tracking-wide mb-2">
-          Construido con
-          <ExternalLink
-            href="https://astro.build/"
-            text="Astro"
-            title="Página web de Astro"
-            rel="external"
-          />
-          <AstroIcon /> desde
-          <ExternalLink
-            href="https://turismodecantabria.com/"
-            text="Cantabria"
-            title="Portal de turismo de Cantabria"
-            rel="external noreferrer"
-          /> 🌲
-        </p>
-        <div class="text-center text-xs flex flex-col gap-1">
-          <span class="text-indigo-800" title="Página sin Javascript"
-            >#ZeroJS #NoJavascript</span
-          >
-          <span class="text-[#514375]">#Astro-{astroVersion}</span>
-          <span class="text-sky-700">#TailwindCSS-{tailwindVersion}</span>
-        </div>
-      </div>
-    </footer>
   </body>
 </html>
