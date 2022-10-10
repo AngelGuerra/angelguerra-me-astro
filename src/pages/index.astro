@@ -11,6 +11,9 @@ import LinkedInIcon from "component:icons/simpleicons/linkedin";
 import GithubIcon from "component:icons/simpleicons/github";
 import TwitterIcon from "component:icons/simpleicons/twitter";
 import LichessIcon from "component:icons/simpleicons/lichess";
+
+import pumpkin from "asset:img/extra/halloween/pumpkin.svg";
+import ghost from "asset:img/extra/halloween/ghost.svg";
 ---
 
 <BaseLayout
@@ -18,7 +21,7 @@ import LichessIcon from "component:icons/simpleicons/lichess";
   description="Padre de tres, pareja, deportista, ninja y programador Full Stack en continuo aprendizaje"
 >
   <section
-    class="relative grow p-4 flex items-center justify-center bg-emerald-200"
+    class="relative grow p-4 flex items-center justify-center bg-[#FF9A00] overflow-hidden"
   >
     <section
       class="relative bg-white max-w-lg p-4 border-4 border-black transition-shadow shadow-square-left hover:shadow-square-right z-10"
@@ -117,5 +120,19 @@ import LichessIcon from "component:icons/simpleicons/lichess";
         </div>
       </div>
     </section>
+
+    <figure
+      class="boo absolute top-1/2 left-1/2 w-40 -z-1 transition-all opacity-0"
+    >
+      <figcaption class="d-block text-center text-2xl font-bold italic">¡BooOOoO!</figcaption>
+      <img src={ghost} alt="" class="" loading="lazy" decoding="async" />
+    </figure>
+    <img src={pumpkin} alt="" class="absolute -bottom-20 -left-8 w-96" />
   </section>
 </BaseLayout>
+
+<style>
+  section > section:hover + .boo {
+    @apply left-2/3 opacity-100;
+  }
+</style>

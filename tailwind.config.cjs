@@ -6,13 +6,6 @@ module.exports = {
   theme: {
     extend: {
       keyframes: {
-        eye: {
-          "0%": { backgroundColor: "#660000", transform: "scale(1)" },
-          "20%": { transform: "scale(0.25)" },
-          "60%": { transform: "scale(0.5)" },
-          "100%": { backgroundColor: "#660000" },
-        },
-
         "glitch-skew": {
           "0%, 60%": { transform: "skew(1deg)" },
           "10%, 100%": { transform: "skew(-3deg)" },
@@ -199,7 +192,6 @@ module.exports = {
         },
       },
       animation: {
-        eye: "eye 10s infinite alternate cubic-bezier(0.17, 0.67, 0.83, 0.67)",
         "glitch-skew": "glitch-skew 1s infinite linear alternate-reverse",
         "glitch-anim": "glitch-anim 5s infinite linear alternate-reverse",
         "glitch-anim-2": "glitch-anim-2 1s infinite linear alternate-reverse",
