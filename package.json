@@ -28,13 +28,13 @@
   "devDependencies": {
     "@astrojs/image": "^0.10.0",
     "@astrojs/sitemap": "^1.0.0",
-    "@astrojs/tailwind": "^2.1.0",
-    "astro": "^1.5.0",
+    "@astrojs/tailwind": "^2.1.1",
+    "astro": "^1.5.2",
     "autoprefixer": "^10.4.12",
     "postcss": "^8.4.18",
     "prettier": "^2.7.1",
-    "prettier-plugin-astro": "^0.5.5",
+    "prettier-plugin-astro": "^0.6.0",
     "prettier-plugin-tailwindcss": "^0.1.13",
-    "tailwindcss": "^3.1.8"
+    "tailwindcss": "^3.2.0"
   }
 }
