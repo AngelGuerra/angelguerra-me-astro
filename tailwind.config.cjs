@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        "very-peri": "#6667AB", // https://www.pantone.com/color-of-the-year-2022
+      },
       keyframes: {
         "glitch-skew": {
           "0%, 60%": { transform: "skew(1deg)" },
