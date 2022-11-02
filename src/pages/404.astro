@@ -1,0 +1,28 @@
+---
+import BaseLayout from "layout:Base";
+
+import JsonBool from "component:json/Bool";
+import JsonNumber from "component:json/Number";
+import JsonString from "component:json/String";
+---
+
+<BaseLayout
+  title="La página que buscas no existe"
+  description="¿He hecho algo mal?"
+  robots="noindex,nofollow"
+>
+  <section class="grow p-4 flex items-center justify-center bg-rose-900">
+    <section
+      class="bg-white max-w-lg p-4 border-4 border-black transition-shadow shadow-square-left hover:shadow-square-right"
+    >
+      <span class="block">{"{"}</span>
+      <JsonNumber title="status" value="404" />
+      <JsonString
+        title="reason"
+        value="La página que buscas no existe... a no ser que la página que estés buscando sea la 404, que en ese caso es ésta que ves. ¿Para qué buscas estas cosas raras?"
+        last={true}
+      />
+      <span class="block">{"}"}</span>
+    </section>
+  </section>
+</BaseLayout>
