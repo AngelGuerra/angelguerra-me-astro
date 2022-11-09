@@ -26,15 +26,15 @@
     "prettier": "prettier --write ./src"
   },
   "devDependencies": {
-    "@astrojs/image": "^0.11.1",
+    "@astrojs/image": "^0.11.2",
     "@astrojs/sitemap": "^1.0.0",
     "@astrojs/tailwind": "^2.1.2",
-    "astro": "^1.6.3",
+    "astro": "^1.6.5",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.18",
     "prettier": "^2.7.1",
     "prettier-plugin-astro": "^0.7.0",
     "prettier-plugin-tailwindcss": "^0.1.13",
-    "tailwindcss": "^3.2.1"
+    "tailwindcss": "^3.2.2"
   }
 }
