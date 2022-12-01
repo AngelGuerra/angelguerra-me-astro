@@ -5,667 +5,857 @@ import ExternalLink from "component:ExternalLink";
 import Item from "component:cv/timeline/Item";
 import Label from "component:cv/timeline/Label";
 import Portfolio from "component:cv/Portfolio";
-import Printer from "component:icons/heroicons/printer";
 
-import bujinkanCantabria from "asset:img/screenshots/bujinkan-cantabria.png";
-import laBuenaLeche from "asset:img/screenshots/la-buena-leche.png";
-import regazoFotografia from "asset:img/screenshots/regazo-fotografia.png";
-import regazoDuelo from "asset:img/screenshots/regazo-fotografia-duelo-perinatal.png";
+import Printer from "component:icons/heroicons/printer";
+import HeartIcon from "component:icons/heroicons/heart";
+import LinkedInIcon from "component:icons/simpleicons/linkedin";
+import GithubIcon from "component:icons/simpleicons/github";
+import TwitterIcon from "component:icons/simpleicons/twitter";
+
 import imgCv from "asset:img/angel-guerra.svg";
+
+const site = Astro.site.toString();
 ---
 
 <BaseLayout
   title="Currículum"
   description="Experiencia a lo largo de mi vida profesional como desarrollador"
 >
-  <div class="p-4 bg-stone-100 h-full print:bg-white print:text-sm">
-    <section class="max-w-2xl mx-auto mb-8 print:w-full">
-      <h1 class="text-2xl text-center my-8 print:hidden">
-        /cv con mi experiencia laboral
-      </h1>
-      <p class="hidden text-2xl text-center my-8 print:block">
-        👋 ¡Hola! ¿Qué tal?
-      </p>
+  <section class="h-full p-4 print:bg-white print:text-sm">
+    <section class="container mx-auto mb-8 print:w-full">
+      <header class="mb-12">
+        <p class="mt-8 mb-2 text-center text-2xl">👋 ¡Hola! ¿Qué tal?</p>
+        <h1 class="mb-2 text-center text-xl print:hidden">
+          Te doy la bienvenida a mi currículum
+        </h1>
+        <p class="text-center text-base print:hidden">
+          ¿Mucho texto? <button
+            onclick="if (window.print) window.print()"
+            class="font-bold underline decoration-very-peri decoration-2 underline-offset-4 transition-all hover:decoration-neutral-700"
+          >
+            Prueba la versión impresa.
+          </button>
+        </p>
+      </header>
 
-      <div class="flex flex-nowrap items-start justify-start gap-4">
-        <div class="hidden basis-72 shrink-0 grow-0 print:block">
-          <figure class="border-0 mb-4">
+      <section
+        class="mb-16 flex flex-wrap items-start justify-start gap-4 print:flex-nowrap md:flex-nowrap"
+      >
+        <section
+          class="mb-6 print:block print:basis-2/5 md:sticky md:top-4 md:mb-0 md:shrink-0 md:grow-0 md:basis-1/3"
+        >
+          <figure class="mb-4 border-0">
             <img
               src={imgCv}
               alt="Dibujo de mi persona realizado por Dante"
               class="aspect-video border-0"
             />
-            <figcaption class="border-0">
+            <figcaption class="border-0 text-sm">
               Una imagen fidedigna de mí mismo realizada por mi hijo con 4 años.
             </figcaption>
           </figure>
           <p class="mb-2 font-bold">Sí, pero... ¿quién soy?</p>
-          <address class="mb-4">
-            Ángel Guerra<br />
-            Desarrollador Full Stack<br />
-            01/03/1990<br />
-            <a href="https://es.linkedin.com/in/angel-guerra-revilla"
-              >https://es.linkedin.com/in/angel-guerra-revilla</a
-            ><br />
-            <a href="https://twitter.com/angellguerra"
-              >https://twitter.com/angellguerra</a
-            ><br />
-            <a href="https://github.com/AngelGuerra"
-              >https://github.com/AngelGuerra</a
-            ><br /><br />
-            <Label text="PHP" />
-            <Label text="CakePHP" />
-            <Label text="JavaScript" />
-            <Label text="React" />
-          </address>
-
-          <p class="mb-2 font-bold">Y... ¿qué busco idealmente?</p>
-          <address>
-            Trabajar en el <em>backend</em><br />
-            Un buen equipo<br />
-            Una buena conciliación familiar<br />
-            Y un buen salario, claro 😄
-          </address>
-        </div>
-        <div>
-          <p class="mb-2">
-            Te doy la bienvenida a mi pequeño atlas del tiempo laboral. A lo
-            largo de estos años trabajando, he tenido la oportunidad de aprender
-            de muchas personas, de muchos ámbitos y de muchas tecnologías. Me
-            considero un poco "culo inquieto" en cuanto al mundo de la
-            tecnología se refiere y por ello siempre estoy intentando probar
-            cosas nuevas o actualizando cosas antiguas.
-          </p>
 
           <p class="mb-2">
-            Un resumen de mi experiencia <strong>más actual</strong> sería:
-            <span
-              class="bg-[#D33C44] text-white px-2 inline-block print:text-[#D33C44] print:font-bold print:px-0 print:bg-white print:underline"
-              >CakePHP</span
-            >
-            para el desarrollo en el <em>backend</em>, <span
-              class="bg-[#4479A1] text-white px-2 inline-block print:font-bold print:px-0 print:bg-white print:underline"
-              >MySQL</span
-            >
-            para las bases de datos, <span
-              class="bg-[#282C34] text-[#61DAFB] px-2 inline-block print:font-bold print:px-0 print:bg-white print:underline"
-              >React</span
-            >
-            para el desarrollo en el <em>frontend</em>, <span
-              class="bg-[#FCA121] text-white px-2 inline-block print:text-[#FCA121] print:font-bold print:px-0 print:bg-white print:underline"
-              >GitLab CI</span
-            >
-            para las integraciones continuas / <em>DevOps</em> y <span
-              class="bg-[#F1502F] text-white px-2 inline-block print:text-[#F1502F] print:font-bold print:px-0 print:bg-white print:underline"
-              >Git</span
-            >
-            para el control de versiones.
-          </p>
-
-          <p class="mb-2 print:mb-0">
-            Esto que he mencionado es con lo que más he trabajado en los últimos
-            años, pero no me importaría trabajar con otras librerías o
-            lenguajes. Lo que sí es cierto es que tengo una clara inclinación
-            por el
-            <em>backend</em> y es en lo que me gustaría centrar mi aprendizaje o
-            evolución como programador, además creo que se me da mejor que su contraparte.
-          </p>
-
-          <p class="mb-2 print:mb-0">
-            Por terminar de presentarme y que puedas hacerte una pequeña imagen
-            de mí, resumiría mis virtudes en la programación del <em>backend</em
-            >, en el compañerismo, en la versatilidad y en las ganas de aprender
-            y mis defectos - porque evidentemente los tengo - en el diseño y la
-            maquetación "Pixel-Perfect" entre posiblemente muchos otros pero que
-            si los enumero aquí no me estaría vendiendo bien 😂.
-          </p>
-
-          <p class="print:hidden">
-            De todas formas, aquí dejo un resumen de toda mi experiencia.
-            ¡Disfruta la lectura y estamos en contacto!
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="container mx-auto p-4">
-      <div>
-        <!-- ITEISA -->
-        <Item
-          title="Julio 2020"
-          current={true}
-          labels={[
-            {
-              css: "shadow-[#8892BF] border-[#4F5B93] bg-[#8892BF] text-white",
-              text: "PHP",
-            },
-            {
-              css: "shadow-[#D33C44] border-[#363637] bg-[#D33C44] text-white",
-              text: "CakePHP",
-            },
-            {
-              css: "shadow-[#F0DB4F] border-[#323330] bg-[#F0DB4F]",
-              text: "JavaScript",
-            },
-            {
-              css: "shadow-[#282C34] border-[#20232A] bg-[#282C34] text-[#61DAFB]",
-              text: "React",
-            },
-            {
-              css: "shadow-[#303846] border-[#20232A] bg-[#303846] text-[#09D3AC]",
-              text: "Create React App",
-            },
-            {
-              css: "shadow-[#111111] border-[#111111] text-[#111111]",
-              text: "NextJS",
-            },
-            {
-              css: "shadow-[#7026B9] border-[#232129] bg-[#7026B9] text-white",
-              text: "GatsbyJS",
-            },
-            {
-              css: "shadow-[#4479A1] border-[#E97B00] bg-[#4479A1] text-white",
-              text: "MySQL",
-            },
-            {
-              css: "shadow-[#222222] border-[#222222] bg-[#222222] text-white",
-              text: "11ty",
-            },
-            {
-              css: "shadow-[#157AFF] border-[#022044] bg-[#157AFF] text-white",
-              text: "Docker",
-            },
-            {
-              css: "shadow-[#F1502F] border-[#3E2C00] bg-[#F1502F] text-white",
-              text: "Git",
-            },
-            {
-              css: "shadow-[#FCA121] border-[#DB3B21] bg-[#FCA121] text-white",
-              text: "GitLab CI",
-            },
-          ]}
-        >
-          <p class="mb-4">
-            <ExternalLink
+            Más allá de la pregunta filosófica, mi nombre es <strong
+              >Ángel</strong
+            > y nací al inicio de la <ExternalLink
+              href="https://es.wikipedia.org/wiki/A%C3%B1os_1990"
+              title="Información en Wikipedia sobre los 90"
+              text="gran década de los 90"
+            />, actualmente soy desarrollador en <ExternalLink
               href="https://iteisa.com/"
               title="Página web de ITEISA"
-              css="underline text-[#af1685] font-bold"
+              css="text-[#af1685] decoration-[#af1685]"
               text="ITEISA"
-            />. Actualmente soy desarrollador
-            <em>Full-Stack</em>. Me encargo principalmente de los desarrollos a
-            medida de la empresa utilizando sobretodo <strong>CakePHP</strong> y
-            <strong>React</strong>. He realizado desde aplicaciones web, tanto
-            las APIs, los frontend, sus integraciones continuas... a páginas web
-            estáticas - como la propia de ITEISA - o web scrapers.
+            />, donde me ocupo, principalmente, de los desarrollos a medida.
+            Principalmente trabajo con React y CakePHP, pero como verás en este
+            currículum, he utilizado muchas herramientas distintas lo que me
+            dota de una gran versatilidad. <span class="print:hidden"
+              >Como curiosidad, soy fan del <ExternalLink
+                href="https://jamstack.org/"
+                title="Página web con información sobre el Jamstack"
+                css="text-[#e7017a] decoration-[#e7017a]"
+                text="Jamstack"
+              />, y me gusta estar cacharreando con los <abbr
+                title="Generadores de sitios estáticos">SSG</abbr
+              > que van surgiendo.</span
+            >
           </p>
-          <p class="mb-4">
-            También participo de manera activa en la planificación de los
-            proyectos, sustituyo a nuestro insustituible encargado de sistemas
-            cuando no está disponible, instruyo en cómo salir de <strong
-              >vim</strong
-            > a mis compañeros y compañeras...
-          </p>
-        </Item>
-        <!-- SPORT2FIT -->
-        <Item
-          title="Enero 2020 - Julio 2020"
-          labels={[
-            {
-              css: "shadow-[#8892BF] border-[#4F5B93] bg-[#8892BF] text-white",
-              text: "PHP",
-            },
-            {
-              css: "shadow-[#D33C44] border-[#363637] bg-[#D33C44] text-white",
-              text: "CakePHP",
-            },
-            {
-              css: "shadow-[#45494c] border-[#828d96] bg-[#45494c] text-white",
-              text: "phpBB",
-            },
-            {
-              css: "shadow-[#117AC9] border-[#003c56] bg-[#117AC9] text-white",
-              text: "WordPress",
-            },
-            {
-              css: "shadow-[#F0DB4F] border-[#323330] bg-[#F0DB4F]",
-              text: "JavaScript",
-            },
-            {
-              css: "shadow-[#0769ad] border-[#7acef4] bg-[#0769ad] text-white",
-              text: "JQuery",
-            },
-            {
-              css: "shadow-[#CC342D] border-[#9b1c16] bg-[#CC342D] text-white",
-              text: "Ruby",
-            },
-            {
-              css: "shadow-[#D30001] border-[#D30001] text-[#D30001]",
-              text: "Ruby On Rails",
-            },
-            {
-              css: "shadow-[#2b2b2b] border-[#333333] bg-[#2b2b2b] text-[#ffcc00]",
-              text: "Jekyll",
-            },
-            {
-              css: "shadow-[#4479A1] border-[#E97B00] bg-[#4479A1] text-white",
-              text: "MySQL",
-            },
-            {
-              css: "shadow-[#336791] border-[#336791] text-[#336791]",
-              text: "PostgreSQL",
-            },
-            {
-              css: "shadow-[#F1502F] border-[#3E2C00] bg-[#F1502F] text-white",
-              text: "Git",
-            },
-          ]}
-        >
-          <p class="mb-4">
-            <ExternalLink
-              href="http://www.sport2fit.com/"
-              title="Página web de Sport2Fit"
-              css="underline text-[#49afcd] font-bold"
-              text="Sport2Fit"
-            />. Trabajé como desarrollador
-            <em>Full-Stack</em>. Principalmente trabajé con <strong
-              >Ruby On Rails</strong
-            > y <strong>JavaScript</strong>. Me encargué del mantenimiento de
-            los desarrollos a medida de la empresa y también realicé nuevos
-            desarrollos con <strong>Jekyll</strong> y <strong>WordPress</strong
-            >.
-          </p>
-        </Item>
-        <!-- ITEISA -->
-        <Item
-          title="Abril 2017 - Enero 2020"
-          labels={[
-            {
-              css: "shadow-[#8892BF] border-[#4F5B93] bg-[#8892BF] text-white",
-              text: "PHP",
-            },
-            {
-              css: "shadow-[#D33C44] border-[#363637] bg-[#D33C44] text-white",
-              text: "CakePHP",
-            },
-            {
-              css: "shadow-[#F0DB4F] border-[#323330] bg-[#F0DB4F]",
-              text: "JavaScript",
-            },
-            {
-              css: "shadow-[#282C34] border-[#20232A] bg-[#282C34] text-[#61DAFB]",
-              text: "React",
-            },
-            {
-              css: "shadow-[#303846] border-[#20232A] bg-[#303846] text-[#09D3AC]",
-              text: "Create React App",
-            },
-            {
-              css: "shadow-[#4479A1] border-[#E97B00] bg-[#4479A1] text-white",
-              text: "MySQL",
-            },
-            {
-              css: "shadow-[#2b2b2b] border-[#333333] bg-[#2b2b2b] text-[#ffcc00]",
-              text: "Jekyll",
-            },
-            {
-              css: "shadow-[#157AFF] border-[#022044] bg-[#157AFF] text-white",
-              text: "Docker",
-            },
-            {
-              css: "shadow-[#43b02a] border-[#75c563] bg-[#43b02a] text-white",
-              text: "Selenium",
-            },
-            {
-              css: "shadow-[#F1502F] border-[#3E2C00] bg-[#F1502F] text-white",
-              text: "Git",
-            },
-            {
-              css: "shadow-[#FCA121] border-[#DB3B21] bg-[#FCA121] text-white",
-              text: "GitLab CI",
-            },
-          ]}
-        >
-          <p class="mb-4">
-            <ExternalLink
-              href="https://iteisa.com/"
-              title="Página web de ITEISA"
-              css="underline text-[#af1685] font-bold"
-              text="ITEISA"
-            />. Trabajé como desarrollador orientado al
-            <em>Backend</em>. Principalmente trabajé con <strong>CakePHP</strong
-            > y ocasionalmente también trabajé en los frontend con <strong
-              >React</strong
-            >. Me encargué de los desarrollos a medida de la empresa,
-            especialmente de las APIs y de los scrapers.
-          </p>
-        </Item>
-        <!-- Punsset -->
-        <Item
-          title="Julio 2014 - Marzo 2017"
-          last={true}
-          labels={[
-            {
-              css: "shadow-[#F0DB4F] border-[#323330] bg-[#F0DB4F]",
-              text: "JavaScript",
-            },
-            {
-              css: "shadow-[#0769ad] border-[#7acef4] bg-[#0769ad] text-white",
-              text: "JQuery",
-            },
-            {
-              css: "shadow-[#3e2723] border-[#1b5e20] bg-[#3e2723] text-white",
-              text: "CoffeeScript",
-            },
-            {
-              css: "shadow-[#CC342D] border-[#9b1c16] bg-[#CC342D] text-white",
-              text: "Ruby",
-            },
-            {
-              css: "shadow-[#D30001] border-[#D30001] text-[#D30001]",
-              text: "Ruby On Rails",
-            },
-            {
-              css: "shadow-[#336791] border-[#336791] text-[#336791]",
-              text: "PostgreSQL",
-            },
-            {
-              css: "shadow-[#F1502F] border-[#3E2C00] bg-[#F1502F] text-white",
-              text: "Git",
-            },
-          ]}
-        >
-          <p class="mb-4">
-            <ExternalLink
-              href="https://www.motork.io/es/"
-              title="Página web de MotorK"
-              css="underline text-[#f2a273] font-bold"
-              text="Punsset"
-            /> (actualmente MotorK). Trabajé como desarollador
-            <em>Full-Stack</em>, principalmente con <strong
-              >Ruby On Rails</strong
-            > y <strong>JavaScript</strong>. Me encargué del mantenimiento y
-            desarrollo de los productos de la empresa relacionados con el mundo
-            de la automoción, así como de otros proyectos paralelos que ésta
-            tenía.
-          </p>
-        </Item>
-        <!-- DAW -->
-        <Item
-          title="Septiembre 2013 - Julio 2014"
-          academic={true}
-          labels={[
-            {
-              css: "shadow-[#F0DB4F] border-[#323330] bg-[#F0DB4F]",
-              text: "JavaScript",
-            },
-            {
-              css: "shadow-[#0769ad] border-[#7acef4] bg-[#0769ad] text-white",
-              text: "JQuery",
-            },
-            {
-              css: "shadow-[#8892BF] border-[#4F5B93] bg-[#8892BF] text-white",
-              text: "PHP",
-            },
-            {
-              css: "shadow-[#4479A1] border-[#E97B00] bg-[#4479A1] text-white",
-              text: "MySQL",
-            },
-            {
-              css: "shadow-[#B52E31] border-[#6F0101] bg-[#B52E31] text-white",
-              text: "AngularJS",
-            },
-          ]}
-        >
-          <p class="mb-4">
-            Desarrollo de Aplicaciones Web en el
-            <ExternalLink
-              href="http://www.iesaglinares.com/"
-              title="Página web del instituto"
-              css="underline text-[#333333] font-bold"
-              text="Augusto González de Linares"
-            />. Las prácticas las realicé en
-            <ExternalLink
-              href="https://iteisa.com/"
-              title="Página web de ITEISA"
-              css="underline text-[#af1685] font-bold"
-              text="ITEISA"
-            />, lugar que, años después, sería mi destino laboral. A lo largo
-            del curso se impartieron, sobretodo, conocimientos sobre <strong
-              >PHP</strong
-            >, <strong>Javascript</strong> y
-            <strong>MySQL</strong>. En las prácticas utilicé <strong>PHP</strong
-            > y <strong>AngularJS</strong> principalmente.
-          </p>
-        </Item>
-        <!-- DAM -->
-        <Item
-          title="Septiembre 2011 - Julio 2013"
-          academic={true}
-          last={true}
-          labels={[
-            {
-              css: "shadow-[#FF0000] border-[#5e5e5e] bg-[#FF0000] text-white",
-              text: "Java",
-            },
-            {
-              css: "shadow-[#4374b5] border-[#e42527] bg-[#4374b5] text-white",
-              text: "Delphi",
-            },
-          ]}
-        >
-          <p class="mb-4">
-            Desarrollo de Aplicaciones Multiplataforma en el
-            <ExternalLink
-              href="http://www.iesaglinares.com/"
-              title="Página web del instituto"
-              css="underline text-[#333333] font-bold"
-              text="Augusto González de Linares"
-            />. Las prácticas las realicé en
-            <ExternalLink
-              href="https://www.cds-soft.es/"
-              title="Página web de ITEISA"
-              css="underline text-[#003366] font-bold"
-              text="Compudata Santander"
-            />. A lo largo del curso se impartieron, sobretodo, conocimientos
-            sobre <strong>JAVA</strong> y todo su ecosistema. En las prácticas utilicé
-            <strong>Delphi</strong>.
-          </p>
-        </Item>
-      </div>
-    </section>
 
-    <section class="max-w-2xl mx-auto mb-8 break-before-page">
-      <h2 class="text-2xl text-center my-8 print:hidden">
-        /portfolio (público)
-      </h2>
-      <p class="hidden text-2xl text-center my-8 print:block">
-        Otros proyectos
-      </p>
-      <p class="mb-2">
-        Además de todo lo realizado en la empresa, a nivel personal he realizado
-        algunos proyectos para diferentes asociaciones o personas. La verdad que
-        lo más sencillo a publicar son sitios estáticos gracias a increíbles
-        soluciones como
-        <ExternalLink
-          href="https://www.netlify.com/"
-          title="Web de Netlify"
-          css="underline text-[#20c6b7] font-bold"
-          text="Netlify"
-        />. Precisamente por este motivo soy bastante fan del
-        <ExternalLink
-          href="https://jamstack.org/"
-          title="Página web con información sobre el Jamstack"
-          css="underline text-[#F0047F] font-bold"
-          text="Jamstack"
-        /> - generadores de sitios estáticos -, actualmente utilizo
-        <ExternalLink
-          href="https://www.11ty.dev/"
-          title="Página web de Eleventy"
-          css="underline text-[#222222] font-bold"
-          text="11ty"
-        /> y
-        <ExternalLink
-          href="https://astro.build/"
-          title="Página web de Astro"
-          css="underline text-[#1d5bfc] font-bold"
-          text="Astro"
-        />, pero he utilizado también GatsbyJS, Hugo o Jekyll por ejemplo.
-      </p>
-    </section>
+          <div class="mb-4 flex flex-wrap gap-4 print:gap-0">
+            <Label text="PHP" css="border-neutral-700 bg-white" />
+            <Label text="CakePHP" css="border-neutral-700 bg-white" />
+            <Label text="MySQL" css="border-neutral-700 bg-white" />
+            <Label text="Git" css="border-neutral-700 bg-white" />
+            <Label text="GitLab CI" css="border-neutral-700 bg-white" />
+            <Label text="JavaScript" css="border-neutral-700 bg-white" />
+            <Label text="React" css="border-neutral-700 bg-white" />
+            <Label text="Tailwind CSS" css="border-neutral-700 bg-white" />
+            <Label text="Astro" css="border-neutral-700 bg-white" />
+            <Label text="11ty" css="border-neutral-700 bg-white" />
+          </div>
 
-    <section
-      class="container mx-auto mb-10 grid gap-4 grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 2xl:grid-cols-4 2xl:grid-rows-1 print:grid-cols-2 print:grid-rows-2"
-    >
-      <Portfolio
-        title="Asociación La Buena Leche"
-        src={laBuenaLeche}
-        alt="Captura de pantalla de la página principal de La Buena Leche"
-        web="https://labuenaleche.org/"
-        github="https://github.com/AngelGuerra/la-buena-leche-org"
-        css="text-[#c17e93]"
-      >
-        <p>
-          Página web de la asociación La Buena Leche, ha pasado por varias
-          versiones, primero la realicé con <strong>AngularJS</strong> para practicar,
-          más tarde, al ser una página que no se actualiza con regularidad y que
-          no tiene ningún tipo de backend, la transformé a una página estática generada
-          con <strong>Jekyll</strong> y maquetada con <strong>Bootstrap</strong
-          >. También tuvo que ver el cambio de AngularJS a Angular, ¡tenía que
-          reescribirlo todo de nuevo!
-        </p>
-      </Portfolio>
-      <Portfolio
-        title="Bujinkan Cantabria"
-        src={bujinkanCantabria}
-        alt="Captura de pantalla de la página principal de Bujinkan Cantabria"
-        web="https://bujinkancantabria.ninja/"
-        github="https://github.com/AngelGuerra/bujinkan-cantabria"
-        css="text-[#bf0202]"
-      >
-        <p>
-          Página web de la asociación Bujinkan Cantabria, está realizada con <strong
-            >11ty</strong
-          > como generador del sitio y con <strong>Tailwind CSS</strong> como librería
-          de estilos. Antes de ésta existía una página realizada con WordPress pero
-          la persona que la mantenía ya no lo iba a hacer, así que cogí el testigo
-          y la realicé a mi manera.
-        </p>
-      </Portfolio>
-      <Portfolio
-        title="Regazo Fotografía"
-        src={regazoFotografia}
-        alt="Captura de pantalla de la página principal de Regazo Fotografía"
-        web="https://regazofotografia.com/"
-        github="https://github.com/AngelGuerra/regazo-fotografia"
-        css="text-[#63b3ed]"
-      >
-        <p>
-          Página web de Regazo Fotografía, está realizada con <strong
-            >Hugo</strong
-          > como generador del sitio y con
-          <strong>Tailwind CSS</strong> como librería de estilos. Utiliza <strong
-            >Netlify</strong
-          > para la redimensión de las imágenes y la recogida de los datos del formulario.
-          La realicé con Hugo por mi afán de estar probando siempre cosas nuevas.
-        </p>
-      </Portfolio>
-      <Portfolio
-        title="Regazo Fotografía - Duelo Perinatal"
-        src={regazoDuelo}
-        alt="Captura de pantalla de la página de duelo de Regazo Fotografía"
-        web="https://dueloperinatal.regazofotografia.com/"
-        github="https://github.com/AngelGuerra/regazo-fotografia-duelo-perinatal"
-        css="text-blue-700"
-      >
-        <p>
-          Esta página es una <em>landing</em> de Regazo Fotografía, pero orientada
-          al duelo perinatal. Está realizada con <strong>11ty</strong>, <strong
-            >AlpineJS</strong
-          > para el comportamiento y <strong>Tailwind CSS</strong> para los estilos.
-        </p>
-      </Portfolio>
-    </section>
+          <p class="mb-2 print:hidden">
+            Por otro lado, me gustan los deportes de contacto - practico o he
+            practicado <ExternalLink
+              href="https://bujinkancantabria.ninja/"
+              title="Página web de Bujinkan Cantabria"
+              text="artes marciales y kick boxing"
+            /> -, el <ExternalLink
+              href="https://lichess.org/@/AngelGuerra"
+              title="Mi perfil en Lichess"
+              text="ajedrez"
+            /> - aunque siendo sinceros lo tengo abandonado -, ver anime y pasar
+            tiempo con mi familia <HeartIcon
+              css="w-4 h-4 inline text-rose-700 fill-rose-700 motion-safe:animate-pulse"
+            />.
+          </p>
 
-    <section class="max-w-2xl mx-auto mb-8">
-      <h2 class="text-2xl text-center my-8 print:hidden">/used</h2>
-      <p class="hidden text-2xl text-center my-8 print:block">
-        Otras tecnologías
-      </p>
-      <p class="mb-2">
-        Además de lo que he comentado en todo lo anterior, aquí voy a poner
-        otras cosas que en algún momento he tocado y/o he utilizado para
-        realizar proyectos concretos en mayor o menor medida. Con esto espero
-        tener un pequeño recordatorio propio de todo lo que he ido utilizando y
-        que, quizá, en algún futuro vuelva a utilizar - o no, también depende de
-        tí -.
-      </p>
-    </section>
+          <p class="mb-2">
+            Apenas utilizo las redes sociales o similares, pero también puedes
+            encontrarme en:
+          </p>
 
-    <section
-      class="container mx-auto mb-8 flex flex-wrap gap-4 items-center justify-center print:gap-1"
-    >
-      <Label
-        css="shadow-[#71c405] border-white bg-[#71c405] text-white "
-        text="Oclif"
-      />
-      <Label
-        css="shadow-[#1f38c5] border-[#0f1c64] bg-[#1f38c5] text-white"
-        text="Frontity"
-      />
-      <Label
-        css="shadow-[#3e2723] border-[#1b5e20] bg-[#3e2723] text-white"
-        text="CoffeeScript"
-      />
-      <Label
-        css="shadow-[#42b883] border-white bg-[#42b883] text-white"
-        text="Vue"
-      />
-      <Label
-        css="shadow-[#306ee5] border-white bg-[#306ee5] text-white"
-        text="Minikube"
-      />
-      <Label
-        css="shadow-[#DD3F8F] border-[#DEDB8E] bg-[#DD3F8F] text-white"
-        text="Lando"
-      />
-      <Label
-        css="shadow-[#ff0076] border-white bg-[#ff0076] text-white"
-        text="PrestaShop"
-      />
-      <Label
-        css="shadow-[#719E40] border-white bg-[#719E40] text-white"
-        text="SlimPHP"
-      />
-      <Label
-        css="shadow-[#7952b3] border-white bg-[#7952b3] text-white"
-        text="Bootstrap"
-      />
-      <Label
-        css="shadow-[#00d1b2] border-white bg-[#00d1b2] text-white"
-        text="Bulma"
-      />
-      <Label
-        css="shadow-[#FF6600] border-white bg-[#FF6600] text-white"
-        text="RabbitMQ"
-      />
-      <Label
-        css="shadow-[#0077cc] border-white bg-[#0077cc] text-white"
-        text="ElasticSearch"
-      />
-      <Label
-        css="shadow-[#2A3238] border-[#4DA925] bg-[#2A3238] text-[#4DA925]"
-        text="Bash Script"
-      />
-      <Label
-        css="shadow-[#68BF66] border-white bg-[#68BF66] text-white"
-        text="Laravel Zero"
-      />
+          <ul class="mb-6 flex flex-wrap gap-4 print:flex-col print:gap-1">
+            <li>
+              <a
+                href="https://es.linkedin.com/in/angel-guerra-revilla"
+                target="_blank"
+                rel="me noopener"
+                title="Mi perfil en LinkedIn"
+              >
+                <span
+                  class="sr-only mb-2 block font-bold underline decoration-very-peri decoration-2 underline-offset-4 transition-all hover:decoration-neutral-700"
+                  >LinkedIn</span
+                >
+                <LinkedInIcon
+                  css="h-8 w-8 transition-all hover:scale-105 print:h-4 print:w-4 print:inline"
+                />
+                <span class="hidden print:inline"
+                  >https://es.linkedin.com/in/angel-guerra-revilla</span
+                >
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://twitter.com/angellguerra"
+                target="_blank"
+                rel="me noopener"
+                title="Mi perfil en Twitter"
+              >
+                <span
+                  class="sr-only mb-2 block font-bold underline decoration-very-peri decoration-2 underline-offset-4 transition-all hover:decoration-neutral-700"
+                  >Twitter</span
+                >
+                <TwitterIcon
+                  css="h-8 w-8 transition-all hover:scale-105 print:h-4 print:w-4 print:inline"
+                />
+                <span class="hidden print:inline"
+                  >https://twitter.com/angellguerra</span
+                >
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/AngelGuerra"
+                target="_blank"
+                rel="me noopener"
+                title="Mi perfil en Github"
+              >
+                <span
+                  class="sr-only mb-2 block font-bold underline decoration-very-peri decoration-2 underline-offset-4 transition-all hover:decoration-neutral-700"
+                  >Github</span
+                >
+                <GithubIcon
+                  css="h-8 w-8 transition-all hover:scale-105 print:h-4 print:w-4 print:inline"
+                />
+                <span class="hidden print:inline"
+                  >https://github.com/AngelGuerra</span
+                >
+              </a>
+            </li>
+          </ul>
+
+          <p class="mb-2 font-bold">Y... ¿qué busco <em>idealmente</em>?</p>
+          <ul>
+            <li>Trabajar en el <em>backend</em>.</li>
+            <li>Utilizar tecnologías y herramientas modernas.</li>
+            <li>Un buen equipo del que formar parte.</li>
+            <li>Una buena conciliación familiar.</li>
+            <li>...y un buen salario, claro 😄.</li>
+          </ul>
+        </section>
+
+        <section class="print:basis-3/5 md:grow">
+          <header>
+            <h2 class="mb-8 text-center text-2xl">Experiencia laboral</h2>
+          </header>
+
+          <div>
+            <!-- ITEISA -->
+            <Item
+              title="Julio 2020"
+              current={true}
+              labels={[
+                {
+                  css: "shadow-[#8892BF] border-[#4F5B93] bg-[#8892BF] text-white",
+                  text: "PHP",
+                },
+                {
+                  css: "shadow-[#D33C44] border-[#363637] bg-[#D33C44] text-white",
+                  text: "CakePHP",
+                },
+                {
+                  css: "shadow-[#356388] border-[#3C9CD7] bg-[#356388] text-white",
+                  text: "PHPUnit",
+                },
+                {
+                  css: "shadow-[#F0DB4F] border-[#323330] bg-[#F0DB4F]",
+                  text: "JavaScript",
+                },
+                {
+                  css: "shadow-[#282C34] border-[#20232A] bg-[#282C34] text-[#61DAFB]",
+                  text: "React",
+                },
+                {
+                  css: "shadow-[#303846] border-[#20232A] bg-[#303846] text-[#09D3AC]",
+                  text: "Create React App",
+                },
+                {
+                  css: "shadow-[#111111] border-[#111111] text-[#111111]",
+                  text: "NextJS",
+                },
+                {
+                  css: "shadow-[#7026B9] border-[#232129] bg-[#7026B9] text-white",
+                  text: "GatsbyJS",
+                },
+                {
+                  css: "shadow-[#4479A1] border-[#E97B00] bg-[#4479A1] text-white",
+                  text: "MySQL",
+                },
+                {
+                  css: "shadow-[#222222] border-[#222222] bg-[#222222] text-white",
+                  text: "11ty",
+                },
+                {
+                  css: "shadow-[#157AFF] border-[#022044] bg-[#157AFF] text-white",
+                  text: "Docker",
+                },
+                {
+                  css: "shadow-[#F1502F] border-[#3E2C00] bg-[#F1502F] text-white",
+                  text: "Git",
+                },
+                {
+                  css: "shadow-[#FCA121] border-[#DB3B21] bg-[#FCA121] text-white",
+                  text: "GitLab CI",
+                },
+              ].sort((a, b) => a.text.localeCompare(b.text))}
+            >
+              <p class="mb-4">
+                <ExternalLink
+                  href="https://iteisa.com/"
+                  title="Página web de ITEISA"
+                  css="text-[#af1685] decoration-[#af1685]"
+                  text="ITEISA"
+                />. Actualmente soy desarrollador
+                <em>Full-Stack</em>. Mi función principal es realizar los
+                desarrollos a medida que los clientes solicitan a la empresa.
+                Por ello, en cada desarrollo, tengo que implicarme con el
+                cliente y su negocio, conocer el mercado al que se destine y las
+                mecánicas de funcionamiento del mismo.
+              </p>
+
+              <p class="mb-4 print:hidden">
+                Al ser una consultaría con multitud de clientes, también he
+                tenido la oportunidad de realizar muchos desarrollos de distinta
+                tipología: scrapers, APIs, frontends a medida, plugins para
+                WordPress o PrestaShop, páginas estáticas...
+              </p>
+
+              <p class="mb-4 print:hidden">
+                Además de esto, también me encargo de sustituir a nuestro
+                insustituible encargado de sistemas cuando no está disponible,
+                instruyo en cómo salir de <strong>vim</strong> a mis compañeros y
+                compañeras...
+              </p>
+            </Item>
+
+            <!-- SPORT2FIT -->
+            <Item
+              title="Enero 2020 - Julio 2020"
+              labels={[
+                {
+                  css: "shadow-[#8892BF] border-[#4F5B93] bg-[#8892BF] text-white",
+                  text: "PHP",
+                },
+                {
+                  css: "shadow-[#D33C44] border-[#363637] bg-[#D33C44] text-white",
+                  text: "CakePHP",
+                },
+                {
+                  css: "shadow-[#45494c] border-[#828d96] bg-[#45494c] text-white",
+                  text: "phpBB",
+                },
+                {
+                  css: "shadow-[#117AC9] border-[#003c56] bg-[#117AC9] text-white",
+                  text: "WordPress",
+                },
+                {
+                  css: "shadow-[#F0DB4F] border-[#323330] bg-[#F0DB4F]",
+                  text: "JavaScript",
+                },
+                {
+                  css: "shadow-[#0769ad] border-[#7acef4] bg-[#0769ad] text-white",
+                  text: "JQuery",
+                },
+                {
+                  css: "shadow-[#CC342D] border-[#9b1c16] bg-[#CC342D] text-white",
+                  text: "Ruby",
+                },
+                {
+                  css: "shadow-[#D30001] border-[#D30001] text-[#D30001]",
+                  text: "Ruby On Rails",
+                },
+                {
+                  css: "shadow-[#2b2b2b] border-[#333333] bg-[#2b2b2b] text-[#ffcc00]",
+                  text: "Jekyll",
+                },
+                {
+                  css: "shadow-[#4479A1] border-[#E97B00] bg-[#4479A1] text-white",
+                  text: "MySQL",
+                },
+                {
+                  css: "shadow-[#336791] border-[#336791] text-[#336791]",
+                  text: "PostgreSQL",
+                },
+                {
+                  css: "shadow-[#F1502F] border-[#3E2C00] bg-[#F1502F] text-white",
+                  text: "Git",
+                },
+              ].sort((a, b) => a.text.localeCompare(b.text))}
+            >
+              <p class="mb-4">
+                <ExternalLink
+                  href="http://www.sport2fit.com/"
+                  title="Página web de Sport2Fit"
+                  css="text-[#49afcd] decoration-[#49afcd]"
+                  text="Sport2Fit"
+                />. Trabajé como desarrollador
+                <em>Full-Stack</em>. Mi función principal era el mantenimiento y
+                desarrollo de los productos de la empresa, hechos con Ruby On
+                Rails, y el desarrollo de una serie de webs tanto con WordPress
+                como con Jekyll y CakePHP.
+              </p>
+
+              <p class="mb-4 print:hidden">
+                La empresa está orientada al mundo del deporte y el motor, tuve
+                contacto directo con los clientes para recopilar y solucionar
+                las dudas e incidencias que tenían.
+              </p>
+            </Item>
+            <!-- ITEISA -->
+            <Item
+              title="Abril 2017 - Enero 2020"
+              labels={[
+                {
+                  css: "shadow-[#8892BF] border-[#4F5B93] bg-[#8892BF] text-white",
+                  text: "PHP",
+                },
+                {
+                  css: "shadow-[#71c405] border-white bg-[#71c405] text-white",
+                  text: "Oclif",
+                },
+                {
+                  css: "shadow-[#D33C44] border-[#363637] bg-[#D33C44] text-white",
+                  text: "CakePHP",
+                },
+                {
+                  css: "shadow-[#F0DB4F] border-[#323330] bg-[#F0DB4F]",
+                  text: "JavaScript",
+                },
+                {
+                  css: "shadow-[#282C34] border-[#20232A] bg-[#282C34] text-[#61DAFB]",
+                  text: "React",
+                },
+                {
+                  css: "shadow-[#303846] border-[#20232A] bg-[#303846] text-[#09D3AC]",
+                  text: "Create React App",
+                },
+                {
+                  css: "shadow-[#4479A1] border-[#E97B00] bg-[#4479A1] text-white",
+                  text: "MySQL",
+                },
+                {
+                  css: "shadow-[#2b2b2b] border-[#333333] bg-[#2b2b2b] text-[#ffcc00]",
+                  text: "Jekyll",
+                },
+                {
+                  css: "shadow-[#157AFF] border-[#022044] bg-[#157AFF] text-white",
+                  text: "Docker",
+                },
+                {
+                  css: "shadow-[#43b02a] border-[#75c563] bg-[#43b02a] text-white",
+                  text: "Selenium",
+                },
+                {
+                  css: "shadow-[#F1502F] border-[#3E2C00] bg-[#F1502F] text-white",
+                  text: "Git",
+                },
+                {
+                  css: "shadow-[#FCA121] border-[#DB3B21] bg-[#FCA121] text-white",
+                  text: "GitLab CI",
+                },
+              ].sort((a, b) => a.text.localeCompare(b.text))}
+            >
+              <p class="mb-4">
+                <ExternalLink
+                  href="https://iteisa.com/"
+                  title="Página web de ITEISA"
+                  css="text-[#af1685] decoration-[#af1685]"
+                  text="ITEISA"
+                />. Como ves, he trabajado varias veces en esta empresa. En esta
+                primera vez mi rol principal fue el desarrollo en el lado del
+                servidor - <em>backend</em> - con CakePHP, aunque también realicé
+                trabajos de frontend con React o Jekyll, por ejemplo.
+              </p>
+
+              <p class="mb-4 print:hidden">
+                Me encargué sobretodo del desarrollo de las APIs, tanto de los
+                productos de los clientes, como de las herramientas internas de
+                la empresa. También realicé scrapers, me encargué del
+                mantenimiento de la propia web de la empresa, hecha con Jekyll,
+                e hice un poco labores de <abbr
+                  title="Investigación y desarrollo">I+D</abbr
+                >, investigando y probando distintas herramientas <i
+                  >open source</i
+                > para ver su viabilidad y sus capacidades de integración con las
+                de la empresa.
+              </p>
+            </Item>
+            <!-- Punsset -->
+            <Item
+              title="Julio 2014 - Marzo 2017"
+              last={true}
+              labels={[
+                {
+                  css: "shadow-[#F0DB4F] border-[#323330] bg-[#F0DB4F]",
+                  text: "JavaScript",
+                },
+                {
+                  css: "shadow-[#0769ad] border-[#7acef4] bg-[#0769ad] text-white",
+                  text: "JQuery",
+                },
+                {
+                  css: "shadow-[#3e2723] border-[#1b5e20] bg-[#3e2723] text-white",
+                  text: "CoffeeScript",
+                },
+                {
+                  css: "shadow-[#CC342D] border-[#9b1c16] bg-[#CC342D] text-white",
+                  text: "Ruby",
+                },
+                {
+                  css: "shadow-[#D30001] border-[#D30001] text-[#D30001]",
+                  text: "Ruby On Rails",
+                },
+                {
+                  css: "shadow-[#336791] border-[#336791] text-[#336791]",
+                  text: "PostgreSQL",
+                },
+                {
+                  css: "shadow-[#F1502F] border-[#3E2C00] bg-[#F1502F] text-white",
+                  text: "Git",
+                },
+              ].sort((a, b) => a.text.localeCompare(b.text))}
+            >
+              <p class="mb-4">
+                <ExternalLink
+                  href="https://www.motork.io/es/"
+                  title="Página web de MotorK"
+                  css="text-[#4f3226] decoration-[#4f3226]"
+                  text="Punsset"
+                /> (actualmente MotorK). Este fue mi primer empleo (<HeartIcon
+                  css="h-4 w-4 inline text-rose-700 fill-rose-700"
+                />) y trabajé como desarollador
+                <em>Full-Stack</em>. Me encargué del mantenimiento y desarrollo
+                de nuevas funcionalidades de los productos de la empresa, en su
+                mayoría relacionados con el mundo del motor y los concesionarios
+                y realizadas con Ruby On Rails.
+              </p>
+
+              <p class="mb-4 print:hidden">
+                Durante un tiempo también realicé labores de soporte al cliente,
+                recogiendo y resolviendo las incidencias de los mismos y, cuando
+                cogí experiencia, me encargué también de los despliegues de los
+                cambios en los productos a producción.
+              </p>
+            </Item>
+          </div>
+
+          <div
+            class="hidden w-full border-4 border-neutral-700 bg-white p-4 shadow-square-left print:block"
+          >
+            <b>Pst</b>: En {site}cv puedes ver una versión más completa del
+            currículum, disfruta la lectura.
+          </div>
+
+          <header class="print:hidden">
+            <h2 class="mb-8 text-center text-2xl">Experiencia académica</h2>
+          </header>
+          <div class="print:hidden">
+            <!-- DAW -->
+            <Item
+              title="Septiembre 2013 - Julio 2014"
+              academic={true}
+              labels={[
+                {
+                  css: "shadow-[#F0DB4F] border-[#323330] bg-[#F0DB4F]",
+                  text: "JavaScript",
+                },
+                {
+                  css: "shadow-[#0769ad] border-[#7acef4] bg-[#0769ad] text-white",
+                  text: "JQuery",
+                },
+                {
+                  css: "shadow-[#8892BF] border-[#4F5B93] bg-[#8892BF] text-white",
+                  text: "PHP",
+                },
+                {
+                  css: "shadow-[#4479A1] border-[#E97B00] bg-[#4479A1] text-white",
+                  text: "MySQL",
+                },
+                {
+                  css: "shadow-[#B52E31] border-[#6F0101] bg-[#B52E31] text-white",
+                  text: "AngularJS",
+                },
+              ]}
+            >
+              <p class="mb-4">
+                <ExternalLink
+                  href="https://www.todofp.es/que-estudiar/loe/informatica-comunicaciones/des-aplicaciones-web.html"
+                  title="Información sobre el grado superior"
+                  css="text-[#004e86] decoration-[#004e86]"
+                  text="Desarrollo de Aplicaciones Web"
+                /> en el
+                <ExternalLink
+                  href="http://www.iesaglinares.com/"
+                  title="Página web del instituto"
+                  css="text-[#2028dc] decoration-[#2028dc]"
+                  text="Augusto González de Linares"
+                />. Las prácticas las realicé en
+                <ExternalLink
+                  href="https://iteisa.com/"
+                  title="Página web de ITEISA"
+                  css="underline text-[#af1685] font-bold"
+                  text="ITEISA"
+                />, lugar que, como has podido leer más arriba, años después
+                sería mi destino laboral. A lo largo del curso se impartieron,
+                sobretodo, conocimientos sobre <strong>PHP</strong>, <strong
+                  >Javascript</strong
+                > y
+                <strong>MySQL</strong>.
+              </p>
+
+              <p class="mb-4 print:hidden">
+                En las prácticas realicé desarrollos de plugins para Plesk,
+                utilizando su API y el desarrollo de una pequeña aplicación de
+                gestión de movimientos bancarios con AngularJS.
+              </p>
+            </Item>
+            <!-- DAM -->
+            <Item
+              title="Septiembre 2011 - Julio 2013"
+              academic={true}
+              last={true}
+              labels={[
+                {
+                  css: "shadow-[#FF0000] border-[#5e5e5e] bg-[#FF0000] text-white",
+                  text: "Java",
+                },
+                {
+                  css: "shadow-[#4374b5] border-[#e42527] bg-[#4374b5] text-white",
+                  text: "Delphi",
+                },
+              ]}
+            >
+              <p class="mb-4">
+                <ExternalLink
+                  href="https://www.todofp.es/que-estudiar/loe/informatica-comunicaciones/des-aplicaciones-multiplataforma.html"
+                  title="Información sobre el grado superior"
+                  css="text-[#004e86] decoration-[#004e86]"
+                  text="Desarrollo de Aplicaciones Multiplataforma"
+                /> en el
+                <ExternalLink
+                  href="http://www.iesaglinares.com/"
+                  title="Página web del instituto"
+                  css="text-[#2028dc] decoration-[#2028dc]"
+                  text="Augusto González de Linares"
+                />. Las prácticas las realicé en
+                <ExternalLink
+                  href="https://www.cds-soft.es/"
+                  title="Página web de ITEISA"
+                  css="underline text-[#003366] font-bold"
+                  text="Compudata Santander"
+                />. A lo largo del curso se impartieron, sobretodo,
+                conocimientos sobre <strong>JAVA</strong> y todo su ecosistema.
+              </p>
+
+              <p class="mb-4 print:hidden">
+                En las prácticas utilicé <strong>Delphi</strong> y lo que realicé
+                fueron distintos ejercicios de desarrollo.
+              </p>
+            </Item>
+          </div>
+        </section>
+      </section>
+
+      <section
+        class="mb-16 flex flex-wrap items-start justify-start gap-4 print:hidden md:flex-nowrap"
+      >
+        <section
+          class="mb-6 md:sticky md:top-4 md:mb-0 md:shrink-0 md:grow-0 md:basis-1/3"
+        >
+          <header>
+            <h2 class="mb-8 text-center text-2xl">Otros proyectos</h2>
+          </header>
+          <p class="mb-2">
+            Además de todo lo realizado en la empresa, a nivel personal he
+            realizado algunos proyectos para diferentes asociaciones o personas.
+            La verdad es que lo más sencillo a publicar son sitios estáticos
+            gracias a increíbles soluciones como
+            <ExternalLink
+              href="https://www.netlify.com/"
+              title="Web de Netlify"
+              css="text-[#20c6b7] decoration-[#20c6b7]"
+              text="Netlify"
+            />. Precisamente por este motivo, tal y como he comentado más
+            arriba, soy fan del
+            <ExternalLink
+              href="https://jamstack.org/"
+              title="Página web con información sobre el Jamstack"
+              css="text-[#F0047F] decoration-[#F0047F]"
+              text="Jamstack"
+            />, actualmente utilizo
+            <ExternalLink
+              href="https://www.11ty.dev/"
+              title="Página web de Eleventy"
+              css="text-[#222222] decoration-[#222222]"
+              text="11ty"
+            /> y
+            <ExternalLink
+              href="https://astro.build/"
+              title="Página web de Astro"
+              css="text-[#1d5bfc] decoration-[#1d5bfc]"
+              text="Astro"
+            />, pero he utilizado también GatsbyJS, Hugo o Jekyll por ejemplo.
+          </p>
+        </section>
+
+        <section class="grid grid-cols-1 gap-4 md:grow lg:grid-cols-2">
+          <Portfolio
+            title="Asociación La Buena Leche"
+            web="https://labuenaleche.org/"
+            github="https://github.com/AngelGuerra/la-buena-leche-org"
+            css="text-[#c17e93]"
+          >
+            <p>
+              Página web de la asociación La Buena Leche, ha pasado por varias
+              versiones, primero la realicé con <strong>AngularJS</strong> para practicar,
+              más tarde, al ser una página que no se actualiza con regularidad y
+              que no tiene ningún tipo de backend, la transformé a una página estática
+              generada con <strong>Jekyll</strong> y maquetada con <strong
+                >Bootstrap</strong
+              >. También tuvo que ver el cambio de AngularJS a Angular, ¡tenía
+              que reescribirlo todo de nuevo!
+            </p>
+          </Portfolio>
+          <Portfolio
+            title="Bujinkan Cantabria"
+            web="https://bujinkancantabria.ninja/"
+            github="https://github.com/AngelGuerra/bujinkan-cantabria"
+            css="text-[#bf0202]"
+          >
+            <p>
+              Página web de la asociación Bujinkan Cantabria, está realizada con <strong
+                >11ty</strong
+              > como generador del sitio y con <strong>Tailwind CSS</strong> como
+              librería de estilos. Antes de ésta existía una página realizada con
+              WordPress pero la persona que la mantenía ya no lo iba a hacer, así
+              que cogí el testigo y la realicé a mi manera. Como curiosidad, está
+              muy bien posicionada en los <ExternalLink
+                href="https://www.11ty.dev/speedlify/bujinkancantabria-ninja/"
+                title="Bujinkan Cantabria en los Eleventy Leaderboards"
+                css="text-[#222222] decoration-[#222222]"
+                text="Eleventy Leaderboards"
+              />, llegando incluso a estar en primera posición.
+            </p>
+          </Portfolio>
+          <Portfolio
+            title="Regazo Fotografía"
+            web="https://regazofotografia.com/"
+            github="https://github.com/AngelGuerra/regazo-fotografia"
+            css="text-[#63b3ed]"
+          >
+            <p class="mb-2">
+              Página web de Regazo Fotografía, está realizada con <strong
+                >Hugo</strong
+              > como generador del sitio y con
+              <strong>Tailwind CSS</strong> como librería de estilos. Utiliza <strong
+                >Netlify</strong
+              > para la redimensión de las imágenes y la recogida de los datos del
+              formulario. La realicé con Hugo por mi afán de estar probando siempre
+              cosas nuevas.
+            </p>
+
+            <p>
+              <b>Publi:</b> Regazo Fotografía es el proyecto de mi pareja, écha un
+              vistazo.
+            </p>
+          </Portfolio>
+          <Portfolio
+            title="Regazo Fotografía - Duelo Perinatal"
+            web="https://dueloperinatal.regazofotografia.com/"
+            github="https://github.com/AngelGuerra/regazo-fotografia-duelo-perinatal"
+            css="text-blue-700"
+          >
+            <p class="mb-2">
+              Esta página es una <em>landing</em> de Regazo Fotografía, pero orientada
+              al duelo perinatal. Está realizada con <strong>11ty</strong>, <strong
+                >AlpineJS</strong
+              > para el comportamiento y <strong>Tailwind CSS</strong> para los estilos.
+            </p>
+
+            <p>
+              Aunque no está posicionada tan arriba como la de Bujinkan
+              Cantabria, ésta tambien aparece en los <ExternalLink
+                href="https://www.11ty.dev/speedlify/dueloperinatal-regazofotografia-com/"
+                title="Regazo Fotografía en los Eleventy Leaderboards"
+                css="text-[#222222] decoration-[#222222]"
+                text="Eleventy Leaderboards"
+              /> con una puntuación perfecta en Lighthouse.
+            </p>
+          </Portfolio>
+        </section>
+      </section>
+
+      <section
+        class="mb-16 flex flex-wrap items-start justify-start gap-4 print:hidden md:flex-nowrap"
+      >
+        <section class="md:grow md:basis-1/2">
+          <header>
+            <h2 class="mb-8 text-center text-2xl">Otras tecnologías</h2>
+          </header>
+
+          <p class="mb-4">
+            Además de lo que he comentado en todo lo anterior, aquí voy a poner
+            otras cosas que en algún momento he tocado y/o he utilizado para
+            realizar proyectos concretos en mayor o menor medida. Con esto
+            espero tener un pequeño recordatorio propio de todo lo que he ido
+            utilizando y que, quizá, en algún futuro vuelva a utilizar - o no,
+            quizá también depende de tí -.
+          </p>
+
+          <section
+            class="container mx-auto mb-8 flex flex-wrap items-center justify-center gap-4 print:gap-1"
+          >
+            <Label
+              css="shadow-[#1f38c5] border-[#0f1c64] bg-[#1f38c5] text-white"
+              text="Frontity"
+            />
+            <Label
+              css="shadow-[#3e2723] border-[#1b5e20] bg-[#3e2723] text-white"
+              text="CoffeeScript"
+            />
+            <Label
+              css="shadow-[#42b883] border-white bg-[#42b883] text-white"
+              text="Vue"
+            />
+            <Label
+              css="shadow-[#306ee5] border-white bg-[#306ee5] text-white"
+              text="Minikube"
+            />
+            <Label
+              css="shadow-[#DD3F8F] border-[#DEDB8E] bg-[#DD3F8F] text-white"
+              text="Lando"
+            />
+            <Label
+              css="shadow-[#ff0076] border-white bg-[#ff0076] text-white"
+              text="PrestaShop"
+            />
+            <Label
+              css="shadow-[#719E40] border-white bg-[#719E40] text-white"
+              text="SlimPHP"
+            />
+            <Label
+              css="shadow-[#7952b3] border-white bg-[#7952b3] text-white"
+              text="Bootstrap"
+            />
+            <Label
+              css="shadow-[#00d1b2] border-white bg-[#00d1b2] text-white"
+              text="Bulma"
+            />
+            <Label
+              css="shadow-[#FF6600] border-white bg-[#FF6600] text-white"
+              text="RabbitMQ"
+            />
+            <Label
+              css="shadow-[#0077cc] border-white bg-[#0077cc] text-white"
+              text="ElasticSearch"
+            />
+            <Label
+              css="shadow-[#2A3238] border-[#4DA925] bg-[#2A3238] text-[#4DA925]"
+              text="Bash Script"
+            />
+            <Label
+              css="shadow-[#68BF66] border-white bg-[#68BF66] text-white"
+              text="Laravel Zero"
+            />
+          </section>
+        </section>
+        <section class="md:grow md:basis-1/2">
+          <header>
+            <h2 class="mb-8 text-center text-2xl">Más información</h2>
+          </header>
+
+          <p class="mb-2">
+            Fuera del ámbito de la tecnología, siempre me ha gustado hacer
+            deporte, especialmente aquellos que son de contacto o artes
+            marciales. De hecho, tengo titulación oficial por parte de la
+            <ExternalLink
+              href="https://www.fekm.es/"
+              title="Web de la Federación Española de Kick Boxing y Muay Thai"
+              css="text-[#ba2123] decoration-[#ba2123]"
+              text="FEKM"
+            /> de defensa personal y
+            <ExternalLink
+              href="https://es.wikipedia.org/wiki/Ninjutsu"
+              title="Información sobre el Ninjutsu en Wikipedia"
+              css="text-[#000000] decoration-[#000000]"
+              text="Ninjutsu"
+            />, un arte marcial japonés, del que actualmente poseo el 4º dan por
+            la <ExternalLink
+              href="https://es.wikipedia.org/wiki/Bujinkan"
+              title="Información sobre la Bujinkan en Wikipedia"
+              css="text-[#C40026] decoration-[#C40026]"
+              text="Bujinkan"
+            />. Además de esto, durante muchos años practiqué Kick Boxing
+            llegando a impartir clases a adultos.
+          </p>
+
+          <p>
+            Hasta los 16 años jugué al ajedrez, primero de manera ocasional y
+            luego en torneos o la propia liga cántabra. Es un hobby que me
+            gustaría recuperar de manera continuada, pero de momento lo tengo
+            aparcado, aunque siempre estoy abierto a echar una partida
+          </p>
+        </section>
+      </section>
     </section>
-  </div>
+  </section>
 
   <button
     onclick="if (window.print) window.print()"
-    class="fixed bottom-4 right-4 bg-black text-white p-3 rounded-full print:hidden"
+    class="fixed bottom-4 right-4 rounded-full bg-neutral-700 p-3 text-white print:hidden"
   >
     <Printer />
     <span class="sr-only">Imprímelo</span>

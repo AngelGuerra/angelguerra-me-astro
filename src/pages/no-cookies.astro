@@ -1,9 +1,7 @@
 ---
 import BaseLayout from "layout:Base";
 
-import JsonBool from "component:json/Bool";
-import JsonNumber from "component:json/Number";
-import JsonString from "component:json/String";
+import CommandLine from "component:CommandLine";
 ---
 
 <BaseLayout
@@ -11,19 +9,23 @@ import JsonString from "component:json/String";
   description="La política de cookies es... que no hay cookies :-)"
   robots="noindex,nofollow"
 >
-  <section class="grow p-4 flex items-center justify-center bg-very-peri">
+  <section
+    class="relative flex grow items-center justify-center overflow-hidden p-4"
+  >
     <section
-      class="bg-white max-w-lg p-4 border-4 border-black transition-shadow shadow-square-left hover:shadow-square-right"
+      class="relative z-10 max-w-lg border-4 border-neutral-700 bg-white p-4 shadow-square-left transition-shadow hover:shadow-square-right"
     >
-      <span class="block">{"{"}</span>
-      <JsonBool title="cookies" value="false" />
-      <JsonNumber title="status" value="404" />
-      <JsonString
-        title="reason"
-        value="Esta página web no utiliza cookies, me acaba de entrar hambre..."
-        last={true}
-      />
-      <span class="block">{"}"}</span>
+      <CommandLine time={true} command="find cookies" />
+
+      <p class="mb-1">
+        find: <i>cookies</i>: No existe el archivo o el directorio
+      </p>
+      <p>
+        Es posible que el error se deba a que <b
+          >ésta página web no utiliza ningún tipo de cookie</b
+        >, si eres una persona celíaca, puedes seguir navegando puesto que es
+        una página sin gluten.
+      </p>
     </section>
   </section>
 </BaseLayout>

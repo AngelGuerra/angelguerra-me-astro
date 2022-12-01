@@ -29,22 +29,24 @@ const {
   class={`relative flex break-inside-avoid print:before:hidden ${
     last
       ? ""
-      : "before:bg-black before:content-[''] before:h-full before:left-[1.125rem] before:absolute before:top-5 before:w-1"
+      : "before:bg-neutral-700 before:content-[''] before:h-full before:left-[1.125rem] before:absolute before:top-5 before:w-1"
   }`.trim()}
 >
   <div class="z-10 print:hidden">
     <span
-      class="mt-5 w-10 h-10 flex justify-center items-center border border-black rounded-full text-black bg-white"
+      class="mt-5 flex h-10 w-10 items-center justify-center rounded-full border border-neutral-700 bg-white text-neutral-700"
     >
       {academic ? <AcademicCapIcon /> : <BriefcaseIcon />}
     </span>
   </div>
   <div class="flex-1 pl-4 print:pl-0">
     <div
-      class="relative mb-10 overflow-auto bg-white border-4 border-black shadow-square-left transition-shadow hover:shadow-square-right print:border-0 print:shadow-none print:hover:shadow-none"
+      class="relative mb-10 overflow-auto border-4 border-neutral-700 bg-white shadow-square-left transition-shadow hover:shadow-square-right print:mb-4 print:border-0 print:shadow-none print:hover:shadow-none"
     >
-      <div class="border-b border-black py-5 px-10 print:p-0 print:border-0">
-        <div class="flex flex-wrap m-0 p-0 gap-4 justify-between items-center">
+      <div
+        class="border-b border-neutral-700 py-5 px-10 print:border-0 print:p-0"
+      >
+        <div class="m-0 flex flex-wrap items-center justify-between gap-4 p-0">
           <p
             class={`text-xl print:text-base print:before:mr-2 ${
               academic
@@ -56,7 +58,7 @@ const {
           </p>
           {
             current && (
-              <span class="border border-emerald-900 bg-emerald-700 px-3 py-1 text-sm uppercase tracking-wider text-white print:border-0 print:bg-white print:text-base print:text-black">
+              <span class="border border-emerald-900 bg-emerald-700 px-3 py-1 text-sm uppercase tracking-wider text-white print:border-0 print:bg-white print:text-base print:text-neutral-700">
                 Actualmente
               </span>
             )
@@ -65,7 +67,9 @@ const {
       </div>
       <div class="mb-0 p-10 print:p-0">
         <slot />
-        <div class="flex flex-wrap gap-4 items-end justify-end print:gap-1">
+        <div
+          class="flex flex-wrap items-end justify-end gap-4 print:hidden print:gap-0"
+        >
           {
             labels.map((label: ILabelProp) => (
               <Label css={label.css} text={label.text} />

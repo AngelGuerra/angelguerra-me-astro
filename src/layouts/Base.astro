@@ -97,7 +97,7 @@ const ldJson: string = JSON.stringify({
     <Fragment
       set:html={`<script type="application/ld+json">${ldJson}</script>`}
     />
-
+    <!-- 
     <style>
       ::-webkit-scrollbar {
         @apply w-2;
@@ -110,30 +110,26 @@ const ldJson: string = JSON.stringify({
       ::-webkit-scrollbar-thumb {
         @apply bg-emerald-600 hover:bg-emerald-800;
       }
-    </style>
+    </style> -->
   </head>
 
-  <body class="flex flex-col min-h-screen">
-    <header class="border-b-4 border-black print:hidden">
+  <body class="flex min-h-screen flex-col bg-gray-200 text-neutral-700">
+    <header class="print:hidden">
       <nav
-        class="container flex flex-row justify-between py-4 px-6 bg-white w-full mx-auto"
+        class="container mx-auto flex w-full flex-row justify-between py-4 px-6"
       >
         <div>
-          <a
-            href="/"
-            class="text-2xl no-underline text-grey-darkest hover:text-blue-dark"
-            rel="home">Ángel Guerra</a
-          >
+          <a href="/" class="text-2xl no-underline" rel="home">Ángel Guerra</a>
         </div>
-        <div>
+        <div class="flex flex-row gap-8">
           <a
             href="/cv"
-            class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2"
-            >/cv</a
+            class="text-lg underline decoration-wavy underline-offset-2 hover:text-neutral-900"
+            >Currículum</a
           >
           <a
             href="/uses"
-            class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2"
+            class="text-lg underline decoration-wavy underline-offset-2 hover:text-neutral-900"
             >/uses</a
           >
         </div>
@@ -141,19 +137,19 @@ const ldJson: string = JSON.stringify({
     </header>
 
     <main
-      class="relative flex-1 flex flex-col flex-wrap items-stretch justify-start"
+      class="relative flex flex-1 flex-col flex-wrap items-stretch justify-start"
     >
       <slot />
     </main>
 
-    <footer class="border-t-4 border-black py-8 bg-white print:hidden">
+    <footer class="border-t-2 border-neutral-700 bg-white py-8 print:hidden">
       <div class="container mx-auto">
-        <p class="text-center text-xs mb-2">
+        <p class="mb-2 text-center text-xs">
           <a href="/no-cookies" title="Política de NO cookies" class="underline"
             >Política de NO cookies</a
           >
         </p>
-        <p class="text-center tracking-wide mb-2">
+        <p class="mb-2 text-center tracking-wide">
           Construido con
           <ExternalLink
             href="https://astro.build/"
@@ -169,9 +165,12 @@ const ldJson: string = JSON.stringify({
             rel="external noreferrer"
           /> 🌲
         </p>
-        <div class="text-center text-xs flex flex-col gap-1">
-          <span class="text-indigo-800" title="Página sin Javascript"
-            >#ZeroJS #NoJavascript</span
+        <div class="flex flex-col gap-1 text-center text-xs">
+          <span
+            class="text-indigo-800 line-through"
+            title="Página sin Javascript">#ZeroJS #NoJavascript</span
+          ><span class="text-indigo-800" title="Página sin Javascript"
+            >#SóloUnPoquitoDeJavaScript</span
           >
           <span class="text-[#514375]">#Astro-{astroVersion}</span>
           <span class="text-sky-700">#TailwindCSS-{tailwindVersion}</span>

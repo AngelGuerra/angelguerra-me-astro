@@ -11,11 +11,10 @@ const { href, text, title, rel = "", css = "" } = Astro.props;
 ---
 
 <a
-  {href}
+  href={href}
   target="_blank"
   rel={`noopener ${rel}`.trim()}
-  {title}
-  class={`underline underline-offset-2 decoration-wavy
-  hover:decoration-rose-900 ${css} print:no-underline print:font-bold`.trim()}
-  >{text}
-</a>
+  title={title}
+  class={`inline underline underline-offset-4 decoration-2 decoration-very-peri hover:decoration-neutral-700 font-bold transition-all print:no-underline print:font-bold ${css}`.trim()}
+  >{text}</a
+>

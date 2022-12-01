@@ -1,0 +1,33 @@
+---
+export interface Props {
+  time?: boolean;
+  command: string;
+}
+
+const { time = false, command } = Astro.props;
+
+import ChevronRightIcon from "component:icons/heroicons/chevron-right";
+import GitBranchIcon from "component:icons/octoicons/git-branch";
+import PackageIcon from "component:icons/octoicons/package";
+---
+
+<section class="mb-2">
+  <p>
+    <span class="font-bold text-cyan-700">angelguerra</span> on <span
+      class="font-bold text-purple-700"><GitBranchIcon /> main</span
+    > via <span class="font-bold text-red-700"><PackageIcon /> v32</span>{
+      time && (
+        <>
+          {" "}
+          took
+          <span class="font-bold text-yellow-700">32 years</span>
+        </>
+      )
+    }
+  </p>
+
+  <p>
+    <ChevronRightIcon css="h-4 w-4 inline text-red-700" />
+    <span class="command">{command}</span>
+  </p>
+</section>

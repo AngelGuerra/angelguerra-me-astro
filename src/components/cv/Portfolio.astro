@@ -1,14 +1,15 @@
 ---
-import { ImageMetadata, OutputFormat } from "@astrojs/image";
 import { Picture } from "@astrojs/image/components";
+import { OutputFormat } from "@astrojs/image/dist/loaders";
+import { ImageMetadata } from "@astrojs/image/dist/vite-plugin-astro-image";
 import ExternalLink from "component:ExternalLink";
 
 export interface Props {
   title: string;
-  src: ImageMetadata;
-  alt: string;
   web: string;
   github: string;
+  alt?: string;
+  src?: ImageMetadata | string;
   css?: string;
 }
 
@@ -25,33 +26,37 @@ const PICTURE_CONFIG: IPicture = {
   formats: ["avif", "webp", "png"],
 };
 
-const { title, src, alt, web, github, css = "" } = Astro.props;
+const { title, web, github, src = "", alt = "", css = "" } = Astro.props;
 ---
 
 <section
-  class="bg-white border-4 border-black h-full flex flex-col transition-shadow shadow-square-left hover:shadow-square-right print:shadow-none print:hover:shadow-none print:border"
+  class="flex h-full flex-col border-4 border-neutral-700 bg-white shadow-square-left transition-shadow hover:shadow-square-right print:border print:shadow-none print:hover:shadow-none"
 >
   <p
-    class={`p-4 text-xl text-center border-b border-black font-bold ${css} 2xl:text-base print:text-base print:p-2`}
+    class={`p-4 text-xl text-center border-b border-neutral-700 font-bold ${css} 2xl:text-base print:text-base print:p-2`}
   >
     {title}
   </p>
-  <Picture
-    src={src}
-    alt={alt}
-    widths={PICTURE_CONFIG.widths}
-    sizes={PICTURE_CONFIG.sizes}
-    formats={PICTURE_CONFIG.formats}
-    loading="lazy"
-    decoding="async"
-    class="print:hidden"
-    aspectRatio="158:109"
-  />
+  {
+    src !== "" && (
+      <Picture
+        src={src}
+        alt={alt}
+        widths={PICTURE_CONFIG.widths}
+        sizes={PICTURE_CONFIG.sizes}
+        formats={PICTURE_CONFIG.formats}
+        loading="lazy"
+        decoding="async"
+        class="print:hidden"
+        aspectRatio="158:109"
+      />
+    )
+  }
   <div class="p-4">
     <slot />
   </div>
   <div
-    class="mt-auto text-center p-4 border-t border-black flex flex-wrap items-center justify-around print:hidden"
+    class="mt-auto flex flex-wrap items-center justify-around border-t border-neutral-700 p-4 text-center print:hidden"
   >
     <ExternalLink
       href={web}

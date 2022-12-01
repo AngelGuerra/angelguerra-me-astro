@@ -2,10 +2,7 @@
 import BaseLayout from "layout:Base";
 
 import ExternalLink from "component:ExternalLink";
-import JsonArray from "component:json/Array";
-import JsonNumber from "component:json/Number";
-import JsonString from "component:json/String";
-import JsonText from "component:json/Text";
+import CommandLine from "component:CommandLine";
 
 import LinkedInIcon from "component:icons/simpleicons/linkedin";
 import GithubIcon from "component:icons/simpleicons/github";
@@ -18,34 +15,40 @@ import LichessIcon from "component:icons/simpleicons/lichess";
   description="Padre de tres, pareja, deportista, ninja y programador Full Stack en continuo aprendizaje"
 >
   <section
-    class="relative grow p-4 flex items-center justify-center bg-very-peri overflow-hidden"
+    class="relative flex grow items-center justify-center overflow-hidden p-4"
   >
     <section
-      class="relative bg-white max-w-lg p-4 border-4 border-black transition-shadow shadow-square-left hover:shadow-square-right z-10"
+      class="relative z-10 max-w-lg border-4 border-neutral-700 bg-white p-4 shadow-square-left transition-shadow hover:shadow-square-right"
     >
-      <span class="block">{"{"}</span>
-      <JsonText title="main-branch">
-        <h1 class="inline-block">Ángel Guerra</h1>
-      </JsonText>
-      <JsonText title="merged-branch">
-        <ExternalLink
-          href="https://www.instagram.com/regazofotografia/"
-          title="Instagram de Regazo Fotografía"
-          text="@regazofotografia"
-        />
-      </JsonText>
-      <JsonNumber title="forks" value="3" />
-      <JsonString title="role" value="Desarrollador Full-Stack" />
-      <JsonArray
-        title="hobbies"
-        values={["Ninjutsu", "Kick Boxing", "Anime", "Ajedrez"]}
-      />
-      <JsonText title="bio" last={true}
-        >Desarrollador afincado en Cantabria, actualmente trabajo en
+      <CommandLine time={true} command="git config --list" />
+
+      <ul class="mb-2">
+        <li>user.name=Ángel Guerra</li>
+        <li>user.hobbies=Ninjutsu | Kick Boxing | Anime | Ajedrez</li>
+        <li>user.role=Full-StackDev</li>
+        <li>user.currentSkills=Javascript | React | PHP | CakePHP</li>
+        <li>core.editor=vscode</li>
+        <li>
+          <span title="Felizmente casado con">remote.origin.url</span
+          >=<ExternalLink
+            href="https://www.instagram.com/regazofotografia/"
+            title="Instagram de Regazo Fotografía"
+            text="@regazofotografia"
+          />
+        </li>
+        <li>branch.main.remote=origin</li>
+        <li><span title="Padre de">branch.main.forks</span>=3</li>
+      </ul>
+
+      <CommandLine command="cat bio.md" />
+
+      <p>
+        ## Bio<br /><br />
+        Desarrollador afincado en Cantabria, actualmente trabajo en
         <ExternalLink
           href="https://iteisa.com/"
           title="Página web de ITEISA"
-          css="text-[#af1685]"
+          css="text-[#af1685] decoration-[#af1685]"
           text="ITEISA"
         />
         donde utilizo sobretodo <strong>CakePHP</strong> y
@@ -53,11 +56,10 @@ import LichessIcon from "component:icons/simpleicons/lichess";
         una persona inquieta en cuanto al mundo de la programación se refiere así
         que, casi siempre, estoy probando cosas nuevas o cacharreando con alguna
         tecnología que surja.
-      </JsonText>
-      <span class="block">{"}"}</span>
+      </p>
 
       <div
-        class="flex flex-row justify-between items-center mt-6 pt-6 border-t-4 border-t-black"
+        class="mt-6 flex flex-row items-center justify-between border-t-4 border-t-neutral-700 pt-6"
       >
         <div>
           <a
@@ -67,7 +69,7 @@ import LichessIcon from "component:icons/simpleicons/lichess";
             title="Mi perfil en LinkedIn"
           >
             <span
-              class="sr-only underline underline-offset-2 decoration-wavy hover:decoration-rose-900"
+              class="sr-only mb-2 block font-bold underline decoration-very-peri decoration-2 underline-offset-4 transition-all hover:decoration-neutral-700"
               >LinkedIn</span
             >
             <LinkedInIcon css="h-12 w-12 transition-all hover:scale-105" />
@@ -81,7 +83,7 @@ import LichessIcon from "component:icons/simpleicons/lichess";
             title="Mi perfil en Twitter"
           >
             <span
-              class="sr-only underline underline-offset-2 decoration-wavy hover:decoration-rose-900"
+              class="sr-only mb-2 block font-bold underline decoration-very-peri decoration-2 underline-offset-4 transition-all hover:decoration-neutral-700"
               >Twitter</span
             >
             <TwitterIcon css="h-12 w-12 transition-all hover:scale-105" />
@@ -95,7 +97,7 @@ import LichessIcon from "component:icons/simpleicons/lichess";
             title="Mi perfil en Github"
           >
             <span
-              class="sr-only underline underline-offset-2 decoration-wavy hover:decoration-rose-900"
+              class="sr-only mb-2 block font-bold underline decoration-very-peri decoration-2 underline-offset-4 transition-all hover:decoration-neutral-700"
               >Github</span
             >
             <GithubIcon css="h-12 w-12 transition-all hover:scale-105" />
@@ -109,7 +111,7 @@ import LichessIcon from "component:icons/simpleicons/lichess";
             title="Mi perfil en Lichess"
           >
             <span
-              class="sr-only underline underline-offset-2 decoration-wavy hover:decoration-rose-900"
+              class="sr-only mb-2 block font-bold underline decoration-very-peri decoration-2 underline-offset-4 transition-all hover:decoration-neutral-700"
               >Lichess</span
             >
             <LichessIcon css="h-12 w-12 transition-all hover:scale-105" />

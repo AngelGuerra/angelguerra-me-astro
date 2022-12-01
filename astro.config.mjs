@@ -29,7 +29,9 @@ export default defineConfig({
   site: "https://angelguerra.me",
   integrations: [
     sitemap({ filter: (page) => !isExcludedInSitemap(page) }),
-    image(),
+    image({
+      serviceEntryPoint: "@astrojs/image/sharp",
+    }),
     tailwind(),
   ],
 });

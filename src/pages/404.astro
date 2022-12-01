@@ -1,27 +1,69 @@
 ---
-import BaseLayout from "layout:Base";
+import { Image } from "@astrojs/image/components";
 
-import JsonNumber from "component:json/Number";
-import JsonString from "component:json/String";
+import BaseLayout from "layout:Base";
+import CommandLine from "component:CommandLine";
+// import confusedTravolta from "/assets/confused-travolta.gif";
 ---
+
+<script>
+  const { pathname } = window.location;
+  document.addEventListener("DOMContentLoaded", () => {
+    document
+      .querySelector(".command")
+      .insertAdjacentText("beforeend", pathname);
+  });
+</script>
 
 <BaseLayout
   title="La página que buscas no existe"
   description="¿He hecho algo mal?"
   robots="noindex,nofollow"
 >
-  <section class="grow p-4 flex items-center justify-center bg-very-peri">
+  <section
+    class="relative flex grow items-center justify-center overflow-hidden p-4"
+  >
     <section
-      class="bg-white max-w-lg p-4 border-4 border-black transition-shadow shadow-square-left hover:shadow-square-right"
+      class="relative z-10 max-w-lg border-4 border-neutral-700 bg-white p-4 shadow-square-left transition-shadow hover:shadow-square-right"
     >
-      <span class="block">{"{"}</span>
-      <JsonNumber title="status" value="404" />
-      <JsonString
-        title="reason"
-        value="La página que buscas no existe... a no ser que la página que estés buscando sea la 404, que en ese caso es ésta que ves. ¿Para qué buscas estas cosas raras?"
-        last={true}
+      <CommandLine time={true} command="" />
+
+      <p class="mb-1">
+        <b>Página no encontrada</b>.<br />
+        Quizá quieres ir a:
+      </p>
+
+      <ul class="mb-1 list-inside list-disc">
+        <li>
+          La página <a
+            href="/"
+            class="inline font-bold underline decoration-very-peri decoration-2 underline-offset-4 transition-all hover:decoration-neutral-700"
+            >principal</a
+          >: origen de todas las cosas.
+        </li>
+        <li>
+          La página con mi <a
+            href="/cv"
+            class="inline font-bold underline decoration-very-peri decoration-2 underline-offset-4 transition-all hover:decoration-neutral-700"
+            >currículum</a
+          >: Con información profesional relevante.
+        </li>
+      </ul>
+
+      <p class="mb-2">
+        O quizá sólo querías ver la página 404, en ese caso, es ésta.
+      </p>
+
+      <Image
+        src={`/assets/confused-travolta.gif`}
+        alt="John Travolta confundido en una escena de Pulp Fiction"
+        width="300"
+        height="291"
+        format="webp"
+        loading="lazy"
+        decoding="async"
+        class="block mx-auto motion-reduce:hidden"
       />
-      <span class="block">{"}"}</span>
     </section>
   </section>
 </BaseLayout>
