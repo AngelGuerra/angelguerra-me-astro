@@ -41,7 +41,7 @@ const ldJson: string = JSON.stringify({
 });
 ---
 
-<html lang="es">
+<html lang="es" class="scroll-smooth">
   <head>
     <title>{title} | Ángel Guerra</title>
     <meta name="description" content={description} />
@@ -97,20 +97,25 @@ const ldJson: string = JSON.stringify({
     <Fragment
       set:html={`<script type="application/ld+json">${ldJson}</script>`}
     />
-    <!-- 
-    <style>
+
+    <style is:global>
       ::-webkit-scrollbar {
         @apply w-2;
       }
 
+      * {
+        scrollbar-width: auto;
+        scrollbar-color: #0e7490 #a3a3a3;
+      }
+
       ::-webkit-scrollbar-track {
-        @apply bg-gray-400;
+        @apply bg-neutral-400;
       }
 
       ::-webkit-scrollbar-thumb {
-        @apply bg-emerald-600 hover:bg-emerald-800;
+        @apply border-0 bg-cyan-700 hover:bg-cyan-600;
       }
-    </style> -->
+    </style>
   </head>
 
   <body class="flex min-h-screen flex-col bg-gray-200 text-neutral-700">
