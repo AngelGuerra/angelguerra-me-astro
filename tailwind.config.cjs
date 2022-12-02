@@ -200,9 +200,9 @@ module.exports = {
         "glitch-anim-2": "glitch-anim-2 1s infinite linear alternate-reverse",
       },
       boxShadow: {
-        square: "0 0.35rem 0 #404040",
-        "square-left": "-0.35rem 0.35rem 0 #404040",
-        "square-right": "0.35rem 0.35rem 0 #404040",
+        square: "0 0.35rem 0 #18181B",
+        "square-left": "-0.35rem 0.35rem 0 #18181B",
+        "square-right": "0.35rem 0.35rem 0 #18181B",
       },
     },
   },

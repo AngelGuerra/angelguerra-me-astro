@@ -118,23 +118,29 @@ const ldJson: string = JSON.stringify({
     </style>
   </head>
 
-  <body class="flex min-h-screen flex-col bg-gray-200 text-neutral-700">
+  <body
+    class="flex min-h-screen flex-col bg-gray-200 bg-gradient-to-b from-violet-100 to-white text-zinc-900 dark:from-slate-800 dark:to-gray-900 dark:text-zinc-200"
+  >
     <header class="print:hidden">
       <nav
-        class="container mx-auto flex w-full flex-row justify-between py-4 px-6"
+        class="container mx-auto flex w-full flex-col justify-between gap-6 py-4 px-6 md:flex-row"
       >
-        <div>
-          <a href="/" class="text-2xl no-underline" rel="home">Ángel Guerra</a>
+        <div class="flex justify-center md:justify-start">
+          <a
+            href="/"
+            class="text-2xl no-underline hover:text-neutral-900 dark:hover:text-white"
+            rel="home">Ángel Guerra</a
+          >
         </div>
-        <div class="flex flex-row gap-8">
+        <div class="flex flex-row justify-center gap-8 md:justify-end">
           <a
             href="/cv"
-            class="text-lg underline decoration-wavy underline-offset-2 hover:text-neutral-900"
+            class="text-lg underline decoration-wavy underline-offset-2 hover:text-neutral-900 dark:hover:text-white"
             >Currículum</a
           >
           <a
             href="/uses"
-            class="text-lg underline decoration-wavy underline-offset-2 hover:text-neutral-900"
+            class="text-lg underline decoration-wavy underline-offset-2 hover:text-neutral-900 dark:hover:text-white"
             >/uses</a
           >
         </div>
@@ -147,7 +153,9 @@ const ldJson: string = JSON.stringify({
       <slot />
     </main>
 
-    <footer class="border-t-2 border-neutral-700 bg-white py-8 print:hidden">
+    <footer
+      class="border-t-2 border-zinc-900 bg-white py-8 dark:border-white dark:bg-gray-900 print:hidden"
+    >
       <div class="container mx-auto">
         <p class="mb-2 text-center text-xs">
           <a href="/no-cookies" title="Política de NO cookies" class="underline"
@@ -172,13 +180,18 @@ const ldJson: string = JSON.stringify({
         </p>
         <div class="flex flex-col gap-1 text-center text-xs">
           <span
-            class="text-indigo-800 line-through"
+            class="text-indigo-800 line-through dark:text-indigo-200"
             title="Página sin Javascript">#ZeroJS #NoJavascript</span
-          ><span class="text-indigo-800" title="Página sin Javascript"
-            >#SóloUnPoquitoDeJavaScript</span
+          ><span
+            class="text-indigo-800 dark:text-indigo-200"
+            title="Página sin Javascript">#SóloUnPoquitoDeJavaScript</span
           >
-          <span class="text-[#514375]">#Astro-{astroVersion}</span>
-          <span class="text-sky-700">#TailwindCSS-{tailwindVersion}</span>
+          <span class="text-[#514375] dark:text-[#ff7e33]"
+            >#Astro-{astroVersion}</span
+          >
+          <span class="text-sky-700 dark:text-sky-400"
+            >#TailwindCSS-{tailwindVersion}</span
+          >
         </div>
       </div>
     </footer>

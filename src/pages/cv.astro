@@ -31,7 +31,7 @@ const site = Astro.site.toString();
         <p class="text-center text-base print:hidden">
           ¿Mucho texto? <button
             onclick="if (window.print) window.print()"
-            class="font-bold underline decoration-very-peri decoration-2 underline-offset-4 transition-all hover:decoration-neutral-700"
+            class="font-bold underline decoration-very-peri decoration-2 underline-offset-4 transition-all hover:decoration-zinc-900"
           >
             Prueba la versión impresa.
           </button>
@@ -84,16 +84,16 @@ const site = Astro.site.toString();
           </p>
 
           <div class="mb-4 flex flex-wrap gap-4 print:gap-0">
-            <Label text="PHP" css="border-neutral-700 bg-white" />
-            <Label text="CakePHP" css="border-neutral-700 bg-white" />
-            <Label text="MySQL" css="border-neutral-700 bg-white" />
-            <Label text="Git" css="border-neutral-700 bg-white" />
-            <Label text="GitLab CI" css="border-neutral-700 bg-white" />
-            <Label text="JavaScript" css="border-neutral-700 bg-white" />
-            <Label text="React" css="border-neutral-700 bg-white" />
-            <Label text="Tailwind CSS" css="border-neutral-700 bg-white" />
-            <Label text="Astro" css="border-neutral-700 bg-white" />
-            <Label text="11ty" css="border-neutral-700 bg-white" />
+            <Label text="PHP" css="border-zinc-900  bg-white" />
+            <Label text="CakePHP" css="border-zinc-900  bg-white" />
+            <Label text="MySQL" css="border-zinc-900  bg-white" />
+            <Label text="Git" css="border-zinc-900  bg-white" />
+            <Label text="GitLab CI" css="border-zinc-900  bg-white" />
+            <Label text="JavaScript" css="border-zinc-900  bg-white" />
+            <Label text="React" css="border-zinc-900  bg-white" />
+            <Label text="Tailwind CSS" css="border-zinc-900  bg-white" />
+            <Label text="Astro" css="border-zinc-900  bg-white" />
+            <Label text="11ty" css="border-zinc-900  bg-white" />
           </div>
 
           <p class="mb-2 print:hidden">
@@ -126,7 +126,7 @@ const site = Astro.site.toString();
                 title="Mi perfil en LinkedIn"
               >
                 <span
-                  class="sr-only mb-2 block font-bold underline decoration-very-peri decoration-2 underline-offset-4 transition-all hover:decoration-neutral-700"
+                  class="sr-only mb-2 block font-bold underline decoration-very-peri decoration-2 underline-offset-4 transition-all hover:decoration-zinc-900"
                   >LinkedIn</span
                 >
                 <LinkedInIcon
@@ -145,7 +145,7 @@ const site = Astro.site.toString();
                 title="Mi perfil en Twitter"
               >
                 <span
-                  class="sr-only mb-2 block font-bold underline decoration-very-peri decoration-2 underline-offset-4 transition-all hover:decoration-neutral-700"
+                  class="sr-only mb-2 block font-bold underline decoration-very-peri decoration-2 underline-offset-4 transition-all hover:decoration-zinc-900"
                   >Twitter</span
                 >
                 <TwitterIcon
@@ -164,7 +164,7 @@ const site = Astro.site.toString();
                 title="Mi perfil en Github"
               >
                 <span
-                  class="sr-only mb-2 block font-bold underline decoration-very-peri decoration-2 underline-offset-4 transition-all hover:decoration-neutral-700"
+                  class="sr-only mb-2 block font-bold underline decoration-very-peri decoration-2 underline-offset-4 transition-all hover:decoration-zinc-900"
                   >Github</span
                 >
                 <GithubIcon
@@ -494,7 +494,7 @@ const site = Astro.site.toString();
           </div>
 
           <div
-            class="hidden w-full border-4 border-neutral-700 bg-white p-4 shadow-square-left print:block"
+            class="hidden w-full border-4 border-zinc-900 bg-white p-4 shadow-square-left print:block"
           >
             <b>Pst</b>: En {site}cv puedes ver una versión más completa del
             currículum, disfruta la lectura.
@@ -856,7 +856,7 @@ const site = Astro.site.toString();
 
   <button
     onclick="if (window.print) window.print()"
-    class="fixed bottom-4 right-4 rounded-full bg-neutral-700 p-3 text-white print:hidden"
+    class="fixed bottom-4 right-4 rounded-full bg-zinc-900 p-3 text-white print:hidden"
   >
     <Printer />
     <span class="sr-only">Imprímelo</span>

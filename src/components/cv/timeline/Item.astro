@@ -29,23 +29,21 @@ const {
   class={`relative flex break-inside-avoid print:before:hidden ${
     last
       ? ""
-      : "before:bg-neutral-700 before:content-[''] before:h-full before:left-[1.125rem] before:absolute before:top-5 before:w-1"
+      : "before:bg-zinc-900  before:content-[''] before:h-full before:left-[1.125rem] before:absolute before:top-5 before:w-1"
   }`.trim()}
 >
   <div class="z-10 print:hidden">
     <span
-      class="mt-5 flex h-10 w-10 items-center justify-center rounded-full border border-neutral-700 bg-white text-neutral-700"
+      class="mt-5 flex h-10 w-10 items-center justify-center rounded-full border border-zinc-900 bg-white text-zinc-900"
     >
       {academic ? <AcademicCapIcon /> : <BriefcaseIcon />}
     </span>
   </div>
   <div class="flex-1 pl-4 print:pl-0">
     <div
-      class="relative mb-10 overflow-auto border-4 border-neutral-700 bg-white shadow-square-left transition-shadow hover:shadow-square-right print:mb-4 print:border-0 print:shadow-none print:hover:shadow-none"
+      class="relative mb-10 overflow-auto border-4 border-zinc-900 bg-white shadow-square-left transition-shadow hover:shadow-square-right dark:border-zinc-200 dark:bg-transparent print:mb-4 print:border-0 print:shadow-none print:hover:shadow-none"
     >
-      <div
-        class="border-b border-neutral-700 py-5 px-10 print:border-0 print:p-0"
-      >
+      <div class="border-b border-zinc-900 py-5 px-10 print:border-0 print:p-0">
         <div class="m-0 flex flex-wrap items-center justify-between gap-4 p-0">
           <p
             class={`text-xl print:text-base print:before:mr-2 ${
@@ -58,7 +56,7 @@ const {
           </p>
           {
             current && (
-              <span class="border border-emerald-900 bg-emerald-700 px-3 py-1 text-sm uppercase tracking-wider text-white print:border-0 print:bg-white print:text-base print:text-neutral-700">
+              <span class="border border-emerald-900 bg-emerald-700 px-3 py-1 text-sm uppercase tracking-wider text-white print:border-0 print:bg-white print:text-base print:text-zinc-900 ">
                 Actualmente
               </span>
             )

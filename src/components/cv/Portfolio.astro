@@ -30,10 +30,10 @@ const { title, web, github, src = "", alt = "", css = "" } = Astro.props;
 ---
 
 <section
-  class="flex h-full flex-col border-4 border-neutral-700 bg-white shadow-square-left transition-shadow hover:shadow-square-right print:border print:shadow-none print:hover:shadow-none"
+  class="flex h-full flex-col border-4 border-zinc-900 bg-white shadow-square-left transition-shadow hover:shadow-square-right dark:border-zinc-200 dark:bg-transparent print:border print:shadow-none print:hover:shadow-none"
 >
   <p
-    class={`p-4 text-xl text-center border-b border-neutral-700 font-bold ${css} 2xl:text-base print:text-base print:p-2`}
+    class={`p-4 text-xl text-center border-b border-zinc-900  font-bold ${css} 2xl:text-base print:text-base print:p-2`}
   >
     {title}
   </p>
@@ -56,7 +56,7 @@ const { title, web, github, src = "", alt = "", css = "" } = Astro.props;
     <slot />
   </div>
   <div
-    class="mt-auto flex flex-wrap items-center justify-around border-t border-neutral-700 p-4 text-center print:hidden"
+    class="mt-auto flex flex-wrap items-center justify-around border-t border-zinc-900 p-4 text-center print:hidden"
   >
     <ExternalLink
       href={web}
