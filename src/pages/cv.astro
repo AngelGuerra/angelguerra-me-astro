@@ -1,4 +1,6 @@
 ---
+import { Image } from "@astrojs/image/components";
+
 import BaseLayout from "layout:Base";
 
 import ExternalLink from "component:ExternalLink";
@@ -12,7 +14,8 @@ import LinkedInIcon from "component:icons/simpleicons/linkedin";
 import GithubIcon from "component:icons/simpleicons/github";
 import TwitterIcon from "component:icons/simpleicons/twitter";
 
-import imgCv from "asset:img/angel-guerra.svg";
+// import imgCv from "asset:img/angel-guerra.svg";
+import imgCv from "asset:img/angel-guerra.png";
 
 const site = Astro.site.toString();
 ---
@@ -42,17 +45,16 @@ const site = Astro.site.toString();
         class="mb-16 flex flex-wrap items-start justify-start gap-4 print:flex-nowrap md:flex-nowrap"
       >
         <section
-          class="mb-6 print:block print:basis-2/5 md:sticky md:top-4 md:mb-0 md:shrink-0 md:grow-0 md:basis-1/3"
+          class="mb-6 print:mb-0 print:block print:basis-2/5 md:sticky md:top-4 md:mb-0 md:shrink-0 md:grow-0 md:basis-1/3"
         >
           <figure class="mb-4 border-0">
-            <img
+            <Image
               src={imgCv}
               alt="Dibujo de mi persona realizado por Dante"
-              class="aspect-video border-0"
+              class="aspect-square border-0 w-full max-w-xs mb-4 d-block mx-auto sm:max-w-none sm:w-2/5 sm:float-right md:w-full lg:w-1/2 xl:w-2/5 print:max-h-40 print:object-contain"
+              loading="lazy"
+              decoding="async"
             />
-            <figcaption class="border-0 text-sm">
-              Una imagen fidedigna de mí mismo realizada por mi hijo con 4 años.
-            </figcaption>
           </figure>
           <p class="mb-2 font-bold">Sí, pero... ¿quién soy?</p>
 
