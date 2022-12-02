@@ -8,9 +8,12 @@ import CommandLine from "component:CommandLine";
 <script>
   const { pathname } = window.location;
   document.addEventListener("DOMContentLoaded", () => {
-    document
-      .querySelector(".command")
-      .insertAdjacentText("beforeend", pathname);
+    const commandElement = document.querySelector(".command");
+
+    // En producción, por algún motivo, si no hago este control se ejecuta dos veces.
+    if (!commandElement.textContent) {
+      commandElement.insertAdjacentText("beforeend", pathname);
+    }
   });
 </script>
 
