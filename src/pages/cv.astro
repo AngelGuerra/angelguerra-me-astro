@@ -15,7 +15,6 @@ import LinkedInIcon from "component:icons/simpleicons/linkedin";
 import GithubIcon from "component:icons/simpleicons/github";
 import TwitterIcon from "component:icons/simpleicons/twitter";
 
-// import imgCv from "asset:img/angel-guerra.svg";
 import imgCv from "asset:img/angel-guerra.png";
 
 const site = Astro.site.toString();
@@ -25,7 +24,7 @@ const site = Astro.site.toString();
   title="Currículum"
   description="Experiencia a lo largo de mi vida profesional como desarrollador"
 >
-  <section class="h-full p-4 print:bg-white print:text-sm print:h-screen">
+  <section class="h-full p-4 print:h-screen print:bg-white print:text-sm">
     <section class="container mx-auto mb-8 print:w-full">
       <header class="mb-12">
         <p class="mt-8 mb-2 text-center text-2xl">👋 ¡Hola! ¿Qué tal?</p>
@@ -55,7 +54,7 @@ const site = Astro.site.toString();
             loading="lazy"
             decoding="async"
           />
-          <p class="mb-2 font-bold">Sí, pero... ¿quién soy?</p>
+          <p class="mb-2 font-bold">Pero... ¿quién soy?</p>
 
           <p class="mb-2">
             Más allá de la pregunta filosófica, mi nombre es <strong
@@ -493,11 +492,13 @@ const site = Astro.site.toString();
           </div>
 
           <div
-            class="hidden w-full border-4 border-zinc-900 bg-white p-4 shadow-square-left print:block"
+            class="hidden w-full border-4 border-zinc-900 bg-white p-4 shadow-square-left print:flex print:items-start print:gap-3"
           >
             <Qr />
-            <b>Pst</b>: En {site}cv/ puedes ver una versión más completa del
-            currículum, disfruta la lectura.
+            <p class="grow basis-0">
+              <b>Pst</b>: En {site}cv/ puedes ver una versión más completa del
+              currículum, disfruta la lectura.
+            </p>
           </div>
 
           <header class="print:hidden">

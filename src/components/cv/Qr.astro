@@ -3,8 +3,9 @@ export interface Props {
   css?: string;
 }
 
-const { css = "hidden aspect-square max-w-xs w-20 mx-auto mb-4 print:block" } =
-  Astro.props;
+const {
+  css = "aspect-square max-w-xs w-20 mx-auto mb-4 print:flex print:basis-20",
+} = Astro.props;
 ---
 
 <svg xmlns="http://www.w3.org/2000/svg" class={css} viewBox="0 0 20480 20480">
