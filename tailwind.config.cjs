@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       colors: {
         "very-peri": "#6667AB", // https://www.pantone.com/color-of-the-year-2022
+        "viva-magenta": "#BB2649", // https://www.pantone.com/color-of-the-year/2023
       },
       keyframes: {
         "glitch-skew": {
