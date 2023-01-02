@@ -21,22 +21,23 @@ const site = Astro.site.toString();
 ---
 
 <BaseLayout
-  title="Currículum"
-  description="Experiencia a lo largo de mi vida profesional como desarrollador"
+  title="My resume"
+  description="Experience throughout my professional life as a developer"
+  robots="noindex,nofollow"
 >
   <section class="h-full p-4 print:h-screen print:bg-white print:text-sm">
     <section class="container mx-auto mb-8 print:w-full">
       <header class="mb-12 print:mb-6">
-        <p class="mt-8 mb-2 text-center text-2xl">👋 ¡Hola! ¿Qué tal?</p>
+        <p class="mt-8 mb-2 text-center text-2xl">👋 Hi! How are you?</p>
         <h1 class="mb-2 text-center text-xl print:hidden">
-          Te doy la bienvenida a mi currículum
+          Welcome to my resume
         </h1>
         <p class="text-center text-base print:hidden">
-          ¿Mucho texto? <button
+          Too much text? <button
             onclick="if (window.print) window.print()"
             class="font-bold underline decoration-viva-magenta decoration-2 underline-offset-4 transition-all hover:decoration-zinc-900"
           >
-            Prueba la versión impresa.
+            Try the printed version.
           </button>
         </p>
       </header>
@@ -49,37 +50,36 @@ const site = Astro.site.toString();
         >
           <Image
             src={imgCv}
-            alt="Fotografía de mí mismo"
+            alt="Photograph of myself"
             class="aspect-square border-0 w-full max-w-xs mb-4 d-block mx-auto sm:max-w-none sm:w-2/5 sm:float-right md:w-full lg:w-1/2 xl:w-2/5 print:max-h-40 print:object-contain"
             loading="lazy"
             decoding="async"
           />
-          <p class="mb-2 font-bold">Pero... ¿quién soy?</p>
+          <p class="mb-2 font-bold">But... Who am I?</p>
 
           <p class="mb-2">
-            Más allá de la pregunta filosófica, mi nombre es <strong
-              >Ángel</strong
-            > y nací al inicio de la <ExternalLink
-              href="https://es.wikipedia.org/wiki/A%C3%B1os_1990"
-              title="Información en Wikipedia sobre los 90"
-              text="gran década de los 90"
-            />. Actualmente soy desarrollador en <ExternalLink
+            Beyond the philosophical question, my name is <strong>Ángel</strong>
+            and I was born at the beginning of the <ExternalLink
+              href="https://en.wikipedia.org/wiki/1990s"
+              title=""
+              text="great decade of the 90s"
+            />. I'm currently a developer at <ExternalLink
               href="https://iteisa.com/"
-              title="Página web de ITEISA"
+              title="ITEISA webpage"
               css="text-[#af1685] decoration-[#af1685]"
               text="ITEISA"
-            /> donde me ocupo, principalmente, de los desarrollos a medida. Principalmente
-            trabajo con React y CakePHP, pero como verás en este currículum, he utilizado
-            muchas herramientas distintas lo que me dota de una gran versatilidad.
+            /> where I mainly deal with custom developments. I mainly work with React
+            and CakePHP, but as you will see in this resume, I have used many different
+            tools which gives me a great versatility.
             <span class="print:hidden"
-              >Como curiosidad, soy fan del <ExternalLink
+              >As a curiosity, I'm a fan of <ExternalLink
                 href="https://jamstack.org/"
-                title="Página web con información sobre el Jamstack"
+                title="Web page with information about Jamstack"
                 css="text-[#e7017a] decoration-[#e7017a]"
                 text="Jamstack"
-              />, y me gusta estar cacharreando con los <abbr
-                title="Generadores de sitios estáticos">SSG</abbr
-              > que van surgiendo.</span
+              />, and I like to be tinkering with the <abbr
+                title="Static Site Generators">SSG</abbr
+              > that are emerging.</span
             >
           </p>
 
@@ -98,22 +98,22 @@ const site = Astro.site.toString();
           </div>
 
           <p class="mb-2 print:hidden">
-            Por otro lado, me gustan los deportes de contacto - practico o he
-            practicado <ExternalLink
+            On the other hand, I like contact sports - I practice or have
+            practiced <ExternalLink
               href="https://bujinkancantabria.ninja/"
-              title="Página web de Bujinkan Cantabria"
-              text="artes marciales y kick boxing"
-            /> -, el <ExternalLink
+              title="Bujinkan Cantabria webpage"
+              text="martial arts and kick boxing"
+            /> -, <ExternalLink
               href="https://lichess.org/@/AngelGuerra"
-              title="Mi perfil en Lichess"
-              text="ajedrez"
-            /> - aunque siendo sinceros lo tengo abandonado -, ver anime y pasar
-            tiempo con mi familia <HeartIcon
+              title="My Lichess profile"
+              text="chess"
+            /> - although to be honest I have abandoned it -, watching anime and
+            spending time with my family <HeartIcon
               css="w-4 h-4 inline text-rose-700 fill-rose-700 motion-safe:animate-pulse"
             />.
           </p>
 
-          <p class="mb-2">Además puedes encontrarme en las redes sociales:</p>
+          <p class="mb-2">You can also find me on social:</p>
 
           <ul class="mb-6 flex flex-wrap gap-4 print:flex-col print:gap-1">
             <li>
@@ -121,7 +121,7 @@ const site = Astro.site.toString();
                 href="https://es.linkedin.com/in/angel-guerra-revilla"
                 target="_blank"
                 rel="me noopener"
-                title="Mi perfil en LinkedIn"
+                title="My LinkedIn profile"
               >
                 <span
                   class="sr-only mb-2 block font-bold underline decoration-viva-magenta decoration-2 underline-offset-4 transition-all hover:decoration-zinc-900"
@@ -140,7 +140,7 @@ const site = Astro.site.toString();
                 href="https://twitter.com/angellguerra"
                 target="_blank"
                 rel="me noopener"
-                title="Mi perfil en Twitter"
+                title="My Twitter profile"
               >
                 <span
                   class="sr-only mb-2 block font-bold underline decoration-viva-magenta decoration-2 underline-offset-4 transition-all hover:decoration-zinc-900"
@@ -159,7 +159,7 @@ const site = Astro.site.toString();
                 href="https://github.com/AngelGuerra"
                 target="_blank"
                 rel="me noopener"
-                title="Mi perfil en Github"
+                title="My Github profile"
               >
                 <span
                   class="sr-only mb-2 block font-bold underline decoration-viva-magenta decoration-2 underline-offset-4 transition-all hover:decoration-zinc-900"
@@ -175,26 +175,28 @@ const site = Astro.site.toString();
             </li>
           </ul>
 
-          <p class="mb-2 font-bold">Y... ¿qué busco <em>idealmente</em>?</p>
+          <p class="mb-2 font-bold">
+            And... what am I <em>ideally</em> looking for?
+          </p>
           <ul>
-            <li>Trabajar en el <em>backend</em>.</li>
-            <li>Utilizar tecnologías y herramientas actuales.</li>
-            <li>Un buen equipo del que formar parte.</li>
-            <li>Una buena conciliación familiar.</li>
-            <li>...y un buen salario, claro 😄.</li>
+            <li>To work, at least, in the backend.</li>
+            <li>Use current technologies and tools.</li>
+            <li>A good team to be part of.</li>
+            <li>A good work-life balance.</li>
+            <li>...and a good salary, of course 😄.</li>
           </ul>
         </section>
 
         <section class="print:basis-3/5 md:grow">
           <header>
-            <h2 class="mb-8 text-center text-2xl">Experiencia laboral</h2>
+            <h2 class="mb-8 text-center text-2xl">Work experience</h2>
           </header>
 
           <div>
             <!-- ITEISA -->
             <Item
-              title="Julio 2020"
-              current={true}
+              title="July 2020 - CURRENTLY"
+              current={false}
               labels={[
                 {
                   css: "shadow-[#8892BF] border-[#4F5B93] bg-[#8892BF] text-white",
@@ -253,35 +255,34 @@ const site = Astro.site.toString();
               <p class="mb-4">
                 <ExternalLink
                   href="https://iteisa.com/"
-                  title="Página web de ITEISA"
+                  title="ITEISA webpage"
                   css="text-[#af1685] decoration-[#af1685]"
                   text="ITEISA"
-                />. Soy desarrollador
-                <em>Full-Stack</em>. Mi función principal es realizar los
-                desarrollos a medida que los clientes solicitan a la empresa.
-                Por ello, en cada desarrollo, tengo que implicarme con el
-                cliente y su negocio, conocer el mercado al que se destine y las
-                mecánicas de funcionamiento del mismo.
+                />. I am a Full-Stack developer. My main function is to perform
+                custom developments that customers request to the company.
+                Therefore, in each development, I have to get involved with the
+                client and their business, know the market to which it is
+                intended and the mechanics of its operation.
               </p>
 
               <p class="mb-4 print:hidden">
-                Al ser una consultaría con multitud de clientes, también he
-                tenido la oportunidad de realizar muchos desarrollos de distinta
-                tipología: scrapers, APIs, frontends a medida, plugins para
-                WordPress o PrestaShop, páginas estáticas...
+                Being a consultancy with a multitude of clients, I have also had
+                the opportunity to make many developments of different types:
+                scrapers, APIs, custom frontends, plugins for WordPress or
+                PrestaShop, static pages...
               </p>
 
               <p class="mb-4 print:hidden">
-                Además de esto, también me encargo de sustituir a nuestro
-                insustituible encargado de sistemas cuando no está disponible,
-                instruyo en cómo salir de <strong>vim</strong> a mis compañeros y
-                compañeras...
+                In addition to this, I am also in charge of replacing our
+                irreplaceable system administrator when he is not available, I
+                instruct my colleagues on how to get out of <strong>vim</strong
+                >...
               </p>
             </Item>
 
             <!-- SPORT2FIT -->
             <Item
-              title="Enero 2020 - Julio 2020"
+              title="January 2020 - July 2020"
               labels={[
                 {
                   css: "shadow-[#8892BF] border-[#4F5B93] bg-[#8892BF] text-white",
@@ -336,26 +337,25 @@ const site = Astro.site.toString();
               <p class="mb-4">
                 <ExternalLink
                   href="http://www.sport2fit.com/"
-                  title="Página web de Sport2Fit"
+                  title="Sport2Fit webpage"
                   css="text-[#49afcd] decoration-[#49afcd]"
                   text="Sport2Fit"
-                />. Trabajé como desarrollador
-                <em>Full-Stack</em>. Mi función principal era el mantenimiento y
-                desarrollo de los productos de la empresa, hechos con Ruby On
-                Rails, y el desarrollo de una serie de webs tanto con WordPress
-                como con Jekyll y CakePHP.
+                />. I worked as a Full-Stack developer. My main function was the
+                maintenance and development of the company's products, made with
+                Ruby On Rails, and the development of a series of websites with
+                WordPress, Jekyll and CakePHP.
               </p>
 
               <p class="mb-4 print:hidden">
-                La empresa está orientada al mundo del deporte y el motor, tuve
-                contacto directo con los clientes para recopilar y solucionar
-                las dudas e incidencias que tenían así que participaba
-                prácticamente en todo el ciclo de vida de los proyectos.
+                The company is oriented to the world of sports and motor, I had
+                direct contact with customers to collect and resolve questions
+                and issues they had so I was involved in virtually the entire
+                life cycle of projects.
               </p>
             </Item>
             <!-- ITEISA -->
             <Item
-              title="Abril 2017 - Enero 2020"
+              title="April 2017 - January 2020"
               labels={[
                 {
                   css: "shadow-[#8892BF] border-[#4F5B93] bg-[#8892BF] text-white",
@@ -410,31 +410,29 @@ const site = Astro.site.toString();
               <p class="mb-4">
                 <ExternalLink
                   href="https://iteisa.com/"
-                  title="Página web de ITEISA"
+                  title="ITEISA webpage"
                   css="text-[#af1685] decoration-[#af1685]"
                   text="ITEISA"
-                />. Como ves, he trabajado varias veces en esta empresa. En esta
-                primera vez mi rol principal fue el desarrollo en el lado del
-                servidor - <em>backend</em> - con CakePHP, aunque también realicé
-                trabajos de frontend con React o Jekyll, por ejemplo.
+                />. As you can see, I have worked several times in this company.
+                In this first time my main role was the development on the
+                server side - backend - with CakePHP, although I also did
+                frontend work with React or Jekyll, for example.
               </p>
 
               <p class="mb-4 print:hidden">
-                Me encargué sobretodo del desarrollo de las APIs, tanto de los
-                productos de los clientes, como de las herramientas internas de
-                la empresa. También realicé scrapers, me encargué del
-                mantenimiento de la propia web de la empresa, hecha con Jekyll,
-                e hice un poco labores de <abbr
-                  title="Investigación y desarrollo">I+D</abbr
-                >, investigando y probando distintas herramientas <i
-                  >open source</i
-                > para ver su viabilidad y sus capacidades de integración con las
-                de la empresa.
+                I was mainly in charge of API development, both for customer
+                products and internal company tools. I also made scrapers, I was
+                in charge of the maintenance of the company's own website, made
+                with Jekyll, and I did some <abbr title="Research & Development"
+                  >R&amp;D</abbr
+                > work, researching and testing different open source tools to see
+                their viability and their integration capabilities with those of
+                the company.
               </p>
             </Item>
             <!-- Punsset -->
             <Item
-              title="Julio 2014 - Marzo 2017"
+              title="July 2014 - March 2017"
               last={true}
               labels={[
                 {
@@ -470,23 +468,22 @@ const site = Astro.site.toString();
               <p class="mb-4">
                 <ExternalLink
                   href="https://www.motork.io/es/"
-                  title="Página web de MotorK"
+                  title="MotorK webpage"
                   css="text-[#4f3226] decoration-[#4f3226]"
                   text="Punsset"
-                /> (actualmente MotorK). Este fue mi primer empleo (<HeartIcon
+                /> (now MotorK). This was my first job (<HeartIcon
                   css="h-4 w-4 inline text-rose-700 fill-rose-700"
-                />) y trabajé como desarrollador
-                <em>Full-Stack</em>. Me encargué del mantenimiento y desarrollo
-                de nuevas funcionalidades de los productos de la empresa, en su
-                mayoría relacionados con el mundo del motor y los concesionarios
-                y realizadas con Ruby On Rails.
+                />) and I worked as a Full-Stack developer. I was in charge of
+                the maintenance and development of new features of the company's
+                products, mostly related to the world of motor and dealers and
+                made with Ruby On Rails.
               </p>
 
               <p class="mb-4 print:hidden">
-                Durante un tiempo también realicé labores de soporte al cliente,
-                recogiendo y resolviendo las incidencias de los mismos y, cuando
-                cogí experiencia, me encargué también de los despliegues de los
-                cambios en los productos a producción.
+                For a while I also performed customer support tasks, collecting
+                and resolving customer incidents and, when I gained experience,
+                I was also in charge of deploying changes in the products to
+                production.
               </p>
             </Item>
           </div>
@@ -496,18 +493,18 @@ const site = Astro.site.toString();
           >
             <Qr />
             <p class="grow basis-0">
-              <b>Pst</b>: En {site}cv/ puedes ver una versión más completa del
-              currículum, disfruta la lectura.
+              <b>Pst</b>: In {site}en/cv/ you can see a more complete version of
+              the resume, enjoy the reading.
             </p>
           </div>
 
           <header class="print:hidden">
-            <h2 class="mb-8 text-center text-2xl">Experiencia académica</h2>
+            <h2 class="mb-8 text-center text-2xl">Academic experience</h2>
           </header>
           <div class="print:hidden">
             <!-- DAW -->
             <Item
-              title="Septiembre 2013 - Julio 2014"
+              title="September 2013 - July 2014"
               academic={true}
               labels={[
                 {
@@ -535,38 +532,37 @@ const site = Astro.site.toString();
               <p class="mb-4">
                 <ExternalLink
                   href="https://www.todofp.es/que-estudiar/loe/informatica-comunicaciones/des-aplicaciones-web.html"
-                  title="Información sobre el grado superior"
+                  title="Information on the subjects taught"
                   css="text-[#004e86] decoration-[#004e86]"
-                  text="Desarrollo de Aplicaciones Web"
-                /> en el
+                  text="Web Applications Development"
+                /> at
                 <ExternalLink
                   href="http://www.iesaglinares.com/"
-                  title="Página web del instituto"
+                  title="Institute website"
                   css="text-[#2028dc] decoration-[#2028dc]"
                   text="Augusto González de Linares"
-                />. Las prácticas las realicé en
+                />. I did my internship at
                 <ExternalLink
                   href="https://iteisa.com/"
-                  title="Página web de ITEISA"
+                  title="ITEISA webpage"
                   css="underline text-[#af1685] font-bold"
                   text="ITEISA"
-                />, lugar que, como has podido leer más arriba, años después
-                sería mi destino laboral. A lo largo del curso se impartieron,
-                sobretodo, conocimientos sobre <strong>PHP</strong>, <strong
-                  >Javascript</strong
-                > y
+                />, a place that, as you can read above, years later would be my
+                work destination. Throughout the course I was taught, above all,
+                knowledge about <strong>PHP</strong>, <strong>Javascript</strong
+                > and
                 <strong>MySQL</strong>.
               </p>
 
               <p class="mb-4 print:hidden">
-                En las prácticas realicé desarrollos de plugins para Plesk,
-                utilizando su API y el desarrollo de una pequeña aplicación de
-                gestión de movimientos bancarios con AngularJS.
+                In the internship I developed plugins for Plesk, using its API,
+                and the development of a small application for managing bank
+                transactions with <strong>AngularJS</strong>.
               </p>
             </Item>
             <!-- DAM -->
             <Item
-              title="Septiembre 2011 - Julio 2013"
+              title="September 2011 - July 2013"
               academic={true}
               last={true}
               labels={[
@@ -583,28 +579,28 @@ const site = Astro.site.toString();
               <p class="mb-4">
                 <ExternalLink
                   href="https://www.todofp.es/que-estudiar/loe/informatica-comunicaciones/des-aplicaciones-multiplataforma.html"
-                  title="Información sobre el grado superior"
+                  title="Information on the subjects taught"
                   css="text-[#004e86] decoration-[#004e86]"
-                  text="Desarrollo de Aplicaciones Multiplataforma"
-                /> en el
+                  text="Multiplatform Application Development"
+                /> at
                 <ExternalLink
                   href="http://www.iesaglinares.com/"
-                  title="Página web del instituto"
+                  title="Institute webpage"
                   css="text-[#2028dc] decoration-[#2028dc]"
                   text="Augusto González de Linares"
-                />. Las prácticas las realicé en
+                />. I did my internship at
                 <ExternalLink
                   href="https://www.cds-soft.es/"
-                  title="Página web de ITEISA"
+                  title="Compudata webpage"
                   css="underline text-[#003366] font-bold"
                   text="Compudata Santander"
-                />. A lo largo del curso se impartieron, sobretodo,
-                conocimientos sobre <strong>JAVA</strong> y todo su ecosistema.
+                />. Throughout the course I was taught, above all, knowledge
+                about <strong>JAVA</strong> and its ecosystem.
               </p>
 
               <p class="mb-4 print:hidden">
-                En las prácticas utilicé <strong>Delphi</strong> y lo que realicé
-                fueron distintos ejercicios de desarrollo.
+                In the practices I used <strong>Delphi</strong> and what I did were
+                different development exercises.
               </p>
             </Item>
           </div>
@@ -618,38 +614,37 @@ const site = Astro.site.toString();
           class="mb-6 md:sticky md:top-4 md:mb-0 md:shrink-0 md:grow-0 md:basis-1/3"
         >
           <header>
-            <h2 class="mb-8 text-center text-2xl">Otros proyectos</h2>
+            <h2 class="mb-8 text-center text-2xl">Side projects</h2>
           </header>
           <p class="mb-2">
-            Además de todo lo realizado en la empresa, a nivel personal he
-            realizado algunos proyectos para diferentes asociaciones o personas.
-            La verdad es que lo más sencillo a publicar son sitios estáticos
-            gracias a increíbles soluciones como
+            In addition to everything done in the company, on a personal level I
+            have done some projects for different associations or individuals.
+            The truth is that the easiest thing to publish are static sites
+            thanks to incredible solutions like
             <ExternalLink
               href="https://www.netlify.com/"
-              title="Web de Netlify"
+              title="Netlify webpage"
               css="text-[#20c6b7] decoration-[#20c6b7]"
               text="Netlify"
-            />. Precisamente por este motivo, tal y como he comentado más
-            arriba, soy fan del
+            />. Precisely for this reason, as I said above, I am a fan of
             <ExternalLink
               href="https://jamstack.org/"
-              title="Página web con información sobre el Jamstack"
+              title="Web page with information about Jamstack"
               css="text-[#F0047F] decoration-[#F0047F]"
               text="Jamstack"
-            />, actualmente utilizo
+            />, I currently use
             <ExternalLink
               href="https://www.11ty.dev/"
-              title="Página web de Eleventy"
+              title="Eleventy webpage"
               css="text-[#222222] decoration-[#222222]"
               text="11ty"
-            /> y
+            /> and
             <ExternalLink
               href="https://astro.build/"
-              title="Página web de Astro"
+              title="Astro webpage"
               css="text-[#1d5bfc] decoration-[#1d5bfc]"
               text="Astro"
-            />, pero he utilizado también GatsbyJS, Hugo o Jekyll por ejemplo.
+            />, but I have also used GatsbyJS, Hugo or Jekyll for example.
           </p>
         </section>
 
@@ -661,14 +656,14 @@ const site = Astro.site.toString();
             css="text-[#c17e93]"
           >
             <p>
-              Página web de la asociación La Buena Leche, ha pasado por varias
-              versiones, primero la realicé con <strong>AngularJS</strong> para practicar,
-              más tarde, al ser una página que no se actualiza con regularidad y
-              que no tiene ningún tipo de backend, la transformé a una página estática
-              generada con <strong>Jekyll</strong> y maquetada con <strong
-                >Bootstrap</strong
-              >. También tuvo que ver el cambio de AngularJS a Angular, ¡tenía
-              que reescribirlo todo de nuevo!
+              Website of the association La Buena Leche, it has gone through
+              several versions, first I made it with <strong>AngularJS</strong> to
+              practice, later, being a page that is not updated regularly and has
+              no backend, I transformed it to a static page generated with <strong
+                >Jekyll</strong
+              > and layout with <strong>Bootstrap</strong>. It also had to do
+              with the change from AngularJS to Angular, I had to rewrite it all
+              over again!
             </p>
           </Portfolio>
           <Portfolio
@@ -678,18 +673,17 @@ const site = Astro.site.toString();
             css="text-[#bf0202]"
           >
             <p>
-              Página web de la asociación Bujinkan Cantabria, está realizada con <strong
+              Website of the Bujinkan Cantabria association, it is made with <strong
                 >11ty</strong
-              > como generador del sitio y con <strong>Tailwind CSS</strong> como
-              librería de estilos. Antes de ésta existía una página realizada con
-              WordPress pero la persona que la mantenía ya no lo iba a hacer, así
-              que cogí el testigo y la realicé a mi manera. Como curiosidad, está
-              muy bien posicionada en los <ExternalLink
+              > as site generator and <strong>Tailwind CSS</strong> as style library.
+              Before this there was a page made with WordPress but the person who
+              maintained it was no longer going to do it, so I took the baton and
+              made it my way. As a curiosity, it is very well positioned in the <ExternalLink
                 href="https://www.11ty.dev/speedlify/bujinkancantabria-ninja/"
-                title="Bujinkan Cantabria en los Eleventy Leaderboards"
+                title="Bujinkan Cantabria at the Eleventy Leaderboards"
                 css="text-[#222222] decoration-[#222222]"
                 text="Eleventy Leaderboards"
-              />, llegando incluso a estar en primera posición.
+              />, even being in first position.
             </p>
           </Portfolio>
           <Portfolio
@@ -699,19 +693,16 @@ const site = Astro.site.toString();
             css="text-[#63b3ed]"
           >
             <p class="mb-2">
-              Página web de Regazo Fotografía, está realizada con <strong
-                >Hugo</strong
-              > como generador del sitio y con
-              <strong>Tailwind CSS</strong> como librería de estilos. Utiliza <strong
-                >Netlify</strong
-              > para la redimensión de las imágenes y la recogida de los datos del
-              formulario. La realicé con Hugo por mi afán de estar probando siempre
-              cosas nuevas.
+              Website of Regazo Fotografía, is made with <strong>Hugo</strong> as
+              site generator and <strong>Tailwind CSS</strong> as style library.
+              It uses <strong>Netlify</strong> for the resizing of the images and
+              the collection of the form data. I made it with Hugo because of my
+              eagerness to be always trying new things.
             </p>
 
             <p>
-              <b>Publi:</b> Regazo Fotografía es el proyecto de mi pareja, écha un
-              vistazo.
+              <b>Advertising:</b> Regazo Fotografía is my wife's project, take a
+              look.
             </p>
           </Portfolio>
           <Portfolio
@@ -721,20 +712,20 @@ const site = Astro.site.toString();
             css="text-blue-700"
           >
             <p class="mb-2">
-              Esta página es una <em>landing</em> de Regazo Fotografía, pero orientada
-              al duelo perinatal. Está realizada con <strong>11ty</strong>, <strong
+              This page is a Regazo Fotografía landing page, but oriented to
+              perinatal bereavement. It is made with <strong>11ty</strong>, <strong
                 >AlpineJS</strong
-              > para el comportamiento y <strong>Tailwind CSS</strong> para los estilos.
+              > for the behavior and <strong>Tailwind CSS</strong> for the styles.
             </p>
 
             <p>
-              Aunque no está posicionada tan arriba como la de Bujinkan
-              Cantabria, ésta tambien aparece en los <ExternalLink
+              Although it is not positioned as high as Bujinkan Cantabria, it
+              also appears in the <ExternalLink
                 href="https://www.11ty.dev/speedlify/dueloperinatal-regazofotografia-com/"
-                title="Regazo Fotografía en los Eleventy Leaderboards"
+                title="Regazo Fotografía at the Eleventy Leaderboards"
                 css="text-[#222222] decoration-[#222222]"
                 text="Eleventy Leaderboards"
-              /> con una puntuación perfecta en Lighthouse.
+              /> with a perfect score in Lighthouse.
             </p>
           </Portfolio>
         </section>
@@ -745,16 +736,16 @@ const site = Astro.site.toString();
       >
         <section class="md:grow md:basis-1/2">
           <header>
-            <h2 class="mb-8 text-center text-2xl">Otras tecnologías</h2>
+            <h2 class="mb-8 text-center text-2xl">Other tools</h2>
           </header>
 
           <p class="mb-4">
-            Además de lo que he comentado en todo lo anterior, aquí voy a poner
-            otras cosas que en algún momento he tocado y/o he utilizado para
-            realizar proyectos concretos en mayor o menor medida. Con esto
-            espero tener un pequeño recordatorio propio de todo lo que he ido
-            utilizando y que, quizá, en algún futuro vuelva a utilizar - o no,
-            quizá también depende de tí -.
+            In addition to what I have commented in all the above, here I am
+            going to put other things that at some point I have touched and/or I
+            have used to make specific projects to a greater or lesser extent.
+            With this I hope to have a small reminder of everything that I have
+            been using and that, perhaps, in some future I will use again - or
+            not, maybe it also depends on you -.
           </p>
 
           <section
@@ -816,39 +807,37 @@ const site = Astro.site.toString();
         </section>
         <section class="md:grow md:basis-1/2">
           <header>
-            <h2 class="mb-8 text-center text-2xl">Más información</h2>
+            <h2 class="mb-8 text-center text-2xl">More info</h2>
           </header>
 
           <p class="mb-2">
-            Fuera del ámbito de la tecnología, siempre me ha gustado hacer
-            deporte, especialmente aquellos que son de contacto o artes
-            marciales. De hecho, tengo titulación oficial por parte de la
-            <ExternalLink
+            Outside the field of technology, I have always liked to do sports,
+            especially those that are contact or martial arts. In fact, I have
+            an official qualification from the <ExternalLink
               href="https://www.fekm.es/"
-              title="Web de la Federación Española de Kick Boxing y Muay Thai"
+              title="Federación Española de Kick Boxing y Muay Thai webpage"
               css="text-[#ba2123] decoration-[#ba2123]"
               text="FEKM"
-            /> de defensa personal y
-            <ExternalLink
-              href="https://es.wikipedia.org/wiki/Ninjutsu"
-              title="Información sobre el Ninjutsu en Wikipedia"
+            /> in self-defense and <ExternalLink
+              href="https://en.wikipedia.org/wiki/Ninjutsu"
+              title="Info about Ninjutsu in Wikipedia"
               css="text-[#000000] decoration-[#000000]"
               text="Ninjutsu"
-            />, un arte marcial japonés, del que actualmente poseo el 4º dan por
-            la <ExternalLink
-              href="https://es.wikipedia.org/wiki/Bujinkan"
-              title="Información sobre la Bujinkan en Wikipedia"
+            />, a Japanese martial art, of which I currently hold the 4th dan by
+            the <ExternalLink
+              href="https://en.wikipedia.org/wiki/Bujinkan"
+              title="Info about Bujinkan in Wikipedia"
               css="text-[#C40026] decoration-[#C40026]"
               text="Bujinkan"
-            />. Además de esto, durante muchos años practiqué Kick Boxing
-            llegando a impartir clases a adultos.
+            />. In addition to this, for many years I practiced Kick Boxing and
+            even taught classes to adults.
           </p>
 
           <p>
-            Hasta los 16 años jugué al ajedrez, primero de manera ocasional y
-            luego en torneos o la propia liga cántabra. Es un hobby que me
-            gustaría recuperar de manera continuada, pero de momento lo tengo
-            aparcado, aunque siempre estoy abierto a echar una partida
+            Until I was 16 years old I played chess, first occasionally and then
+            in tournaments or the Cantabrian league itself. It is a hobby that I
+            would like to recover continuously, but at the moment I have parked
+            it, although I am always open to play a game.
           </p>
         </section>
       </section>
@@ -860,7 +849,7 @@ const site = Astro.site.toString();
     class="fixed bottom-4 right-4 rounded-full bg-zinc-900 p-3 text-white print:hidden"
   >
     <Printer />
-    <span class="sr-only">Imprímelo</span>
+    <span class="sr-only">Print it</span>
   </button>
 </BaseLayout>
 

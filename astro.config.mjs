@@ -10,6 +10,7 @@ import tailwind from "@astrojs/tailwind";
 const isExcludedInSitemap = (page) => {
   return [
     "https://angelguerra.me/no-cookies/",
+    "https://angelguerra.me/en/cv/",
     "https://angelguerra.me/herir-al-ser-humano/",
     "https://angelguerra.me/ignorar-las-ordenes-del-ser-humano/",
     "https://angelguerra.me/herirse-a-uno-mismo/",
