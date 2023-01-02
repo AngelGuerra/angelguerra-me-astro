@@ -4,7 +4,7 @@ import { Image } from "@astrojs/image/components";
 import BaseLayout from "layout:Base";
 
 import ExternalLink from "component:ExternalLink";
-import Qr from "component:cv/Qr";
+import QrEn from "component:cv/QrEn";
 import Item from "component:cv/timeline/Item";
 import Label from "component:cv/timeline/Label";
 import Portfolio from "component:cv/Portfolio";
@@ -491,7 +491,7 @@ const site = Astro.site.toString();
           <div
             class="hidden w-full border-4 border-zinc-900 bg-white p-4 shadow-square-left print:flex print:items-start print:gap-3"
           >
-            <Qr />
+            <QrEn />
             <p class="grow basis-0">
               <b>Pst</b>: In {site}en/cv/ you can see a more complete version of
               the resume, enjoy the reading.
