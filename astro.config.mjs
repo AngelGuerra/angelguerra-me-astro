@@ -27,7 +27,7 @@ const isExcludedInSitemap = (page) => {
 
 // @ts-check
 export default defineConfig({
-  site: "https://angelguerra.me",
+  site: "https://angelguerra.me/",
   integrations: [
     sitemap({ filter: (page) => !isExcludedInSitemap(page) }),
     image({
