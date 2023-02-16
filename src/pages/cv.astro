@@ -64,12 +64,12 @@ const site = Astro.site.toString();
               title="Información en Wikipedia sobre los 90"
               text="gran década de los 90"
             />. Actualmente soy desarrollador en <ExternalLink
-              href="https://iteisa.com/"
-              title="Página web de ITEISA"
-              css="text-[#af1685] decoration-[#af1685]"
-              text="ITEISA"
+              href="https://www.entelgy.com/"
+              title="Página web de Entelgy"
+              css="text-[#041C2C] decoration-[#041C2C] dark:text-[#D04C81] dark:decoration-[#D04C81]"
+              text="Entelgy"
             /> donde me ocupo, principalmente, de los desarrollos a medida. Principalmente
-            trabajo con React y CakePHP, pero como verás en este currículum, he utilizado
+            trabajo con React y Ruby, pero como verás en este currículum, he utilizado
             muchas herramientas distintas lo que me dota de una gran versatilidad.
             <span class="print:hidden"
               >Como curiosidad, soy fan del <ExternalLink
@@ -84,17 +84,50 @@ const site = Astro.site.toString();
           </p>
 
           <div class="mb-4 flex flex-wrap gap-4 print:gap-1">
-            <Label text="PHP" css="border-zinc-900  bg-white" />
-            <Label text="CakePHP" css="border-zinc-900  bg-white" />
-            <Label text="MySQL" css="border-zinc-900  bg-white" />
-            <Label text="Git" css="border-zinc-900  bg-white" />
-            <Label text="GitLab CI" css="border-zinc-900  bg-white" />
-            <Label text="JavaScript" css="border-zinc-900  bg-white" />
-            <Label text="React" css="border-zinc-900  bg-white" />
-            <Label text="Tailwind CSS" css="border-zinc-900  bg-white" />
-            <Label text="Jamstack" css="border-zinc-900  bg-white" />
-            <Label text="Astro" css="border-zinc-900  bg-white" />
-            <Label text="11ty" css="border-zinc-900  bg-white" />
+            <Label
+              text="PHP"
+              css="border-zinc-900 bg-white dark:text-zinc-900"
+            />
+            <Label
+              text="CakePHP"
+              css="border-zinc-900 bg-white dark:text-zinc-900"
+            />
+            <Label
+              text="MySQL"
+              css="border-zinc-900 bg-white dark:text-zinc-900"
+            />
+            <Label
+              text="Git"
+              css="border-zinc-900 bg-white dark:text-zinc-900"
+            />
+            <Label
+              text="GitLab CI"
+              css="border-zinc-900 bg-white dark:text-zinc-900"
+            />
+            <Label
+              text="JavaScript"
+              css="border-zinc-900 bg-white dark:text-zinc-900"
+            />
+            <Label
+              text="React"
+              css="border-zinc-900 bg-white dark:text-zinc-900"
+            />
+            <Label
+              text="Tailwind CSS"
+              css="border-zinc-900 bg-white dark:text-zinc-900"
+            />
+            <Label
+              text="Jamstack"
+              css="border-zinc-900 bg-white dark:text-zinc-900"
+            />
+            <Label
+              text="Astro"
+              css="border-zinc-900 bg-white dark:text-zinc-900"
+            />
+            <Label
+              text="11ty"
+              css="border-zinc-900 bg-white dark:text-zinc-900"
+            />
           </div>
 
           <p class="mb-2 print:hidden">
@@ -191,10 +224,45 @@ const site = Astro.site.toString();
           </header>
 
           <div>
+            <!-- Entelgy -->
+            <Item
+              title="Febrero 2023"
+              current={true}
+              labels={[
+                {
+                  css: "shadow-[#157AFF] border-[#022044] bg-[#157AFF] text-white",
+                  text: "Docker",
+                },
+                {
+                  css: "shadow-[#F1502F] border-[#3E2C00] bg-[#F1502F] text-white",
+                  text: "Git",
+                },
+                {
+                  css: "shadow-[#CC342D] border-[#9b1c16] bg-[#CC342D] text-white",
+                  text: "Ruby",
+                },
+                {
+                  css: "shadow-[#D30001] border-[#D30001] text-[#D30001]",
+                  text: "Ruby On Rails",
+                },
+              ].sort((a, b) => a.text.localeCompare(b.text))}
+            >
+              <p class="mb-4">
+                <ExternalLink
+                  href="https://www.entelgy.com/"
+                  title="Página web de Entelgy"
+                  css="text-[#041C2C] decoration-[#041C2C] dark:text-[#D04C81] dark:decoration-[#D04C81]"
+                  text="Entelgy"
+                />. Soy analista técnico - desarrollador
+                <em>Full-Stack</em>. En un tiempo esto será un bloque fabuloso
+                con lo que realizo en la empresa. De momento acabo de empezar -o
+                no me he acordado de actualizar esto 😅...-.
+              </p>
+            </Item>
+
             <!-- ITEISA -->
             <Item
-              title="Julio 2020"
-              current={true}
+              title="Julio 2020 - Febrero 2023"
               labels={[
                 {
                   css: "shadow-[#8892BF] border-[#4F5B93] bg-[#8892BF] text-white",
@@ -256,25 +324,25 @@ const site = Astro.site.toString();
                   title="Página web de ITEISA"
                   css="text-[#af1685] decoration-[#af1685]"
                   text="ITEISA"
-                />. Soy desarrollador
-                <em>Full-Stack</em>. Mi función principal es realizar los
-                desarrollos a medida que los clientes solicitan a la empresa.
-                Por ello, en cada desarrollo, tengo que implicarme con el
-                cliente y su negocio, conocer el mercado al que se destine y las
-                mecánicas de funcionamiento del mismo.
+                />. Trabajé como desarrollador
+                <em>Full-Stack</em>. Mi función principal era realizar los
+                desarrollos a medida que los clientes solicitaban a la empresa.
+                Por ello, en cada desarrollo, tenía que implicarme con el
+                cliente y su negocio, conocer el mercado al que se destinaba y
+                las mecánicas de funcionamiento del mismo.
               </p>
 
               <p class="mb-4 print:hidden">
-                Al ser una consultaría con multitud de clientes, también he
-                tenido la oportunidad de realizar muchos desarrollos de distinta
+                Al ser una consultaría con multitud de clientes, también tuve la
+                oportunidad de realizar muchos desarrollos de distinta
                 tipología: scrapers, APIs, frontends a medida, plugins para
                 WordPress o PrestaShop, páginas estáticas...
               </p>
 
               <p class="mb-4 print:hidden">
-                Además de esto, también me encargo de sustituir a nuestro
-                insustituible encargado de sistemas cuando no está disponible,
-                instruyo en cómo salir de <strong>vim</strong> a mis compañeros y
+                Además de esto, también me encargaba de sustituir al
+                insustituible encargado de sistemas cuando no estaba disponible,
+                instruía en cómo salir de <strong>vim</strong> a mis compañeros y
                 compañeras...
               </p>
             </Item>
