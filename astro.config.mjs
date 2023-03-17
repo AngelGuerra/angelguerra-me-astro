@@ -1,21 +1,15 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
-import image from "@astrojs/image";
 import tailwind from "@astrojs/tailwind";
 
-/**
- * @description Determina si la página debe aparecer en el sitemap o no.
- * @param {string} page Página que se recibe del filter-sitemap.
- */
-const isExcludedInSitemap = (page) => {
+function isExcludedInSitemap(page) {
   return [
     "https://angelguerra.me/no-cookies/",
-    "https://angelguerra.me/en/cv/",
-    "https://angelguerra.me/herir-al-ser-humano/",
-    "https://angelguerra.me/ignorar-las-ordenes-del-ser-humano/",
-    "https://angelguerra.me/herirse-a-uno-mismo/",
+    "https://angelguerra.me/harming-humans/",
+    "https://angelguerra.me/ignoring-human-orders/",
+    "https://angelguerra.me/harm-to-self/",
   ].includes(page);
-};
+}
 
 // Full Astro Configuration API Documentation:
 // https://docs.astro.build/reference/configuration-reference
@@ -28,11 +22,9 @@ const isExcludedInSitemap = (page) => {
 // @ts-check
 export default defineConfig({
   site: "https://angelguerra.me/",
+  experimental: { assets: true },
   integrations: [
     sitemap({ filter: (page) => !isExcludedInSitemap(page) }),
-    image({
-      serviceEntryPoint: "@astrojs/image/sharp",
-    }),
     tailwind(),
   ],
 });

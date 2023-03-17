@@ -13,7 +13,6 @@ export interface Props {
 const { title, description, robots = "index,follow" } = Astro.props;
 const currentUrl: URL = Astro.url;
 const image: string = `${Astro.site.toString()}assets/logo-social-1200x630.jpg`;
-const astroVersion: string = packages["node_modules/astro"].version;
 const tailwindVersion: string = packages["node_modules/tailwindcss"].version;
 
 const ldJson: string = JSON.stringify({
@@ -41,7 +40,7 @@ const ldJson: string = JSON.stringify({
 });
 ---
 
-<html lang="es" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
   <head>
     <title>{title} | Ángel Guerra</title>
     <meta name="description" content={description} />
@@ -86,7 +85,7 @@ const ldJson: string = JSON.stringify({
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={currentUrl} />
-    <meta property="og:locale" content="es" />
+    <meta property="og:locale" content="en" />
     <meta property="og:image" content={image} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -140,9 +139,9 @@ const ldJson: string = JSON.stringify({
         </div>
         <div class="flex flex-row justify-center gap-8 md:justify-end">
           <a
-            href="/cv/"
+            href="/resume/"
             class="text-lg underline decoration-wavy underline-offset-2 hover:text-neutral-900 dark:hover:text-white"
-            >Currículo</a
+            >Resume</a
           >
           <a
             href="/uses/"
@@ -164,23 +163,21 @@ const ldJson: string = JSON.stringify({
     >
       <div class="container mx-auto">
         <p class="mb-2 text-center text-xs">
-          <a href="/no-cookies" title="Política de NO cookies" class="underline"
-            >Política de NO cookies</a
-          >
+          <a href="/no-cookies" class="underline">NO cookies policy</a>
         </p>
         <p class="mb-2 text-center tracking-wide">
-          Construido con
+          Built with
           <ExternalLink
             href="https://astro.build/"
             text="Astro"
-            title="Página web de Astro"
+            title="Astro's webpage"
             rel="external"
           />
-          <AstroIcon /> desde
+          <AstroIcon /> from
           <ExternalLink
             href="https://turismodecantabria.com/"
             text="Cantabria"
-            title="Portal de turismo de Cantabria"
+            title="Cantabria tourism portal"
             rel="external noreferrer"
           /> 🌲
         </p>
@@ -190,10 +187,10 @@ const ldJson: string = JSON.stringify({
             title="Página sin Javascript">#ZeroJS #NoJavascript</span
           ><span
             class="text-indigo-800 dark:text-indigo-200"
-            title="Página sin Javascript">#SóloUnPoquitoDeJavaScript</span
+            title="Página sin Javascript">#JustALittleBitOfJavascript</span
           >
           <span class="text-[#514375] dark:text-[#ff7e33]"
-            >#Astro-{astroVersion}</span
+            >#{Astro.generator.replace(" ", "-")}</span
           >
           <span class="text-sky-700 dark:text-sky-400"
             >#TailwindCSS-{tailwindVersion}</span

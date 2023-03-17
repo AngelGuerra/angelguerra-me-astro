@@ -1,32 +1,14 @@
 ---
-import { Picture } from "@astrojs/image/components";
-import { OutputFormat } from "@astrojs/image/dist/loaders";
-import { ImageMetadata } from "@astrojs/image/dist/vite-plugin-astro-image";
 import ExternalLink from "component:ExternalLink";
 
 export interface Props {
   title: string;
   web: string;
   github: string;
-  alt?: string;
-  src?: ImageMetadata | string;
   css?: string;
 }
 
-interface IPicture {
-  widths: number[];
-  sizes: string;
-  formats: OutputFormat[];
-}
-
-const PICTURE_CONFIG: IPicture = {
-  widths: [632, 368, 496, 624, 364],
-  sizes:
-    "(min-width: 640px) 632px, (min-width: 768px) 368px, (min-width: 1024px) 496px, (min-width: 1280px) 624px, (min-width: 1536px) 364px, 632px",
-  formats: ["avif", "webp", "png"],
-};
-
-const { title, web, github, src = "", alt = "", css = "" } = Astro.props;
+const { title, web, github, css = "" } = Astro.props;
 ---
 
 <section
@@ -37,21 +19,6 @@ const { title, web, github, src = "", alt = "", css = "" } = Astro.props;
   >
     {title}
   </p>
-  {
-    src !== "" && (
-      <Picture
-        src={src}
-        alt={alt}
-        widths={PICTURE_CONFIG.widths}
-        sizes={PICTURE_CONFIG.sizes}
-        formats={PICTURE_CONFIG.formats}
-        loading="lazy"
-        decoding="async"
-        class="print:hidden"
-        aspectRatio="158:109"
-      />
-    )
-  }
   <div class="p-4">
     <slot />
   </div>
@@ -60,13 +27,13 @@ const { title, web, github, src = "", alt = "", css = "" } = Astro.props;
   >
     <ExternalLink
       href={web}
-      title="Ir a la página web"
+      title="Go to the webpage"
       css={`underline font-bold ${css}`.trim()}
       text="Web"
     />
     <ExternalLink
       href={github}
-      title="Repositorio con el código"
+      title="Code repository"
       css={`underline font-bold ${css}`.trim()}
       text="GitHub"
     />

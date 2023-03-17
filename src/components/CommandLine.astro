@@ -9,6 +9,15 @@ const { time = false, command } = Astro.props;
 import ChevronRightIcon from "component:icons/heroicons/chevron-right";
 import GitBranchIcon from "component:icons/octoicons/git-branch";
 import PackageIcon from "component:icons/octoicons/package";
+
+function getAngelAge(): number {
+  return Math.abs(
+    new Date(Date.now() - new Date("1990-03-01").getTime()).getUTCFullYear() -
+      1970
+  );
+}
+
+const age: number = getAngelAge();
 ---
 
 <section class="mb-2">
@@ -17,14 +26,14 @@ import PackageIcon from "component:icons/octoicons/package";
     <span class="font-bold text-purple-700 dark:text-purple-400"
       ><GitBranchIcon /> main</span
     > via <span class="font-bold text-red-700 dark:text-red-400"
-      ><PackageIcon /> v32</span
+      ><PackageIcon /> v{age}.0.0</span
     >{
       time && (
         <>
           {" "}
           took
           <span class="font-bold text-yellow-700 dark:text-yellow-400">
-            32 years
+            {age} years
           </span>
         </>
       )

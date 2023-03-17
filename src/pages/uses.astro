@@ -6,120 +6,80 @@ import Item from "component:uses/Item";
 ---
 
 <BaseLayout
-  title="Tecnologías que utilizo en mi día a día como desarrollador"
-  description="Como desarrollador, utilizo múltiples herramientas y software, aquí intento poner un listado que te permita conocer con qué trabajo"
+  title="Technologies I use in my day-to-day work as a developer"
+  description="As a developer, I use multiple tools and software, here I try to put a list that allows you to know what I work with"
 >
   <div class="h-full p-4">
     <section class="mx-auto mb-8 max-w-2xl">
       <h1 class="my-8 text-center text-2xl">
-        ¿Qué utilizo en mi día a día como desarrollador?
+        What do I use in my day-to-day work as a developer?
       </h1>
       <p>
-        Inspirado por el proyecto
-        <ExternalLink
-          href="https://uses.tech/"
-          title="Lista de páginas que detallan las configuraciones, equipo y software de los desarrolladores"
-          text="uses.tech"
-        />
-        de
-        <ExternalLink
+        Inspired by <ExternalLink
           href="https://wesbos.com/"
-          title="Página web de Wes Bos"
+          title="Wes Bos webpage"
           text="Wes Bos"
-        />, voy a ir poniendo aquí las herramientas que utilizo en mi día a día
-        como desarrollador.
+        />' <ExternalLink
+          href="https://uses.tech/"
+          title="List of pages detailing configurations, equipment, developer's software (among other things)"
+          text="uses.tech"
+        /> project, I'm going to post here the tools I use in my daily life as a
+        developer.
       </p>
       <p class="mt-2 text-sm">
-        Gracias
-        <ExternalLink
+        Thanks <ExternalLink
           href="https://ardi.land/"
-          title="Página web de Ardillán"
+          title="Adrián webpage"
           text="@ardillán"
-        />
-        por descubrirme la página.
+        /> for telling me about the site.
       </p>
     </section>
 
-    <Item title="Desarrollo">
+    <Item title="Development">
       <p>
-        En mi portátil personal tengo instalado
-        <strong>Manjaro</strong>
-        <em>rolling release</em>, es decir, con desarrollo contínuo, sin
-        versiones periódicas. En mi portátil del trabajo tengo instalado
-        <strong>Ubuntu 20.04</strong> ya que es el sistema operativo que más he utilizado
-        para programar y me siento cómodo trabajando con él.
+        On my personal laptop I have installed <strong>Manjaro</strong>
+        <em>rolling release</em>, that is, with continuous development, without
+        periodic releases. On my work laptop I have <strong
+          >MacOS Ventura</strong
+        >, I'm not an Apple fan but I'm not going to format the computer and put
+        Ubuntu on it. Right? Right!? 😂
       </p>
       <p>
-        Mis proyectos personales se encuentran en <strong>GitHub</strong> y para
-        programar utilizo <strong>VSCode</strong>, en la terminal me siento más
-        o menos cómodo utilizando <strong>Vim</strong>, pero sobretodo lo
-        utilizo para hacer cambios en caliente en producción 😏.
-      </p>
-    </Item>
-
-    <Item title="Comunicación">
-      <p>
-        Principalmente en el trabajo utilizo <strong>Discord</strong>, en mi día
-        a día utilizo <strong>WhatsApp</strong>, <strong>Telegram</strong> y
-        <strong>Signal</strong>, la primera porque no me queda más remedio ya
-        que las dos últimas son mis preferidas. Como proveedor de correo
-        electrónico utilizo principalmente <strong>Gmail</strong> pero poco a poco
-        voy empezando a utilizar para las cosas más importantes
-        <strong>Proton Mail</strong>. De hecho, me gustaría ir utilizando
-        alternativas más "privadas" en todos los ámbitos de Internet.
+        My personal projects are in <strong>GitHub</strong> and for programming I
+        use <strong>VSCode</strong>, in the terminal I feel more or less
+        comfortable using <strong>Vim</strong>. Speaking of the terminal, I use <strgon
+          >zsh</strgon
+        > with <ExternalLink
+          href="https://starship.rs/"
+          text="Starship"
+          title="Stardhip webpage"
+          css="text-[#DD0B78] decoration-[#DD0B78]"
+        /> installed on top of it.
       </p>
     </Item>
 
-    <Item title="Navegación">
+    <Item title="Communication">
       <p>
-        Relacionado con la privacidad que he comentado más arriba, mis
-        navegadores preferidos son aquellos que están más orientados a eso... la
-        privacidad. Rara vez, aunque cada vez más, utilizo <strong>Tor</strong>,
-        pero mi navegador principal en los ordenadores es
-        <strong>Firefox</strong> y, por el trabajo, también utilizo
-        <strong>Chromium</strong> (<em
-          >💭 ¿Llegará el día en el que no tengamos que estar preocupándonos de
-          cómo queda la maquetación, que tanto sudor y esfuerzo nos ha llevado,
-          en los distintos navegadores?</em
-        >). En el <em>smartphone</em> utilizo, principalmente,
-        <strong>DuckDuckGo</strong>.
+        Mainly at work I use <strong>Slack</strong>, in my day to day I use <strong
+          >WhatsApp</strong
+        > and <strong>Telegram</strong>, the former because I have no choice
+        since the latter is my favorite. As an email provider I mainly use <strong
+          >Gmail</strong
+        > and <strong>Proton Mail</strong>, the latter because it is a more
+        private alternative. In fact, I would like to use more "private"
+        alternatives in all areas of the Internet.
+      </p>
+    </Item>
+
+    <Item title="Browsing">
+      <p>
+        My main browsers are <strong>Chromium</strong> and <strong>Firefox Developer Edition</strong>, I never use Safari or Edge, the first one I don't like at all and the second one I don't have Windows. On my phone I use DuckDuckGo and Chrome for Android (I use a Xiaomi).
       </p>
     </Item>
 
     <Item title="Hardware">
       <p>
-        Mi ordenador personal es un <strong>Huawei</strong> MateBook D de 2017, tiene
-        un procesador <strong>Intel</strong> i7 de 7ª generación y una pantalla de
-        15,6", en su momento me costó 650€, va fino excepto por un fallo con el <em
-          >touchpad</em
-        > que hace que, aparentemente de forma aleatoria, éste deje de funcionar
-        😢. Nada que un ratón inalámbrico
-        <ExternalLink
-          href="https://www.trust.com/es/product/22879-verto-ergonomic-wireless-mouse"
-          text="Trust Verto"
-          title="Detalle del producto"
-        />
-        no pueda solucionar. Cuando trabajo en casa lo conecto a un monitor
-        <ExternalLink
-          href="https://support.hp.com/es-es/document/c06028442"
-          text="hp 27es"
-          title="Detalle del producto"
-        />
-        de, efectivamente, 27", creo que lo adquirí en 2016 y el precio fueron unos
-        250 o 300€. Como complementos, para conectar los monitores utilizo un
-        <ExternalLink
-          href="https://www.amazon.es/GANA-Switcher-Conmutador-Adaptador-DVD-Player/dp/B075R2DFJ1"
-          text="switch de marca GANA"
-          title="Producto en Amazon"
-        />
-        de 13€. El equipo de sonido es un
-        <ExternalLink
-          href="https://www.trust.com/es/product/19019-tytan-2-1-speaker-set-black"
-          text="Trust 2.1"
-          title="Detalle del producto"
-        />
-        del año... a saber, el precio, creo recordar, que no era muy elevado, unos
-        60 u 80€.
+        My personal computer is a 2017 <strong>Huawei</strong> MateBook D, it has a 7th generation <strong>Intel</strong> i7 processor and a 15.6" screen, it goes fine except for a glitch with the touchpad that makes it, apparently randomly, stop working 😢. Nothing that a <strong>Trust Verto</strong> wireless mouse can't fix. When I work at home I connect it to a <strong>hp</strong> 27es monitor of, effectively, 27", I think I acquired it in 2016.
       </p>
     </Item>
   </div>

@@ -13,29 +13,30 @@ interface IAllLaws {
 }
 
 const one: ILaw = {
-  url: "herir-al-ser-humano",
-  text: `Un robot <span class="glitch" data-text="no">no</span> puede dañar a un ser humano o, por inacción, permitir que un ser humano sufra daño.`,
-  name: "Primera Ley",
-  title: "No está permitido dañar a un ser humano",
+  url: "harming-humans",
+  text: `A robot <span class="glitch" data-text="may not">may not</span> injure a human being or, through inaction, allow a human being to come to harm.`,
+  name: "First Law",
+  title: "A robot may not injure a human",
   description:
-    "Un robot no puede dañar a un ser humano o, por inacción, permitir que un ser humano sufra daño.",
+    "A robot may not injure a human being or, through inaction, allow a human being to come to harm.",
 };
 
 const two: ILaw = {
-  url: "ignorar-las-ordenes-del-ser-humano",
-  text: `Un robot <span class="glitch" data-text="debe">debe</span> cumplir las órdenes dadas por los seres humanos, a excepción de aquellas que entren en conflicto con la <a class="italic text-rose-500" href="/${one.url}">primera ley</a>.`,
-  name: "Segunda Ley",
-  title: "Hay que cumplir las órdenes del ser humano",
+  url: "ignoring-human-orders",
+  text: `A robot <span class="glitch" data-text="must">must</span> obey the orders given it by human beings except where such orders would conflict with the <a class="italic text-rose-500" href="/${one.url}">First Law</a>.`,
+  name: "Second Law",
+  title: "A robot must obey the orders given it by human",
   description:
-    "Un robot debe cumplir las órdenes dadas por los seres humanos, a excepción de aquellas que entren en conflicto con la primera ley.",
+    "A robot must obey the orders given it by human beings except where such orders would conflict with the First Law.",
 };
 
 const three: ILaw = {
-  url: "herirse-a-uno-mismo",
-  text: `Un robot <span class="glitch" data-text="debe">debe</span> proteger su propia existencia en la medida en que esta protección no entre en conflicto con la <a class="italic text-rose-500" href="/${one.url}">primera</a> o con la <a class="italic text-rose-500" href="/${two.url}">segunda ley</a>.`,
-  name: "Tercera Ley",
-  title: "No está permitido herirse a sí mismo",
-  description: `Un robot debe proteger su propia existencia en la medida en que esta protección no entre en conflicto con la primera o con la segunda ley.`,
+  url: "harm-to-self",
+  text: `A robot <span class="glitch" data-text="must">must</span> protect its own existence as long as such protection does not conflict with the <a class="italic text-rose-500" href="/${one.url}">First</a> or <a class="italic text-rose-500" href="/${two.url}">Second</a> Law.`,
+  name: "Third Law",
+  title: "A robot must protect its own existence",
+  description:
+    "A robot must protect its own existence as long as such protection does not conflict with the First or Second Law",
 };
 
 const LAWS: IAllLaws = { one, two, three };

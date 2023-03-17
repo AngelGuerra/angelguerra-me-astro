@@ -1,6 +1,4 @@
 ---
-import { Image } from "@astrojs/image/components";
-
 import BaseLayout from "layout:Base";
 import CommandLine from "component:CommandLine";
 ---
@@ -10,7 +8,7 @@ import CommandLine from "component:CommandLine";
   document.addEventListener("DOMContentLoaded", () => {
     const commandElement = document.querySelector(".command");
 
-    // En producción, por algún motivo, si no hago este control se ejecuta dos veces.
+    // In production, for some reason, if I don't do this check it runs twice.
     if (!commandElement.textContent) {
       commandElement.insertAdjacentText("beforeend", pathname);
     }
@@ -18,8 +16,8 @@ import CommandLine from "component:CommandLine";
 </script>
 
 <BaseLayout
-  title="La página que buscas no existe"
-  description="¿He hecho algo mal?"
+  title="The page you are looking for does not exist"
+  description="Did I do something wrong?"
   robots="noindex,nofollow"
 >
   <section
@@ -31,40 +29,37 @@ import CommandLine from "component:CommandLine";
       <CommandLine time={true} command="" />
 
       <p class="mb-1">
-        <b>Página no encontrada</b>.<br />
-        Quizá quieres ir a:
+        <b>Page Not Found</b>.<br />
+        Maybe you want to go to:
       </p>
 
       <ul class="mb-1 list-inside list-disc">
         <li>
-          La página <a
+          The <a
             href="/"
             class="inline font-bold underline decoration-viva-magenta decoration-2 underline-offset-4 transition-all hover:decoration-zinc-900"
-            >principal</a
-          >: origen de todas las cosas.
+            >home page</a
+          >: origin of all things.
         </li>
         <li>
-          La página con mi <a
-            href="/cv"
+          The page with <a
+            href="/resume/"
             class="inline font-bold underline decoration-viva-magenta decoration-2 underline-offset-4 transition-all hover:decoration-zinc-900"
-            >currículum</a
-          >: Con información profesional relevante.
+            >my resume</a
+          >: With relevant professional information.
         </li>
       </ul>
 
       <p class="mb-2">
-        O quizá sólo querías ver la página 404, en ese caso, es ésta.
+        Or maybe you just wanted to see the 404 page, in that case, this is it.
       </p>
 
-      <Image
-        src={`/assets/confused-travolta.gif`}
-        alt="John Travolta confundido en una escena de Pulp Fiction"
-        width="300"
-        height="291"
-        format="webp"
-        loading="lazy"
-        decoding="async"
-        class="block mx-auto motion-reduce:hidden"
+      <img
+        src="/assets/confused-travolta.gif"
+        alt="John Travolta confused"
+        width={300}
+        height={291}
+        class="mx-auto block motion-reduce:hidden"
       />
     </section>
   </section>
