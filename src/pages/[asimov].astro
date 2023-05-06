@@ -48,12 +48,12 @@ const currentLaw: ILaw = Object.values(LAWS).find(
     content: attr(data-text);
     text-shadow: -2px 0 #ff00c1;
     clip: rect(44px, 450px, 56px, 0);
-    @apply absolute top-0 left-[2px] h-full w-full animate-glitch-anim;
+    @apply absolute left-[2px] top-0 h-full w-full animate-glitch-anim;
   }
 
   .glitch::after {
     content: attr(data-text);
     text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
-    @apply absolute top-0 left-0 h-full w-full animate-glitch-anim-2;
+    @apply absolute left-0 top-0 h-full w-full animate-glitch-anim-2;
   }
 </style>

@@ -27,7 +27,7 @@ const site = Astro.site.toString();
   <section class="h-full p-4 print:h-screen print:bg-white print:text-sm">
     <section class="container mx-auto mb-8 print:w-full">
       <header class="mb-12 print:mb-6">
-        <p class="mt-8 mb-2 text-center text-2xl">👋 Hi! How are you?</p>
+        <p class="mb-2 mt-8 text-center text-2xl">👋 Hi! How are you?</p>
         <h1 class="mb-2 text-center text-xl print:hidden">
           I welcome you to my resume
         </h1>
@@ -218,17 +218,18 @@ const site = Astro.site.toString();
           </ul>
 
           <div
-            class="hidden w-full border-4 border-zinc-900 bg-white p-4 shadow-square-left text-sm print:flex print:items-start print:gap-3"
+            class="hidden w-full border-4 border-zinc-900 bg-white p-4 text-sm shadow-square-left print:flex print:items-start print:gap-3"
           >
             <Image
               src={imgQr.src}
               width={320}
               height={320}
               alt="QR"
-              class="aspect-square max-w-xs w-20 mx-auto print:flex print:basis-20"
+              class="mx-auto aspect-square w-20 max-w-xs print:flex print:basis-20"
             />
             <p class="grow basis-0">
-              <b>Pst</b>: In {site}resume/ you can see a more complete version of this resume, enjoy the reading.
+              <b>Pst</b>: In {site}resume/ you can see a more complete version
+              of this resume, enjoy the reading.
             </p>
           </div>
         </section>
