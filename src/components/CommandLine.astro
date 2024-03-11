@@ -13,7 +13,7 @@ import PackageIcon from "component:icons/octoicons/package";
 function getAngelAge(): number {
   return Math.abs(
     new Date(Date.now() - new Date("1990-03-01").getTime()).getUTCFullYear() -
-      1970
+      1970,
   );
 }
 

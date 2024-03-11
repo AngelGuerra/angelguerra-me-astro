@@ -12,7 +12,7 @@ export function getStaticPaths() {
 
 const { asimov } = Astro.params;
 const currentLaw: ILaw = Object.values(LAWS).find(
-  (law: ILaw) => law.url === asimov
+  (law: ILaw) => law.url === asimov,
 );
 ---
 
@@ -53,7 +53,9 @@ const currentLaw: ILaw = Object.values(LAWS).find(
 
   .glitch::after {
     content: attr(data-text);
-    text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+    text-shadow:
+      -2px 0 #00fff9,
+      2px 2px #ff00c1;
     @apply absolute left-0 top-0 h-full w-full animate-glitch-anim-2;
   }
 </style>
